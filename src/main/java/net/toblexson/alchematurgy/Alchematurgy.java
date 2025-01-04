@@ -1,11 +1,14 @@
 package net.toblexson.alchematurgy;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.toblexson.alchematurgy.registry.ModItems;
 import org.slf4j.Logger;
 
 /**
@@ -25,13 +28,17 @@ public class Alchematurgy
     private static final Logger LOGGER = LogUtils.getLogger();
 
     /** The main constructor for the mod
-     * @param modEventBus The Mod Event Bus
+     * @param bus The Mod Event Bus
      * @param modContainer The Mod Container
      */
-    public Alchematurgy(IEventBus modEventBus, ModContainer modContainer)
+    public Alchematurgy(IEventBus bus, ModContainer modContainer)
     {
-        // Register the commonSetup method for modloading
-        modEventBus.addListener(this::commonSetup);
+        // Register the event listeners
+        bus.addListener(this::commonSetup);
+        bus.addListener(this::addCreative);
+
+        // Register the items
+        ModItems.register(bus);
 
         // Register ModConfigSpec so that FML can create and load the config file
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -42,5 +49,14 @@ public class Alchematurgy
      */
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+    }
+
+    /**
+     * Listener to add items to the vanilla creative mode tabs
+     */
+    private void addCreative(BuildCreativeModeTabContentsEvent event)
+    {
+        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
+            event.accept(ModItems.TEST_ITEM);
     }
 }
