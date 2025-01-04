@@ -1,0 +1,4 @@
+@ParametersAreNonnullByDefault
+package net.toblexson.alchematurgy;
+
+import javax.annotation.ParametersAreNonnullByDefault;
