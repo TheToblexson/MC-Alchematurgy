@@ -8,6 +8,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.toblexson.alchematurgy.registry.ModBlocks;
+import net.toblexson.alchematurgy.registry.ModCreativeModeTabs;
 import net.toblexson.alchematurgy.registry.ModItems;
 
 /**
@@ -32,6 +33,7 @@ public class Alchematurgy
         bus.addListener(this::addCreative);
 
         // Register the deferred registers
+        ModCreativeModeTabs.register(bus);
         ModItems.register(bus);
         ModBlocks.register(bus);
 
