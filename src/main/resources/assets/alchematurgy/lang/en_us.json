@@ -1,3 +1,5 @@
 {
-  "item.alchematurgy.test_item": "Test Item"
+  "item.alchematurgy.test_item": "Test Item",
+
+  "block.alchematurgy.test_block": "Test Block"
 }
