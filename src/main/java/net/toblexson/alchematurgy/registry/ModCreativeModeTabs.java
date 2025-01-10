@@ -1,5 +1,6 @@
 package net.toblexson.alchematurgy.registry;
 
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -10,6 +11,9 @@ import net.toblexson.alchematurgy.Alchematurgy;
 
 import java.util.function.Supplier;
 
+/**
+ * Alchematurgy's Creative Tab registration.
+ */
 public class ModCreativeModeTabs
 {
     /** The Deferred Register for Alchematurgy's creative mode tabs.
@@ -22,13 +26,8 @@ public class ModCreativeModeTabs
                     .title(Component.translatable("creativetab.alchematurgy.alchematurgy_tab"))
                     .displayItems((itemsDisplayParameters, output) ->
                     {
-                        // Items
-                        output.accept(ModItems.WAND);
-                        output.accept(ModItems.ASH);
-
-                        // Blocks
-                        output.accept(ModBlocks.ALCHEMICAL_CRUCIBLE);
-                        output.accept(ModBlocks.ALCHEMICAL_DISTILLER);
+                        // Adds all items and block items to the tab
+                        ModItems.ITEMS.getEntries().stream().map(Holder::value).forEach(output::accept);
                     }).build());
 
     /** Register all the creative mode tabs in the deferred register.

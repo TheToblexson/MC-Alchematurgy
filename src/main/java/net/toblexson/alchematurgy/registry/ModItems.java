@@ -6,6 +6,9 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
 
+/**
+ * Alchematurgy's Item registration.
+ */
 public class ModItems
 {
     /**

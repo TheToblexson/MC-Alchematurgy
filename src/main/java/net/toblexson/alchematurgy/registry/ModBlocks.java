@@ -12,6 +12,9 @@ import net.toblexson.alchematurgy.Alchematurgy;
 
 import java.util.function.Supplier;
 
+/**
+ * Alchematurgy's Block registration.
+ */
 public class ModBlocks
 {
     /**
