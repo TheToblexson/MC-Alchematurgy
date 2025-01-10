@@ -1,12 +1,10 @@
 package net.toblexson.alchematurgy;
 
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.registry.ModCreativeModeTabs;
 import net.toblexson.alchematurgy.registry.ModItems;
@@ -30,7 +28,6 @@ public class Alchematurgy
     {
         // Register the event listeners
         bus.addListener(this::commonSetup);
-        bus.addListener(this::addCreative);
 
         // Register the deferred registers
         ModCreativeModeTabs.register(bus);
@@ -46,17 +43,5 @@ public class Alchematurgy
      */
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-    }
-
-    /**
-     * Listener to add items to the vanilla creative mode tabs
-     */
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
-        {
-            event.accept(ModItems.TEST_ITEM);
-            event.accept(ModBlocks.TEST_BLOCK);
-        }
     }
 }

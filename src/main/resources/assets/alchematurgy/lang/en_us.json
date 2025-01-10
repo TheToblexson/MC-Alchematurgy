@@ -1,7 +1,9 @@
 {
-  "item.alchematurgy.test_item": "Test Item",
+  "item.alchematurgy.wand": "Wand",
+  "item.alchematurgy.ash": "Ash",
 
-  "block.alchematurgy.test_block": "Test Block",
+  "block.alchematurgy.alchemical_crucible": "Alchemical Crucible",
+  "block.alchematurgy.alchemical_distiller": "Alchemical Distiller",
 
   "creativetab.alchematurgy.alchematurgy_tab": "Alchematurgy"
 }

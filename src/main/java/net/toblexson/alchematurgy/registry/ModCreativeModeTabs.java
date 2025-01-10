@@ -12,23 +12,27 @@ import java.util.function.Supplier;
 
 public class ModCreativeModeTabs
 {
-    /**
-     * The Deferred Register for the mod's creative mode tabs
+    /** The Deferred Register for Alchematurgy's creative mode tabs.
      */
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Alchematurgy.MOD_ID);
 
     public static Supplier<CreativeModeTab> ALCHEMATURGY_TAB = CREATIVE_MODE_TABS.register("alchematurgy_tab", ()->
             CreativeModeTab.builder()
-                    .icon(()-> new ItemStack(ModItems.TEST_ITEM.get()))
+                    .icon(()-> new ItemStack(ModItems.WAND.get()))
                     .title(Component.translatable("creativetab.alchematurgy.alchematurgy_tab"))
                     .displayItems((itemsDisplayParameters, output) ->
                     {
-                        output.accept(ModItems.TEST_ITEM);
-                        output.accept(ModBlocks.TEST_BLOCK);
+                        // Items
+                        output.accept(ModItems.WAND);
+                        output.accept(ModItems.ASH);
+
+                        // Blocks
+                        output.accept(ModBlocks.ALCHEMICAL_CRUCIBLE);
+                        output.accept(ModBlocks.ALCHEMICAL_DISTILLER);
                     }).build());
 
     /** Register all the creative mode tabs in the deferred register.
-     * @param bus The Event Bus
+     * @param bus The event bus.
      */
     public static void register(IEventBus bus)
     {

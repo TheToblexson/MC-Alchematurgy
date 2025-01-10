@@ -2,6 +2,6 @@
   "parent": "minecraft:item/generated",
   "textures":
   {
-    "layer0": "alchematurgy:item/test_item"
+    "layer0": "alchematurgy:item/ash"
   }
 }

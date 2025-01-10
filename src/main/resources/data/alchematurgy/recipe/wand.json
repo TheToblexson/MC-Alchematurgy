@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key":
+  {
+    "a": { "item": "minecraft:stick" },
+    "b": { "item": "minecraft:iron_ingot"},
+    "c": { "item": "minecraft:iron_nugget" }
+  },
+  "pattern":
+          [
+            "  b",
+            " a ",
+            "c  "
+          ],
+  "result":
+  {
+    "count": 1,
+    "id": "alchematurgy:wand"
+  }
+}

@@ -13,10 +13,13 @@ public class ModItems
      */
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Alchematurgy.MOD_ID);
 
-    public static final DeferredItem<Item> TEST_ITEM = ITEMS.register("test_item", () ->
+    public static final DeferredItem<Item> WAND = ITEMS.register("wand", () ->
+            new Item(new Item.Properties()));
+    public static final DeferredItem<Item> ASH = ITEMS.register("ash", () ->
             new Item(new Item.Properties()));
 
-    /** Register all the items in the deferred register.
+    /**
+     * Register all the items in the deferred register.
      * @param bus The Event Bus
      */
     public static void register(IEventBus bus)
