@@ -9,6 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
+import net.toblexson.alchematurgy.world.block.AlchemicalCrucibleBlock;
 
 import java.util.function.Supplier;
 
@@ -22,16 +23,17 @@ public class ModBlocks
      */
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Alchematurgy.MOD_ID);
 
-    public static final DeferredBlock<Block> ALCHEMICAL_CRUCIBLE = registerBlock("alchemical_crucible", () ->
-            new Block(BlockBehaviour.Properties.of()
-                              .strength(4f)
-                              .requiresCorrectToolForDrops()
-                              .sound(SoundType.METAL)));
-    public static final DeferredBlock<Block> ALCHEMICAL_DISTILLER = registerBlock("alchemical_distiller", () ->
-            new Block(BlockBehaviour.Properties.of()
-                              .strength(4f)
-                              .requiresCorrectToolForDrops()
-                              .sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> ALCHEMICAL_CRUCIBLE = registerBlock("alchemical_crucible",
+        () -> new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of()
+                                                  .strength(4f)
+                                                  .requiresCorrectToolForDrops()
+                                                  .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> ALCHEMICAL_DISTILLER = registerBlock("alchemical_distiller",
+        () -> new Block(BlockBehaviour.Properties.of()
+                                .strength(4f)
+                                .requiresCorrectToolForDrops()
+                                .sound(SoundType.METAL)));
 
     /**
      * Register a block with a block item.

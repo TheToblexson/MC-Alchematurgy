@@ -16,10 +16,19 @@ public class ModItems
      */
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Alchematurgy.MOD_ID);
 
-    public static final DeferredItem<Item> WAND = ITEMS.register("wand", () ->
-            new Item(new Item.Properties()));
-    public static final DeferredItem<Item> ASH = ITEMS.register("ash", () ->
-            new Item(new Item.Properties()));
+    public static final DeferredItem<Item> WAND = item("wand");
+
+    public static final DeferredItem<Item> ASH = item("ash");
+
+    public static final DeferredItem<Item> EARTH = item("element_earth");
+    public static final DeferredItem<Item> WATER = item("element_water");
+    public static final DeferredItem<Item> AIR = item("element_air");
+    public static final DeferredItem<Item> FIRE = item("element_fire");
+
+    private static DeferredItem<Item> item(String name)
+    {
+        return ITEMS.register(name, () -> new Item(new Item.Properties()));
+    }
 
     /**
      * Register all the items in the deferred register.

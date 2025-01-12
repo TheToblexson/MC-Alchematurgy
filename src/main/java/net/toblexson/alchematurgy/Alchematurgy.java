@@ -5,6 +5,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.registry.ModCreativeModeTabs;
 import net.toblexson.alchematurgy.registry.ModItems;
@@ -33,6 +34,7 @@ public class Alchematurgy
         ModCreativeModeTabs.register(bus);
         ModItems.register(bus);
         ModBlocks.register(bus);
+        ModBlockEntityTypes.register(bus);
 
         // Register ModConfigSpec so that FML can create and load the config file
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
