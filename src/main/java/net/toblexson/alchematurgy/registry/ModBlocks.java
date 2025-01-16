@@ -21,7 +21,7 @@ public class ModBlocks
     /**
      * The Deferred Register for all the mod blocks.
      */
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Alchematurgy.MOD_ID);
+    public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(Alchematurgy.MOD_ID);
 
     public static final DeferredBlock<Block> ALCHEMICAL_CRUCIBLE = registerBlock("alchemical_crucible",
         () -> new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of()
@@ -45,7 +45,7 @@ public class ModBlocks
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
 
-        DeferredBlock<T> deferredBlock = BLOCKS.register(name, block);
+        DeferredBlock<T> deferredBlock = REGISTER.register(name, block);
         registerBlockItem(name, deferredBlock);
         return deferredBlock;
     }
@@ -58,7 +58,7 @@ public class ModBlocks
      */
     private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block)
     {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        ModItems.REGISTER.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     /**
@@ -67,6 +67,6 @@ public class ModBlocks
      */
     public static void register(IEventBus bus)
     {
-        BLOCKS.register(bus);
+        REGISTER.register(bus);
     }
 }

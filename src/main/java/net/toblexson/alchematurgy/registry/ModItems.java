@@ -14,7 +14,7 @@ public class ModItems
     /**
      * The Deferred Register for all the mod items.
      */
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Alchematurgy.MOD_ID);
+    public static final DeferredRegister.Items REGISTER = DeferredRegister.createItems(Alchematurgy.MOD_ID);
 
     public static final DeferredItem<Item> WAND = item("wand");
 
@@ -27,7 +27,7 @@ public class ModItems
 
     private static DeferredItem<Item> item(String name)
     {
-        return ITEMS.register(name, () -> new Item(new Item.Properties()));
+        return REGISTER.register(name, () -> new Item(new Item.Properties()));
     }
 
     /**
@@ -36,6 +36,6 @@ public class ModItems
      */
     public static void register(IEventBus bus)
     {
-        ITEMS.register(bus);
+        REGISTER.register(bus);
     }
 }

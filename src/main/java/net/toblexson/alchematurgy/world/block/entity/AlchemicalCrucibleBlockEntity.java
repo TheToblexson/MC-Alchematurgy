@@ -8,6 +8,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.items.ItemStackHandler;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 
 /**
@@ -19,6 +20,7 @@ public class AlchemicalCrucibleBlockEntity extends BaseContainerBlockEntity
      * The item stack list.
      */
     private NonNullList<ItemStack> items = NonNullList.withSize(3, ItemStack.EMPTY);
+    private final ItemStackHandler stackHandler = new ItemStackHandler(items);
 
     /**
      * Create the block entity
