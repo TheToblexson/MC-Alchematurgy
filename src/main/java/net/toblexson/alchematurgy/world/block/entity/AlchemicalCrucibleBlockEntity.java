@@ -5,22 +5,28 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 
 /**
  * The block entity for the Alchemical Crucible
  */
 public class AlchemicalCrucibleBlockEntity extends BaseContainerBlockEntity
 {
+    public static final int INVENTORY_SIZE = 3;
+    public static final int INPUT_SLOT = 0;
+    public static final int FUEL_SLOT = 1;
+    public static final int OUTPUT_SLOT = 2;
+
     /**
      * The item stack list.
      */
-    private NonNullList<ItemStack> items = NonNullList.withSize(3, ItemStack.EMPTY);
-    private final ItemStackHandler stackHandler = new ItemStackHandler(items);
+    private NonNullList<ItemStack> items = NonNullList.withSize(INVENTORY_SIZE, ItemStack.EMPTY);
 
     /**
      * Create the block entity
@@ -39,7 +45,7 @@ public class AlchemicalCrucibleBlockEntity extends BaseContainerBlockEntity
     @Override
     public int getContainerSize()
     {
-        return items.size();
+        return INVENTORY_SIZE;
     }
 
     /**
@@ -72,9 +78,16 @@ public class AlchemicalCrucibleBlockEntity extends BaseContainerBlockEntity
         this.items = items;
     }
 
+    /**
+     * Create the associated menu.
+     * @param containerID The container ID.
+     * @param playerInventory The player inventory.
+     * @return The associated menu.
+     */
     @Override
-    protected AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory)
+    protected AbstractContainerMenu createMenu(int containerID, Inventory playerInventory)
     {
-        return null;
+        ContainerLevelAccess access = level == null ? ContainerLevelAccess.NULL : ContainerLevelAccess.create(level, worldPosition);
+        return new AlchemicalCrucibleMenu(containerID, playerInventory, access, new ItemStackHandler(items));
     }
 }
