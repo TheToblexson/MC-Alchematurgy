@@ -3,7 +3,9 @@ package net.toblexson.alchematurgy.world.block;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
@@ -17,6 +19,7 @@ import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 import org.jetbrains.annotations.Nullable;
@@ -33,6 +36,12 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     public AlchemicalCrucibleBlock(Properties properties)
     {
         super(properties);
+    }
+
+    @Override
+    protected void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom)
+    {
+        super.tick(pState, pLevel, pPos, pRandom);
     }
 
     /**
@@ -85,9 +94,9 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
 
     @Nullable
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType)
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> serverType)
     {
-        return super.getTicker(pLevel, pState, pBlockEntityType);
+        return level.isClientSide ? null : createTickerHelper(serverType, ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), AlchemicalCrucibleBlockEntity::serverTick);
     }
 
     /**

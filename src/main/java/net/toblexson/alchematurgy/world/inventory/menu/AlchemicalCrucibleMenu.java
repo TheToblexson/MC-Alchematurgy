@@ -6,13 +6,16 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.registry.ModMenuTypes;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
 
-import static net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity.*;
+import static net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity.INVENTORY_SIZE;
 
 /**
  * The menu for the alchemical crucible.
@@ -40,35 +43,41 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
     public AlchemicalCrucibleMenu(int containerID, Inventory playerInventory, ContainerLevelAccess access, IItemHandler dataInventory)
     {
         super(ModMenuTypes.ALCHEMICAL_CRUCIBLE_MENU.get(), containerID);
-        if (dataInventory.getSlots() == INVENTORY_SIZE)
-        {
-            addSlot(new SlotItemHandler(dataInventory, INPUT_SLOT, 56, 17));
-            addSlot(new SlotItemHandler(dataInventory,FUEL_SLOT,56,53));
-            addSlot(new SlotItemHandler(dataInventory,OUTPUT_SLOT,116,35));
-        }
+        this.access = access;
 
-        //player_inventory
-        int startX = 8;
-        int startY = 84;
-        int i = 9;
+        addCrucibleInventory(dataInventory);
+        addPlayerInventory(8, 84, playerInventory);
+        addPlayerHotbar(8, 142, playerInventory);
+    }
+
+    private void addCrucibleInventory(IItemHandler inventory)
+    {
+        if (inventory.getSlots() == INVENTORY_SIZE)
+        {
+            addSlot(new InputSlot(inventory));
+            addSlot(new FuelSlot(inventory));
+            addSlot(new BottleSlot(inventory));
+            addSlot(new OutputSlot(inventory));
+        }
+    }
+
+    private void addPlayerHotbar(int startX, int startY, Inventory inventory)
+    {
+        for (int x = 0; x < 9; x++)
+        {
+            addSlot(new Slot(inventory, x, startX + (18 * x), startY));
+        }
+    }
+
+    private void addPlayerInventory(int startX, int startY, Inventory inventory)
+    {
         for (int y = 0; y < 3; y++)
         {
             for (int x = 0; x < 9; x++)
             {
-                addSlot(new Slot(playerInventory, i, startX + (18 * x), startY + (18 * y)));
-                i++;
+                addSlot(new Slot(inventory, x + (y * 9) + 9, startX + (18 * x), startY + (18 * y)));
             }
         }
-
-        //hotbar
-        //startX = 8;
-        startY = 142;
-        for (int x = 0; x < 9; x++)
-        {
-            addSlot(new Slot(playerInventory, x, startX + (18 * x), startY));
-        }
-
-        this.access = access;
     }
 
     @Override
@@ -145,5 +154,62 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
     public boolean stillValid(Player player)
     {
         return AbstractContainerMenu.stillValid(access, player, ModBlocks.ALCHEMICAL_CRUCIBLE.get());
+    }
+
+    private static class InputSlot extends SlotItemHandler
+    {
+        public InputSlot(IItemHandler dataInventory)
+        {
+            super(dataInventory, AlchemicalCrucibleBlockEntity.INPUT_SLOT, 56, 17);
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack)
+        {
+            //check if recipe exists
+            return true;
+        }
+    }
+
+    private static class FuelSlot extends SlotItemHandler
+    {
+        public FuelSlot(IItemHandler dataInventory)
+        {
+            super(dataInventory, AlchemicalCrucibleBlockEntity.FUEL_SLOT, 56, 53);
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack)
+        {
+            return stack.getBurnTime(RecipeType.SMELTING) > 0;
+        }
+    }
+
+    private static class BottleSlot extends SlotItemHandler
+    {
+        public BottleSlot(IItemHandler dataInventory)
+        {
+            super(dataInventory, AlchemicalCrucibleBlockEntity.BOTTLE_SLOT, 84, 17);
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack)
+        {
+            return stack.is(Items.GLASS_BOTTLE);
+        }
+    }
+
+    private static class OutputSlot extends SlotItemHandler
+    {
+        public OutputSlot(IItemHandler dataInventory)
+        {
+            super(dataInventory, AlchemicalCrucibleBlockEntity.OUTPUT_SLOT, 116, 35);
+        }
+
+        @Override
+        public boolean mayPlace(ItemStack stack)
+        {
+            return false;
+        }
     }
 }

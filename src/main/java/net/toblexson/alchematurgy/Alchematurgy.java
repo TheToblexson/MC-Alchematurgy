@@ -1,5 +1,6 @@
 package net.toblexson.alchematurgy;
 
+import com.mojang.logging.LogUtils;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -9,6 +10,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalCrucibleScreen;
+import org.slf4j.Logger;
 
 /**
  * The main class for Alchematurgy
@@ -20,6 +22,8 @@ public class Alchematurgy
      * Alchematurgy's mod ID.
      */
     public static final String MOD_ID = "alchematurgy";
+
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     /** The main constructor for the mod
      * @param bus The Mod Event Bus
