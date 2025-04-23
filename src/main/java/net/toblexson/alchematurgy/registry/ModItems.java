@@ -20,10 +20,12 @@ public class ModItems
 
     public static final DeferredItem<Item> ASH = item("ash");
 
-    public static final DeferredItem<Item> EARTH = item("element_earth");
-    public static final DeferredItem<Item> WATER = item("element_water");
-    public static final DeferredItem<Item> AIR = item("element_air");
-    public static final DeferredItem<Item> FIRE = item("element_fire");
+    public static final DeferredItem<Item> ALCHEMICAL_ASH = item("alchemical_ash");
+
+    public static final DeferredItem<Item> ELEMENT_EARTH = item("element_earth");
+    public static final DeferredItem<Item> ELEMENT_WATER = item("element_water");
+    public static final DeferredItem<Item> ELEMENT_AIR = item("element_air");
+    public static final DeferredItem<Item> ELEMENT_FIRE = item("element_fire");
 
     private static DeferredItem<Item> item(String name)
     {

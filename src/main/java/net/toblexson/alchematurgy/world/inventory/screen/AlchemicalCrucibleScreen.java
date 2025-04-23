@@ -1,58 +1,47 @@
 package net.toblexson.alchematurgy.world.inventory.screen;
 
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 
-/**
- * The alchemical crucible screen.
- */
 public class AlchemicalCrucibleScreen extends AbstractContainerScreen<AlchemicalCrucibleMenu>
 {
-    /**
-     * The location of the background texture.
-      */
-    private static final ResourceLocation BACKGROUND_LOCATION = Alchematurgy.modLoc("textures/gui/container/alchemical_crucible_screen.png");
+    private static final ResourceLocation TEXTURE = Alchematurgy.modLoc("textures/gui/container/alchemical_crucible_screen.png");
 
     /**
-     * Create an alchemical crucible screen
-     * @param menu The menu.
-     * @param playerInventory The player inventory.
-     * @param title The title component.
+     * Create an instance of an alchemical crucible screen.
+     * @param menu The alchemical crucible menu instance.
+     * @param inventory The player's inventory.
+     * @param title The menu's title.
      */
-    public AlchemicalCrucibleScreen(AlchemicalCrucibleMenu menu, Inventory playerInventory, Component title)
+    public AlchemicalCrucibleScreen(AlchemicalCrucibleMenu menu, Inventory inventory, Component title)
     {
-        super(menu, playerInventory, title);
+        super(menu, inventory, title);
     }
 
     /**
-     * Render the screen.
-     * @param graphics      The GuiGraphics object used for rendering.
-     * @param mouseX        The x-coordinate of the mouse cursor.
-     * @param mouseY        The y-coordinate of the mouse cursor.
-     * @param partialTick   The partial tick time.
-     */
-    @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick)
-    {
-        renderBackground(graphics,mouseX,mouseY,partialTick);
-        super.render(graphics, mouseX, mouseY, partialTick);
-    }
-
-    /**
-     * Renders the background of the screen
-     * @param graphics      The GuiGraphics object used for rendering.
-     * @param partialTick   The partial tick time.
-     * @param mouseX        The x-coordinate of the mouse cursor.
-     * @param mouseY        The y-coordinate of the mouse cursor.
+     * Render the background of the screen.
+     * @param graphics The GUI graphics.
+     * @param partialTick The current partial tick.
+     * @param mouseX The mouse X position.
+     * @param mouseY The mouse Y position.
      */
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY)
     {
-        graphics.blit(BACKGROUND_LOCATION, leftPos, topPos, 0, 0, imageWidth, imageHeight);
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1f,1f,1f,1f);
+        RenderSystem.setShaderTexture(0, TEXTURE);
+
+        int x = (width - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
+
+        graphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
     }
 }

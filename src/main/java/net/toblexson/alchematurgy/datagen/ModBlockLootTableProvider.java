@@ -31,7 +31,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
     {
         dropSelf(ModBlocks.ALCHEMICAL_CRUCIBLE.get());
         dropSelf(ModBlocks.ALCHEMICAL_DISTILLER.get());
-
     }
 
     /**

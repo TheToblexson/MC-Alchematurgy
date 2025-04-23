@@ -29,5 +29,12 @@ public class ModItemModelProvider extends ItemModelProvider
     {
         basicItem(ModItems.WAND.get());
         basicItem(ModItems.ASH.get());
+
+        basicItem(ModItems.ALCHEMICAL_ASH.get());
+
+        basicItem(ModItems.ELEMENT_EARTH.get());
+        basicItem(ModItems.ELEMENT_WATER.get());
+        basicItem(ModItems.ELEMENT_AIR.get());
+        basicItem(ModItems.ELEMENT_FIRE.get());
     }
 }

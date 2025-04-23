@@ -2,126 +2,152 @@ package net.toblexson.alchematurgy.world.block.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.ContainerHelper;
+import net.minecraft.network.protocol.Packet;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.Containers;
+import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
-import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
+import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * The block entity for the Alchemical Crucible
  */
-public class AlchemicalCrucibleBlockEntity extends BaseContainerBlockEntity
+public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuProvider
 {
-    public static final int INVENTORY_SIZE = 4;
-    public static final int INPUT_SLOT = 0;
-    public static final int FUEL_SLOT = 1;
-    public static final int BOTTLE_SLOT = 2;
-    public static final int OUTPUT_SLOT = 3;
 
     /**
-     * The item stack list.
+     * The size of the inventory.
      */
-    private ItemStackHandler stackHandler = new ItemStackHandler(INVENTORY_SIZE);
+    public static final int INVENTORY_SIZE = 4;
 
     /**
-     * Create the block entity
-     * @param pos The block position.
-     * @param state The block state.
+     * The inventory as an ItemStackHandler.
+     */
+    public ItemStackHandler inventory = new ItemStackHandler(INVENTORY_SIZE)
+    {
+        /**
+         * Updates the server when the inventory is modified.
+         * @param slot The slot that has been modified.
+         */
+        @Override
+        protected void onContentsChanged(int slot)
+        {
+            setChanged();
+            assert level != null;
+            if(!level.isClientSide())
+                level.sendBlockUpdated(getBlockPos(),getBlockState(),getBlockState(),3);
+        }
+    };
+
+    /**
+     * Create an instance of an Alchemical Crucible block entity.
+     * @param pos The position of the block.
+     * @param state The block state that is hosting the block entity.
      */
     public AlchemicalCrucibleBlockEntity(BlockPos pos, BlockState state)
     {
         super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state);
     }
 
-    @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider provider)
+    /**
+     * Clear the inventory.
+     */
+    public void clearContents()
     {
-        super.saveAdditional(tag, provider);
-        ContainerHelper.saveAllItems(tag,getItems(),provider);
-    }
-
-    @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider provider)
-    {
-        super.loadAdditional(tag, provider);
-        NonNullList<ItemStack> items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-        ContainerHelper.loadAllItems(tag, items, provider);
-        setItems(items);
+        inventory = new ItemStackHandler(INVENTORY_SIZE);
     }
 
     /**
-     * The size of the container.
-     * @return The number of slots in the container.
+     * Drops the inventory using the Containers helper method.
      */
-    @Override
-    public int getContainerSize()
+    public void dropInventory()
     {
-        return INVENTORY_SIZE;
+        SimpleContainer container = new SimpleContainer(inventory.getSlots());
+        for(int i = 0; i < inventory.getSlots(); i++)
+            container.setItem(i, inventory.getStackInSlot(i));
+        assert this.level != null;
+        Containers.dropContents(this.level, this.worldPosition, container);
     }
 
     /**
-     * The menu's display name.
-     * @return The name component.
+     * Save additional data to the tag.
+     * @param tag The tag being written to.
+     * @param registries The registries.
      */
     @Override
-    protected Component getDefaultName()
+    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
-        return Component.translatable("block.alchematurgy.alchemical_crucible");
+        super.saveAdditional(tag, registries);
+        tag.put("inventory", inventory.serializeNBT(registries));
     }
 
     /**
-     * Get the item list.
-     * @return the item list.
+     * Read additional data from the tag.
+     * @param tag The tag being read from.
+     * @param registries The registries.
      */
     @Override
-    protected NonNullList<ItemStack> getItems()
+    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
-        NonNullList<ItemStack> list = NonNullList.create();
-        for (int i = 0; i < stackHandler.getSlots(); i++)
-        {
-            list.add(stackHandler.getStackInSlot(i));
-        }
-        return list;
+        super.loadAdditional(tag, registries);
+        inventory.deserializeNBT(registries, tag.getCompound("inventory"));
     }
 
     /**
-     * Set the item list.
-     * @param items the new item list.
+     * Get the inventory's display name.
+     * @return The display name.
      */
     @Override
-    protected void setItems(NonNullList<ItemStack> items)
+    public Component getDisplayName()
     {
-        this.stackHandler = new ItemStackHandler(items);
+        return ModBlocks.ALCHEMICAL_CRUCIBLE.get().getName();
     }
 
     /**
-     * Create the associated menu.
-     * @param containerID The container ID.
-     * @param playerInventory The player inventory.
-     * @return The associated menu.
+     * Create the menu.
+     * @param containerID The ID of the container.
+     * @param inventory The inventory of the player.
+     * @param player The player who has interacted with the block.
+     * @return The new menu instance.
      */
+    @Nullable
     @Override
-    protected AbstractContainerMenu createMenu(int containerID, Inventory playerInventory)
+    public AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player)
     {
-        ContainerLevelAccess access = level == null ? ContainerLevelAccess.NULL : ContainerLevelAccess.create(level, worldPosition);
-        return new AlchemicalCrucibleMenu(containerID, playerInventory, access, stackHandler);
+        return new AlchemicalCrucibleMenu(containerID, inventory, this);
     }
 
-    public static void serverTick(Level level, BlockPos pos, BlockState state, AlchemicalCrucibleBlockEntity blockEntity)
+    /**
+     * Create an update packet.
+     * @return The new client-bound block entity packet.
+     */
+    @Nullable
+    @Override
+    public Packet<ClientGamePacketListener> getUpdatePacket()
     {
-        //todo - not working? Why is it air??
-        ItemStack stack = blockEntity.getItem(INPUT_SLOT);
-        Alchematurgy.LOGGER.debug(stack.toString());
+        return ClientboundBlockEntityDataPacket.create(this);
+    }
+
+    /**
+     * Create an update tag.
+     * @param registries The registries.
+     * @return The new compound tag.
+     */
+    @Override
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries)
+    {
+        return saveWithoutMetadata(registries);
     }
 }

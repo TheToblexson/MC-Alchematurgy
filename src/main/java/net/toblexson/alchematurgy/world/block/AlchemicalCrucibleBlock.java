@@ -2,11 +2,9 @@ package net.toblexson.alchematurgy.world.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
@@ -15,20 +13,20 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityTicker;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Objects;
 
 /**
  * The Alchemical Crucible block class
  */
 public class AlchemicalCrucibleBlock extends BaseEntityBlock
 {
+    public static final MapCodec<AlchemicalCrucibleBlock> CODEC = simpleCodec(AlchemicalCrucibleBlock::new);
+
     /**
     * Create the Alchemical Crucible block.
     * @param properties The block properties.
@@ -55,7 +53,12 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     @Override
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston)
     {
-        Containers.dropContentsOnDestroy(state, newState, level, pos);
+        if (state.getBlock() != newState.getBlock())
+            if (level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
+            {
+                blockEntity.dropInventory();
+                level.updateNeighbourForOutputSignal(pos,this);
+            }
         super.onRemove(state,level,pos,newState,movedByPiston);
     }
 
@@ -72,7 +75,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult)
     {
         if (!level.isClientSide && player instanceof ServerPlayer serverPlayer)
-            serverPlayer.openMenu(state.getMenuProvider(level,pos));
+            serverPlayer.openMenu(Objects.requireNonNull(state.getMenuProvider(level, pos)), pos);
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
@@ -87,26 +90,15 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     @Override
     protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos)
     {
-        return new SimpleMenuProvider((containerId, playerInventory, player) ->
-                                              new AlchemicalCrucibleMenu(containerId, playerInventory),
-                                        Component.translatable("block.alchematurgy.alchemical_crucible"));
+        if (level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
+            return new SimpleMenuProvider(blockEntity, this.getName());
+        return null;
     }
 
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> serverType)
-    {
-        return level.isClientSide ? null : createTickerHelper(serverType, ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), AlchemicalCrucibleBlockEntity::serverTick);
-    }
-
-    /**
-     * I don't understand CODECs yet, so this is just simple and hopefully works.
-     * @return The block's CODEC.
-     */
     @Override
     public MapCodec<? extends BaseEntityBlock> codec()
     {
-        return simpleCodec(AlchemicalCrucibleBlock::new);
+        return CODEC;
     }
 
     /**
