@@ -2,9 +2,7 @@ package net.toblexson.alchematurgy.world.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
@@ -13,8 +11,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,12 +35,6 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     public AlchemicalCrucibleBlock(Properties properties)
     {
         super(properties);
-    }
-
-    @Override
-    protected void tick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom)
-    {
-        super.tick(pState, pLevel, pPos, pRandom);
     }
 
     /**
@@ -95,6 +90,28 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
         return null;
     }
 
+    /**
+     * Get the ticker from the block entity.
+     * @param level The level that the block exists in.
+     * @param state The block state of the block.
+     * @param blockEntityType The type of block entity associated with the block.
+     * @return The block entity ticker.
+     * @param <T> A block entity class.
+     */
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
+    {
+        if (!level.isClientSide())
+            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(),
+                                      (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
+        return null;
+    }
+
+    /**
+     * Returns the block's CODEC
+     * @return The CODEC
+     */
     @Override
     public MapCodec<? extends BaseEntityBlock> codec()
     {

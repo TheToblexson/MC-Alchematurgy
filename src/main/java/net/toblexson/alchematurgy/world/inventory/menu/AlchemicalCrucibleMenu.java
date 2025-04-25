@@ -3,9 +3,7 @@ package net.toblexson.alchematurgy.world.inventory.menu;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
@@ -29,24 +27,20 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
     private static final int INVENTORY_START = PLAYER_FULL_INVENTORY_START + PLAYER_FULL_INVENTORY_SIZE;
     private static final int INVENTORY_SIZE = 4;
 
-    /**
-     * The block entity this menu is attached to.
-     */
-    public final AlchemicalCrucibleBlockEntity blockEntity;
-    /**
-     * The level that the menu is open in.
-     */
+    private final AlchemicalCrucibleBlockEntity blockEntity;
     private final Level level;
+    private final ContainerData data;
 
     /**
      * Create the menu for the Alchemical Crucible
      * @param containerId The id of the container.
      * @param inventory The player's inventory.
-     * @param extra Extra data from a buffer.
+     * @param data Extra data from a buffer.
      */
-    public AlchemicalCrucibleMenu(int containerId, Inventory inventory, FriendlyByteBuf extra)
+    public AlchemicalCrucibleMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
     {
-        this(containerId, inventory, Objects.requireNonNull(inventory.player.level().getBlockEntity(extra.readBlockPos())));
+        this(containerId, inventory, Objects.requireNonNull(inventory.player.level().getBlockEntity(data.readBlockPos())),
+             new SimpleContainerData(AlchemicalCrucibleBlockEntity.DATA_COUNT));
     }
 
     /**
@@ -55,29 +49,20 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
      * @param inventory The player's inventory.
      * @param blockEntity The block entity that the menu is attached to.
      */
-    public AlchemicalCrucibleMenu(int containerId, Inventory inventory, BlockEntity blockEntity)
+    public AlchemicalCrucibleMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
     {
         super(ModMenuTypes.ALCHEMICAL_CRUCIBLE_MENU.get(), containerId);
         this.blockEntity = (AlchemicalCrucibleBlockEntity) blockEntity;
         this.level = inventory.player.level();
+        this.data = data;
 
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
 
-        //Need custom slots
-
         //input
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,0, 56, 17)
-        {
-            @Override
-            public boolean mayPlace(ItemStack stack)
-            {
-                //TODO Only allow insertion if a recipe exists.
-                return super.mayPlace(stack);
-            }
-        });
+        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.INPUT_SLOT, 56, 17));
         //fuel
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,1, 56, 53)
+        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.FUEL_SLOT, 56, 53)
         {
             @Override
             public boolean mayPlace(ItemStack stack)
@@ -86,7 +71,7 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
             }
         });
         //bottle
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,2, 84, 17)
+        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.BOTTLE_SLOT, 84, 17)
         {
             @Override
             public boolean mayPlace(ItemStack stack)
@@ -95,7 +80,7 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
             }
         });
         //output
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,3, 116, 35)
+        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.OUTPUT_SLOT, 116, 35)
         {
             @Override
             public boolean mayPlace(ItemStack stack)
@@ -103,11 +88,36 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
                 return false;
             }
         });
+
+        addDataSlots(data);
+    }
+
+    /**
+     * If the block entity is in the process of crafting.
+     * @return Whether the block entity is crafting.
+     */
+    public boolean isCrafting()
+    {
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_PROGRESS_SLOT) > 0;
+    }
+
+    /**
+     * Get the current progress of the progress arrow.
+     * @return The size of the progress arrow in pixels.
+     */
+    public int getCraftingArrowProgress()
+    {
+        int progress = data.get(AlchemicalCrucibleBlockEntity.DATA_PROGRESS_SLOT);
+        int maxProgress = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_PROGRESS_SLOT);
+        int arrowMaxSize = 28;
+        float factor = (float) arrowMaxSize / maxProgress;
+
+        return maxProgress != 0 && progress != 0 ? (int)(progress * factor) : 0;
     }
 
     /**
      * Move a stack from a shift click action.
-     * CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
+     * CREDIT GOES TO: diesieben07 | <a href="https://github.com/diesieben07/SevenCommons">...</a>
      * constants renamed for personal preference.
      * @param player The player interacting with the menu.
      * @param index The index of the slot clicked.

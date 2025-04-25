@@ -27,10 +27,10 @@ public class AlchemicalCrucibleScreen extends AbstractContainerScreen<Alchemical
 
     /**
      * Render the background of the screen.
-     * @param graphics The GUI graphics.
-     * @param partialTick The current partial tick.
-     * @param mouseX The mouse X position.
-     * @param mouseY The mouse Y position.
+     * @param graphics The GuiGraphics object used for rendering.
+     * @param partialTick The partial tick time.
+     * @param mouseX The x-coordinate of the mouse cursor.
+     * @param mouseY The y-coordinate of the mouse cursor.
      */
     @Override
     protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY)
@@ -43,5 +43,29 @@ public class AlchemicalCrucibleScreen extends AbstractContainerScreen<Alchemical
         int y = (height - imageHeight) / 2;
 
         graphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
+
+        renderProgressArrow(graphics, x, y);
+    }
+
+    private void renderProgressArrow(GuiGraphics graphics, int x, int y)
+    {
+        if (menu.isCrafting())
+        {
+            graphics.blit(TEXTURE, x + 78, y + 36, 178, 1, menu.getCraftingArrowProgress(), 11);
+        }
+    }
+
+    /**
+     * Renders the GUI (this calls all the sub-methods, most of which is handled by the super).
+     * @param graphics The GuiGraphics object used for rendering.
+     * @param mouseX The x-coordinate of the mouse cursor.
+     * @param mouseY The y-coordinate of the mouse cursor.
+     * @param partialTick The partial tick time.
+     */
+    @Override
+    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick)
+    {
+        super.render(graphics, mouseX, mouseY, partialTick);
+        this.renderTooltip(graphics, mouseX, mouseY);
     }
 }

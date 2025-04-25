@@ -13,11 +13,15 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.registry.ModBlocks;
+import net.toblexson.alchematurgy.registry.ModItems;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 import org.jetbrains.annotations.Nullable;
 
@@ -26,15 +30,16 @@ import org.jetbrains.annotations.Nullable;
  */
 public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuProvider
 {
+    private static final int INVENTORY_SIZE = 4;
+    public static final int INPUT_SLOT = 0;
+    public static final int FUEL_SLOT = 1;
+    public static final int BOTTLE_SLOT = 2;
+    public static final int OUTPUT_SLOT = 3;
 
-    /**
-     * The size of the inventory.
-     */
-    public static final int INVENTORY_SIZE = 4;
+    public static final int DATA_COUNT = 2;
+    public static final int DATA_PROGRESS_SLOT = 0;
+    public static final int DATA_MAX_PROGRESS_SLOT = 1;
 
-    /**
-     * The inventory as an ItemStackHandler.
-     */
     public ItemStackHandler inventory = new ItemStackHandler(INVENTORY_SIZE)
     {
         /**
@@ -51,6 +56,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
         }
     };
 
+    protected final ContainerData data;
+    private int progress = 0;
+    private int maxProgress = 200;
+
     /**
      * Create an instance of an Alchemical Crucible block entity.
      * @param pos The position of the block.
@@ -59,14 +68,90 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     public AlchemicalCrucibleBlockEntity(BlockPos pos, BlockState state)
     {
         super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state);
+        data = new ContainerData()
+        {
+            @Override
+            public int get(int index)
+            {
+                return switch (index)
+                {
+                    case DATA_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.progress;
+                    case DATA_MAX_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxProgress;
+                    default -> 0;
+                };
+            }
+
+            @Override
+            public void set(int index, int value)
+            {
+                switch (index)
+                {
+                    case DATA_PROGRESS_SLOT: AlchemicalCrucibleBlockEntity.this.progress = value;
+                    case DATA_MAX_PROGRESS_SLOT: AlchemicalCrucibleBlockEntity.this.maxProgress = value;
+                }
+            }
+
+            @Override
+            public int getCount()
+            {
+                return DATA_COUNT;
+            }
+        };
     }
 
     /**
-     * Clear the inventory.
+     * The ticking method for the block entity.
+     * @param level The current level.
+     * @param pos The block position.
+     * @param state The block state.
      */
-    public void clearContents()
+    public void tick(Level level, BlockPos pos, BlockState state)
     {
-        inventory = new ItemStackHandler(INVENTORY_SIZE);
+        //TODO implement recipes (canCraft needs to change so that it gets to max progress and then checks if it can output because there can be multiple output options.
+        if(canCraft())
+        {
+            progress++;
+            setChanged(level, pos, state);
+            if (progress >= maxProgress)
+            {
+                craftItem();
+                progress = 0;
+            }
+        }
+        else
+            progress = 0;
+    }
+
+    /**
+     * Complete the crafting operation. Removing from the input and adding to the output.
+     */
+    private void craftItem()
+    {
+        ItemStack result = new ItemStack(ModItems.ELEMENT_EARTH.get());
+        int newCount = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount();
+        inventory.extractItem(INPUT_SLOT, 1, false);
+        inventory.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(), newCount));
+    }
+
+    /**
+     * Check to see if there is a recipe and space to craft.
+     * @return Whether crafting is possible.
+     */
+    private boolean canCraft()
+    {
+        //TODO implement recipes
+        ItemStack output = new ItemStack(ModItems.ELEMENT_EARTH.get());
+        return !inventory.getStackInSlot(INPUT_SLOT).isEmpty() && canOutput(output);
+    }
+
+    private boolean canOutput(ItemStack output)
+    {
+        ItemStack stack = inventory.getStackInSlot(OUTPUT_SLOT);
+        if (stack.isEmpty())
+            return true;
+        int maxCount = stack.getMaxStackSize();
+        int outputCount = stack.getCount() + output.getCount();
+        return stack.getItem() == output.getItem() && outputCount <= maxCount;
     }
 
     /**
@@ -91,6 +176,8 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     {
         super.saveAdditional(tag, registries);
         tag.put("inventory", inventory.serializeNBT(registries));
+        tag.putInt("progress", progress);
+        tag.putInt("max_progress", maxProgress);
     }
 
     /**
@@ -103,6 +190,8 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     {
         super.loadAdditional(tag, registries);
         inventory.deserializeNBT(registries, tag.getCompound("inventory"));
+        progress = tag.getInt("progress");
+        maxProgress = tag.getInt("max_progress");
     }
 
     /**
@@ -126,7 +215,7 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     @Override
     public AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player)
     {
-        return new AlchemicalCrucibleMenu(containerID, inventory, this);
+        return new AlchemicalCrucibleMenu(containerID, inventory, this, data);
     }
 
     /**
