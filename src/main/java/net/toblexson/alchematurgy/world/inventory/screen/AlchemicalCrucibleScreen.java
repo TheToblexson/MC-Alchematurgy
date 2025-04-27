@@ -45,14 +45,34 @@ public class AlchemicalCrucibleScreen extends AbstractContainerScreen<Alchemical
         graphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(graphics, x, y);
+        renderWaterCover(graphics, x, y);
+        renderFlame(graphics, x, y);
+    }
+
+    private void renderFlame(GuiGraphics graphics, int x, int y)
+    {
+        if (menu.isBurning())
+        {
+            int height = menu.fireAmount();
+            int offset = 14 - height;
+            graphics.blit(TEXTURE, x + 56, y + 36 + offset, 176, 15 + offset, 14, height);
+        }
+    }
+
+    private void renderWaterCover(GuiGraphics graphics, int x, int y)
+    {
+        if (menu.hasWater())
+        {
+            int height = menu.waterAmount();
+            int offset = 4 - height;
+            graphics.blit(TEXTURE, x + 87, y + 54 + offset, 176, 11 + offset, 10, height);
+        }
     }
 
     private void renderProgressArrow(GuiGraphics graphics, int x, int y)
     {
         if (menu.isCrafting())
-        {
-            graphics.blit(TEXTURE, x + 78, y + 36, 178, 1, menu.getCraftingArrowProgress(), 11);
-        }
+            graphics.blit(TEXTURE, x + 78, y + 36, 176, 0, menu.getCraftingArrowProgress(), 11);
     }
 
     /**

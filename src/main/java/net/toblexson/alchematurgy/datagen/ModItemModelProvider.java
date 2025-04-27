@@ -32,9 +32,9 @@ public class ModItemModelProvider extends ItemModelProvider
 
         basicItem(ModItems.ALCHEMICAL_ASH.get());
 
-        basicItem(ModItems.ELEMENT_EARTH.get());
-        basicItem(ModItems.ELEMENT_WATER.get());
-        basicItem(ModItems.ELEMENT_AIR.get());
-        basicItem(ModItems.ELEMENT_FIRE.get());
+        basicItem(ModItems.BOTTLED_EARTH_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_WATER_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_AIR_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_FIRE_ESSENCE.get());
     }
 }

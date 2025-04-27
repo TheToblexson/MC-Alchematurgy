@@ -93,6 +93,47 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
     }
 
     /**
+     * If there is water in the block entity.
+     * @return True if the water level is above 0.
+     */
+    public boolean hasWater()
+    {
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_WATER_AMOUNT_SLOT) > 0;
+    }
+
+    /**
+     * Calculates the amount of the water cover texture to render.
+     * @return the height the water cover texture should be.
+     */
+    public int waterAmount()
+    {
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_WATER_AMOUNT_SLOT);
+    }
+
+    /**
+     * If the crucible should render the flames.
+     * @return If the heat value is above zero.
+     */
+    public boolean isBurning()
+    {
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_FUEL_LEVEL_SLOT) > 0;
+    }
+
+    /**
+     * Calculates how much of the flame should be rendered.
+     * @return The height of the flame in pixels.
+     */
+    public int fireAmount()
+    {
+        int fuelLevel = data.get(AlchemicalCrucibleBlockEntity.DATA_FUEL_LEVEL_SLOT);
+        int maxFuel = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_FUEL_SLOT);
+        int flameMaxSize = 14;
+        float factor = (float) flameMaxSize / maxFuel;
+
+        return (int)(fuelLevel * factor);
+    }
+
+    /**
      * If the block entity is in the process of crafting.
      * @return Whether the block entity is crafting.
      */
@@ -133,8 +174,8 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
 
         // Check if the slot clicked is one of the vanilla container slots
         if (index < PLAYER_FULL_INVENTORY_START + PLAYER_FULL_INVENTORY_SIZE) {
-            // This is a vanilla container slot so merge the stack into the tile inventory
-            if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_START + INVENTORY_SIZE, false)) {
+            // This is a vanilla container slot so merge the stack into the tile inventory (-1 to avoid the output slot)
+            if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_START + INVENTORY_SIZE - 1, false)) {
                 return ItemStack.EMPTY;  // EMPTY_ITEM
             }
         } else if (index < INVENTORY_START + INVENTORY_SIZE) {

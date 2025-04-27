@@ -15,10 +15,16 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.neoforge.fluids.IFluidTank;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.registry.ModItems;
@@ -30,15 +36,21 @@ import org.jetbrains.annotations.Nullable;
  */
 public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuProvider
 {
+    //TODO add fuel/heat requirement
+    
     private static final int INVENTORY_SIZE = 4;
     public static final int INPUT_SLOT = 0;
     public static final int FUEL_SLOT = 1;
     public static final int BOTTLE_SLOT = 2;
     public static final int OUTPUT_SLOT = 3;
 
-    public static final int DATA_COUNT = 2;
+    public static final int DATA_COUNT = 6;
     public static final int DATA_PROGRESS_SLOT = 0;
     public static final int DATA_MAX_PROGRESS_SLOT = 1;
+    public static final int DATA_WATER_AMOUNT_SLOT = 2;
+    public static final int DATA_MAX_WATER_SLOT = 3;
+    public static final int DATA_FUEL_LEVEL_SLOT = 4;
+    public static final int DATA_MAX_FUEL_SLOT = 5;
 
     public ItemStackHandler inventory = new ItemStackHandler(INVENTORY_SIZE)
     {
@@ -58,7 +70,11 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 200;
+    private int maxProgress = 50; //200
+    private int waterAmount = 0;
+    private int maxWater = 4;
+    private int fuelLevel = 0;
+    private int maxFuel = 0;
 
     /**
      * Create an instance of an Alchemical Crucible block entity.
@@ -77,6 +93,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
                 {
                     case DATA_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.progress;
                     case DATA_MAX_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxProgress;
+                    case DATA_WATER_AMOUNT_SLOT -> AlchemicalCrucibleBlockEntity.this.waterAmount;
+                    case DATA_MAX_WATER_SLOT -> AlchemicalCrucibleBlockEntity.this.maxWater;
+                    case DATA_FUEL_LEVEL_SLOT -> AlchemicalCrucibleBlockEntity.this.fuelLevel;
+                    case DATA_MAX_FUEL_SLOT -> AlchemicalCrucibleBlockEntity.this.maxFuel;
                     default -> 0;
                 };
             }
@@ -88,6 +108,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
                 {
                     case DATA_PROGRESS_SLOT: AlchemicalCrucibleBlockEntity.this.progress = value;
                     case DATA_MAX_PROGRESS_SLOT: AlchemicalCrucibleBlockEntity.this.maxProgress = value;
+                    case DATA_WATER_AMOUNT_SLOT: AlchemicalCrucibleBlockEntity.this.waterAmount = value;
+                    case DATA_MAX_WATER_SLOT: AlchemicalCrucibleBlockEntity.this.maxWater = value;
+                    case DATA_FUEL_LEVEL_SLOT: AlchemicalCrucibleBlockEntity.this.fuelLevel = value;
+                    case DATA_MAX_FUEL_SLOT: AlchemicalCrucibleBlockEntity.this.maxFuel = value;
                 }
             }
 
@@ -99,6 +123,14 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
         };
     }
 
+    public boolean tryAddWater()
+    {
+        if (waterAmount >= maxWater)
+            return false;
+        waterAmount = maxWater;
+        return true;
+    }
+
     /**
      * The ticking method for the block entity.
      * @param level The current level.
@@ -108,18 +140,72 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     public void tick(Level level, BlockPos pos, BlockState state)
     {
         //TODO implement recipes (canCraft needs to change so that it gets to max progress and then checks if it can output because there can be multiple output options.
-        if(canCraft())
+        boolean updateLitStatus = false;
+        boolean hasChanged = false;
+        if (canCraft())
         {
-            progress++;
-            setChanged(level, pos, state);
-            if (progress >= maxProgress)
+            //if there is no fuel, burn fuel
+            if (fuelLevel <= 0)
             {
-                craftItem();
-                progress = 0;
+                maxFuel = 0;
+                burnFuel();
+                updateLitStatus = true;
+            }
+            //if there is fuel, craft
+            if (fuelLevel > 0)
+            {
+                progress++;
+                //if progress has reached the required amount, craft
+                if (progress >= maxProgress)
+                {
+                    craftItem();
+                    progress = 0;
+                    hasChanged = true;
+                }
             }
         }
+        //else reset progress
         else
             progress = 0;
+        //if lit, decrease fuel
+        if (fuelLevel > 1)
+            fuelLevel--;
+        else
+        {
+            fuelLevel = 0;
+            updateLitStatus = true;
+        }
+        //if fuel has changed, change state and update
+        if (updateLitStatus)
+        {
+            if (fuelLevel > 0 && !state.getValue(BlockStateProperties.LIT))
+            {
+                Alchematurgy.LOGGER.debug("Setting Block State to LIT");
+                state = state.setValue(BlockStateProperties.LIT, true);
+                Alchematurgy.LOGGER.debug("State: {}", state);
+                level.setBlock(pos, state, 3);
+                hasChanged = true;
+            }
+            else if (fuelLevel <= 0 && state.getValue(BlockStateProperties.LIT))
+            {
+                Alchematurgy.LOGGER.debug("Setting Block State to UNLIT");
+                state = state.setValue(BlockStateProperties.LIT, false);
+                level.setBlock(pos, state, 3);
+                hasChanged = true;
+            }
+        }
+        if (hasChanged)
+            setChanged(level, pos, state);
+    }
+
+    private void burnFuel()
+    {
+        if (inventory.getStackInSlot(FUEL_SLOT).getBurnTime(null) > 0)
+        {
+            maxFuel = inventory.getStackInSlot(FUEL_SLOT).getBurnTime(null);
+            fuelLevel = maxFuel;
+            inventory.extractItem(FUEL_SLOT, 1, false);
+        }
     }
 
     /**
@@ -127,8 +213,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
      */
     private void craftItem()
     {
-        ItemStack result = new ItemStack(ModItems.ELEMENT_EARTH.get());
+        ItemStack result = new ItemStack(ModItems.BOTTLED_EARTH_ESSENCE.get());
         int newCount = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount();
+        waterAmount--;
+        inventory.extractItem(BOTTLE_SLOT, 1, false);
         inventory.extractItem(INPUT_SLOT, 1, false);
         inventory.setStackInSlot(OUTPUT_SLOT, new ItemStack(result.getItem(), newCount));
     }
@@ -140,8 +228,13 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     private boolean canCraft()
     {
         //TODO implement recipes
-        ItemStack output = new ItemStack(ModItems.ELEMENT_EARTH.get());
-        return !inventory.getStackInSlot(INPUT_SLOT).isEmpty() && canOutput(output);
+        ItemStack output = new ItemStack(ModItems.BOTTLED_EARTH_ESSENCE.get());
+        return waterAmount > 0 && hasBottle() && !inventory.getStackInSlot(INPUT_SLOT).isEmpty() && canOutput(output);
+    }
+
+    private boolean hasBottle()
+    {
+        return inventory.getStackInSlot(BOTTLE_SLOT).is(Items.GLASS_BOTTLE);
     }
 
     private boolean canOutput(ItemStack output)
@@ -178,6 +271,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
         tag.put("inventory", inventory.serializeNBT(registries));
         tag.putInt("progress", progress);
         tag.putInt("max_progress", maxProgress);
+        tag.putInt("water_amount", waterAmount);
+        tag.putInt("max_water", maxWater);
+        tag.putInt("fuel_level", fuelLevel);
+        tag.putInt("max_fuel", maxFuel);
     }
 
     /**
@@ -192,6 +289,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
         inventory.deserializeNBT(registries, tag.getCompound("inventory"));
         progress = tag.getInt("progress");
         maxProgress = tag.getInt("max_progress");
+        waterAmount = tag.getInt("water_amount");
+        maxWater = tag.getInt("max_water");
+        fuelLevel = tag.getInt("fuel_level");
+        maxFuel = tag.getInt("max_fuel");
     }
 
     /**

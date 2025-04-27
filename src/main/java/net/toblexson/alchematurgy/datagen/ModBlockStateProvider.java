@@ -2,6 +2,8 @@ package net.toblexson.alchematurgy.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -29,11 +31,27 @@ public class ModBlockStateProvider extends BlockStateProvider
     @Override
     protected void registerStatesAndModels()
     {
-        simpleBlockWithItem(ModBlocks.ALCHEMICAL_CRUCIBLE.get(),
-            models().cubeBottomTop("alchemical_crucible", modBlockLocation("alchemical_crucible_side"),
-                                   modBlockLocation("alchemical_crucible_bottom"), modBlockLocation("alchemical_crucible_top")));
+        AlchemicalCrucible();
+
+        //simpleBlockWithItem(ModBlocks.ALCHEMICAL_CRUCIBLE.get(),
+        //    models().cubeBottomTop("alchemical_crucible", modBlockLocation("alchemical_crucible_side"),
+        //                           modBlockLocation("alchemical_crucible_bottom"), modBlockLocation("alchemical_crucible_top")));
 
         block(ModBlocks.ALCHEMICAL_DISTILLER);
+    }
+
+    private void AlchemicalCrucible()
+    {
+        BlockModelBuilder litModel = models().cubeBottomTop("alchemical_crucible_lit", modBlockLocation("alchemical_crucible_side_lit"),
+                                                         modBlockLocation("alchemical_crucible_bottom"), modBlockLocation("alchemical_crucible_top"));
+        BlockModelBuilder unlitModel = models().cubeBottomTop("alchemical_crucible", modBlockLocation("alchemical_crucible_side"),
+                                                            modBlockLocation("alchemical_crucible_bottom"), modBlockLocation("alchemical_crucible_top"));
+        getVariantBuilder(ModBlocks.ALCHEMICAL_CRUCIBLE.get())
+                .partialState().with(BlockStateProperties.LIT, true)
+                .modelForState().modelFile(litModel).addModel()
+                .partialState().with(BlockStateProperties.LIT, false)
+                .modelForState().modelFile(unlitModel).addModel();
+        simpleBlockItem(ModBlocks.ALCHEMICAL_CRUCIBLE.get(), unlitModel);
     }
 
     /**
