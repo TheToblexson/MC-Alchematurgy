@@ -33,8 +33,6 @@ import org.jetbrains.annotations.Nullable;
  */
 public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuProvider
 {
-    //TODO add fuel/heat requirement
-    
     private static final int INVENTORY_SIZE = 4;
     public static final int INPUT_SLOT = 0;
     public static final int FUEL_SLOT = 1;
