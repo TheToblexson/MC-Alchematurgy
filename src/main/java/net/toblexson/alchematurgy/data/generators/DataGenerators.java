@@ -1,4 +1,4 @@
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.data.generators;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;

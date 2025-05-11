@@ -1,0 +1,9156 @@
+{
+  "values": {
+    "minecraft:acacia_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:acacia_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_hanging_sign": {
+      "air": 0.0,
+      "earth": 7.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:acacia_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:acacia_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:activator_rail": {
+      "air": 0.0,
+      "earth": 17.0,
+      "fire": 1.3300,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 1.3300
+    },
+    "minecraft:allium": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:amethyst_block": {
+      "air": 16.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:amethyst_cluster": {
+      "air": 4.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 4.0
+    },
+    "minecraft:amethyst_shard": {
+      "air": 4.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 4.0
+    },
+    "minecraft:ancient_debris": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 64.0,
+      "water": 0.0,
+      "life": 64.0,
+      "magic": 0.0
+    },
+    "minecraft:andesite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:andesite_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:andesite_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:andesite_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:anvil": {
+      "air": 0.0,
+      "earth": 496.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:apple": {
+      "air": 1.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:armor_stand": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:arrow": {
+      "air": 4.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:azalea": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:azalea_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:azure_bluet": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:baked_potato": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.7800,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_block": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_chest_raft": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_hanging_sign": {
+      "air": 0.0,
+      "earth": 7.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_mosaic": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_mosaic_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_raft": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:bamboo_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:barrel": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 28.0,
+      "magic": 0.0
+    },
+    "minecraft:basalt": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:beacon": {
+      "air": 64.0,
+      "earth": 122.0,
+      "fire": 112.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 176.0
+    },
+    "minecraft:bee_nest": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:beehive": {
+      "air": 12.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 12.0,
+      "life": 30.0,
+      "magic": 0.0
+    },
+    "minecraft:beetroot_seeds": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:beetroot": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:beetroot_soup": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 18.0,
+      "magic": 0.0
+    },
+    "minecraft:bell": {
+      "air": 0.0,
+      "earth": 68.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:big_dripleaf": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:birch_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_hanging_sign": {
+      "air": 0.0,
+      "earth": 7.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:birch_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:birch_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:black_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:black_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:black_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:black_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:black_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:black_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:black_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:blackstone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blackstone_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blackstone_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blackstone_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blast_furnace": {
+      "air": 0.0,
+      "earth": 98.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blaze_powder": {
+      "air": 2.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:blaze_rod": {
+      "air": 4.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:blue_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:blue_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_ice": {
+      "air": 162.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 162.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_orchid": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:blue_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:blue_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:bone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:bone_block": {
+      "air": 0.0,
+      "earth": 9.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 9.0,
+      "magic": 0.0
+    },
+    "minecraft:bone_meal": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:book": {
+      "air": 0.0,
+      "earth": 10.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bookshelf": {
+      "air": 0.0,
+      "earth": 30.0,
+      "fire": 0.0,
+      "water": 18.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:bordure_indented_banner_pattern": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 3.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bow": {
+      "air": 6.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:bowl": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:brain_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:brain_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:brain_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bread": {
+      "air": 12.0,
+      "earth": 12.0,
+      "fire": 0.0,
+      "water": 12.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:brewing_stand": {
+      "air": 4.0,
+      "earth": 14.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:brick": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 2.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brick_slab": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 4.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brick_stairs": {
+      "air": 0.0,
+      "earth": 24.0,
+      "fire": 12.0,
+      "water": 12.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brick_wall": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 8.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:bricks": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 8.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:brown_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_mushroom": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_mushroom_block": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 18.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:brown_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:brown_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:brush": {
+      "air": 4.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bubble_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bubble_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:bubble_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:bucket": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:bundle": {
+      "air": 2.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:bush": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cactus": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cactus_flower": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cake": {
+      "air": 13.0,
+      "earth": 156.0,
+      "fire": 0.0,
+      "water": 33.0,
+      "life": 34.0,
+      "magic": 0.0
+    },
+    "minecraft:calcite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:calibrated_sculk_sensor": {
+      "air": 12.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 76.0
+    },
+    "minecraft:campfire": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 54.0,
+      "magic": 0.0
+    },
+    "minecraft:candle": {
+      "air": 6.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:carrot": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:carrot_on_a_stick": {
+      "air": 4.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 5.0,
+      "life": 11.0,
+      "magic": 0.0
+    },
+    "minecraft:cartography_table": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:carved_pumpkin": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:cauldron": {
+      "air": 0.0,
+      "earth": 112.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cave_vines": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:chain": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chainmail_boots": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chainmail_chestplate": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chainmail_helmet": {
+      "air": 0.0,
+      "earth": 24.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chainmail_leggings": {
+      "air": 0.0,
+      "earth": 28.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:charcoal": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:cherry_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_hanging_sign": {
+      "air": 0.0,
+      "earth": 6.5200,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:cherry_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:cherry_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:chest": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 0.0
+    },
+    "minecraft:chest_minecart": {
+      "air": 0.0,
+      "earth": 80.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 0.0
+    },
+    "minecraft:chipped_anvil": {
+      "air": 0.0,
+      "earth": 496.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_bookshelf": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 30.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_deepslate": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_nether_bricks": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_polished_blackstone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_quartz_block": {
+      "air": 16.0,
+      "earth": 32.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_red_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_stone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_tuff": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chiseled_tuff_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:chorus_flower": {
+      "air": 8.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 8.0,
+      "magic": 16.0
+    },
+    "minecraft:chorus_fruit": {
+      "air": 8.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:clay": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:clay_ball": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:clock": {
+      "air": 0.0,
+      "earth": 136.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:coal": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:coal_block": {
+      "air": 0.0,
+      "earth": 36.0,
+      "fire": 36.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:coal_ore": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:coarse_dirt": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:cobbled_deepslate": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobbled_deepslate_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobbled_deepslate_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobbled_deepslate_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobblestone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobblestone_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobblestone_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobblestone_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cobweb": {
+      "air": 2.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cocoa_beans": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:compass": {
+      "air": 0.0,
+      "earth": 72.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:composter": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 14.0,
+      "magic": 0.0
+    },
+    "minecraft:conduit": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 192.0,
+      "life": 0.0,
+      "magic": 64.0
+    },
+    "minecraft:cooked_chicken": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cooked_cod": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cooked_mutton": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cooked_porkchop": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cooked_rabbit": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cooked_salmon": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:cookie": {
+      "air": 1.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:copper_block": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:copper_bulb": {
+      "air": 4.0,
+      "earth": 448.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 12.0
+    },
+    "minecraft:copper_door": {
+      "air": 0.0,
+      "earth": 288.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:copper_grate": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:copper_ingot": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:copper_ore": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:copper_trapdoor": {
+      "air": 0.0,
+      "earth": 432.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cornflower": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:cracked_deepslate_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cracked_deepslate_tiles": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cracked_nether_bricks": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cracked_polished_blackstone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cracked_stone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:crafting_table": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:creeper_charge_banner_pattern": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:creeper_head": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:crimson_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:crimson_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_fungus": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_hanging_sign": {
+      "air": 0.0,
+      "earth": 6.5200,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_hyphae": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_nylium": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 3.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_roots": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:crimson_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_stem": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:crimson_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:crossbow": {
+      "air": 4.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:crying_obsidian": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:cut_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cut_copper_slab": {
+      "air": 0.0,
+      "earth": 72.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cut_copper_stairs": {
+      "air": 0.0,
+      "earth": 216.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cut_red_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cut_red_sandstone_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cut_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cut_sandstone_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:cyan_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:cyan_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:cyan_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:damaged_anvil": {
+      "air": 0.0,
+      "earth": 496.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dandelion": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_hanging_sign": {
+      "air": 0.0,
+      "earth": 6.5200,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_oak_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:dark_prismarine": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 68.0,
+      "life": 32.0,
+      "magic": 32.0
+    },
+    "minecraft:dark_prismarine_slab": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 34.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:dark_prismarine_stairs": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 102.0,
+      "life": 48.0,
+      "magic": 48.0
+    },
+    "minecraft:daylight_detector": {
+      "air": 12.0,
+      "earth": 30.0,
+      "fire": 24.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_brain_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_brain_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_brain_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_bubble_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_bubble_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_bubble_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_bush": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_fire_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_fire_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_fire_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_horn_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_horn_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_horn_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_tube_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_tube_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dead_tube_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_brick_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_brick_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_brick_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_coal_ore": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_copper_ore": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_diamond_ore": {
+      "air": 16.0,
+      "earth": 66.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_emerald_ore": {
+      "air": 16.0,
+      "earth": 66.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:deepslate_gold_ore": {
+      "air": 0.0,
+      "earth": 34.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_iron_ore": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_lapis_lazuli_ore": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:deepslate_redstone_ore": {
+      "air": 0.0,
+      "earth": 10.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:deepslate_tile_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_tile_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_tile_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:deepslate_tiles": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:detector_rail": {
+      "air": 0.0,
+      "earth": 108.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:diamond": {
+      "air": 16.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_axe": {
+      "air": 48.0,
+      "earth": 192.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_block": {
+      "air": 144.0,
+      "earth": 576.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_boots": {
+      "air": 64.0,
+      "earth": 256.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_chestplate": {
+      "air": 128.0,
+      "earth": 512.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_helmet": {
+      "air": 80.0,
+      "earth": 320.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_hoe": {
+      "air": 32.0,
+      "earth": 128.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_horse_armor": {
+      "air": 160.0,
+      "earth": 640.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_leggings": {
+      "air": 112.0,
+      "earth": 448.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_ore": {
+      "air": 16.0,
+      "earth": 66.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_pickaxe": {
+      "air": 48.0,
+      "earth": 192.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_shovel": {
+      "air": 16.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:diamond_sword": {
+      "air": 32.0,
+      "earth": 128.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:diorite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diorite_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diorite_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:diorite_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dirt": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:dirt_path": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:dispenser": {
+      "air": 6.0,
+      "earth": 22.0,
+      "fire": 8.0,
+      "water": 6.0,
+      "life": 12.0,
+      "magic": 8.0
+    },
+    "minecraft:dragon_breath": {
+      "air": 16.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 64.0
+    },
+    "minecraft:dragon_egg": {
+      "air": 128.0,
+      "earth": 0.0,
+      "fire": 128.0,
+      "water": 0.0,
+      "life": 128.0,
+      "magic": 128.0
+    },
+    "minecraft:dragon_head": {
+      "air": 128.0,
+      "earth": 0.0,
+      "fire": 128.0,
+      "water": 0.0,
+      "life": 128.0,
+      "magic": 128.0
+    },
+    "minecraft:dried_kelp": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 1.0,
+      "water": 2.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:dried_kelp_block": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 16.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:dripstone_block": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:dropper": {
+      "air": 0.0,
+      "earth": 22.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:echo_shard": {
+      "air": 16.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:egg": {
+      "air": 1.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:elytra": {
+      "air": 640.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 64.0
+    },
+    "minecraft:emerald": {
+      "air": 16.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:emerald_block": {
+      "air": 144.0,
+      "earth": 576.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 144.0,
+      "magic": 144.0
+    },
+    "minecraft:emerald_ore": {
+      "air": 16.0,
+      "earth": 66.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:enchanted_golden_apple": {
+      "air": 2.0,
+      "earth": 260.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 32.0
+    },
+    "minecraft:enchanting_table": {
+      "air": 32.0,
+      "earth": 202.0,
+      "fire": 64.0,
+      "water": 6.0,
+      "life": 4.0,
+      "magic": 64.0
+    },
+    "minecraft:end_crystal": {
+      "air": 26.0,
+      "earth": 18.0,
+      "fire": 12.0,
+      "water": 0.0,
+      "life": 10.0,
+      "magic": 26.0
+    },
+    "minecraft:end_rod": {
+      "air": 8.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 4.0,
+      "life": 8.0,
+      "magic": 20.0
+    },
+    "minecraft:end_stone": {
+      "air": 4.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 2.0
+    },
+    "minecraft:end_stone_brick_slab": {
+      "air": 2.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 1.0
+    },
+    "minecraft:end_stone_brick_stairs": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 3.0
+    },
+    "minecraft:end_stone_brick_wall": {
+      "air": 4.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 2.0
+    },
+    "minecraft:end_stone_bricks": {
+      "air": 4.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 2.0
+    },
+    "minecraft:ender_chest": {
+      "air": 10.0,
+      "earth": 132.0,
+      "fire": 132.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 146.0
+    },
+    "minecraft:ender_eye": {
+      "air": 10.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 18.0
+    },
+    "minecraft:ender_pearl": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:experience_bottle": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 8.0
+    },
+    "minecraft:exposed_chiseled_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_copper_bulb": {
+      "air": 4.0,
+      "earth": 448.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 12.0
+    },
+    "minecraft:exposed_copper_door": {
+      "air": 0.0,
+      "earth": 288.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_copper_grate": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_copper_trapdoor": {
+      "air": 0.0,
+      "earth": 432.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_cut_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_cut_copper_slab": {
+      "air": 0.0,
+      "earth": 72.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:exposed_cut_copper_stairs": {
+      "air": 0.0,
+      "earth": 216.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:feather": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:fermented_spider_eye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 10.0,
+      "magic": 2.0
+    },
+    "minecraft:fern": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:field_masoned_banner_pattern": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 8.0,
+      "water": 10.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:fire_charge": {
+      "air": 6.0,
+      "earth": 16.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:fire_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:fire_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:fire_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:fishing_rod": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 10.0,
+      "magic": 0.0
+    },
+    "minecraft:fletching_table": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:flint": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:flint_and_steel": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:flower_pot": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 6.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:flowering_azalea": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:flowering_azalea_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:furnace": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:furnace_minecart": {
+      "air": 0.0,
+      "earth": 96.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:ghast_tear": {
+      "air": 16.0,
+      "earth": 0.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 8.0
+    },
+    "minecraft:gilded_blackstone": {
+      "air": 0.0,
+      "earth": 19.7800,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:glass_bottle": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:glistening_melon_slice": {
+      "air": 0.0,
+      "earth": 32.4400,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:glow_berries": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 1.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 2.0
+    },
+    "minecraft:glow_ink_sac": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:glow_item_frame": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 4.0,
+      "water": 4.0,
+      "life": 22.0,
+      "magic": 2.0
+    },
+    "minecraft:glow_lichen": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 1.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:glowstone": {
+      "air": 32.0,
+      "earth": 32.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 32.0
+    },
+    "minecraft:glowstone_dust": {
+      "air": 8.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:goat_horn": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:gold_block": {
+      "air": 0.0,
+      "earth": 288.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gold_ingot": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gold_nugget": {
+      "air": 0.0,
+      "earth": 3.5560,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gold_ore": {
+      "air": 0.0,
+      "earth": 34.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_apple": {
+      "air": 1.0,
+      "earth": 257.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_axe": {
+      "air": 0.0,
+      "earth": 96.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_boots": {
+      "air": 0.0,
+      "earth": 128.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_carrot": {
+      "air": 0.0,
+      "earth": 29.4400,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_chestplate": {
+      "air": 0.0,
+      "earth": 256.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_helmet": {
+      "air": 0.0,
+      "earth": 160.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_hoe": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_horse_armor": {
+      "air": 0.0,
+      "earth": 320.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_leggings": {
+      "air": 0.0,
+      "earth": 224.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_pickaxe": {
+      "air": 0.0,
+      "earth": 96.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_shovel": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:golden_sword": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:granite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:granite_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:granite_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:granite_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:grass_block": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:gravel": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:gray_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:gray_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_terracotta": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:gray_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:green_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:green_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:green_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:green_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:green_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:green_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:green_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:grindstone": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:gunpowder": {
+      "air": 4.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:hanging_roots": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:hay_bale": {
+      "air": 36.0,
+      "earth": 36.0,
+      "fire": 0.0,
+      "water": 36.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:heart_of_the_sea": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 128.0,
+      "life": 0.0,
+      "magic": 64.0
+    },
+    "minecraft:heavy_weighted_pressure_plate": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:honey_block": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:honey_bottle": {
+      "air": 6.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:honeycomb": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:honeycomb_block": {
+      "air": 16.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:hopper": {
+      "air": 0.0,
+      "earth": 80.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 0.0
+    },
+    "minecraft:hopper_minecart": {
+      "air": 0.0,
+      "earth": 160.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 0.0
+    },
+    "minecraft:horn_coral": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:horn_coral_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:horn_coral_fan": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:ice": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_chiseled_stone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_cobblestone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_cracked_stone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_deepslate": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_mossy_stone_bricks": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_stone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:infested_stone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:ink_sac": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_axe": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_bars": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_block": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_boots": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_chestplate": {
+      "air": 0.0,
+      "earth": 128.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_door": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_helmet": {
+      "air": 0.0,
+      "earth": 80.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_hoe": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_horse_armor": {
+      "air": 0.0,
+      "earth": 160.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_ingot": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_leggings": {
+      "air": 0.0,
+      "earth": 112.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_nugget": {
+      "air": 0.0,
+      "earth": 1.7800,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_ore": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_pickaxe": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_shovel": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_sword": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:iron_trapdoor": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:item_frame": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:jack_o_lantern": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 4.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:jukebox": {
+      "air": 16.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:jungle_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_hanging_sign": {
+      "air": 0.0,
+      "earth": 6.5200,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:jungle_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:jungle_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:kelp": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:ladder": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 14.0,
+      "magic": 0.0
+    },
+    "minecraft:lantern": {
+      "air": 0.0,
+      "earth": 18.2200,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:lapis_lazuli": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:lapis_lazuli_block": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 72.0,
+      "life": 0.0,
+      "magic": 72.0
+    },
+    "minecraft:lapis_lazuli_ore": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:large_fern": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:lava_bucket": {
+      "air": 0.0,
+      "earth": 56.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lead": {
+      "air": 12.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 12.0,
+      "life": 8.0,
+      "magic": 4.0
+    },
+    "minecraft:leaf_litter": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:leather": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:leather_boots": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:leather_cap": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:leather_horse_armor": {
+      "air": 0.0,
+      "earth": 40.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 0.0
+    },
+    "minecraft:leather_pants": {
+      "air": 0.0,
+      "earth": 28.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 28.0,
+      "magic": 0.0
+    },
+    "minecraft:leather_tunic": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 0.0
+    },
+    "minecraft:lectern": {
+      "air": 0.0,
+      "earth": 30.0,
+      "fire": 0.0,
+      "water": 18.0,
+      "life": 44.0,
+      "magic": 0.0
+    },
+    "minecraft:lever": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:light_blue_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_blue_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:light_gray_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:light_gray_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:light_weighted_pressure_plate": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lightning_rod": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lilac": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:lily_of_the_valley": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:lily_pad": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:lime_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:lime_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:lime_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:lodestone": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:loom": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:magenta_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_glazed_terrracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:magenta_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:magenta_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:magma_block": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:magma_cream": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:mangeta_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_hanging_sign": {
+      "air": 0.0,
+      "earth": 6.5200,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_propagule": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_roots": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:mangrove_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:map": {
+      "air": 0.0,
+      "earth": 88.0,
+      "fire": 8.0,
+      "water": 16.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:melon": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:melon_seeds": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:melon_slice": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:melon_stem": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:milk_bucket": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:minecart": {
+      "air": 0.0,
+      "earth": 80.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:moss_block": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:moss_carpet": {
+      "air": 2.6700,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.3300,
+      "life": 2.6700,
+      "magic": 0.0
+    },
+    "minecraft:mossy_cobblestone": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_cobblestone_slab": {
+      "air": 2.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_cobblestone_stairs": {
+      "air": 6.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 3.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_cobblestone_wall": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_stone_bricks": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_stone_bricks_slab": {
+      "air": 2.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_stone_bricks_stairs": {
+      "air": 6.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 3.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:mossy_stone_bricks_wall": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:mud": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:mud_brick_slab": {
+      "air": 2.0,
+      "earth": 2.5000,
+      "fire": 0.0,
+      "water": 3.0,
+      "life": 2.5000,
+      "magic": 0.0
+    },
+    "minecraft:mud_brick_stairs": {
+      "air": 6.0,
+      "earth": 7.5000,
+      "fire": 0.0,
+      "water": 9.0,
+      "life": 7.5000,
+      "magic": 0.0
+    },
+    "minecraft:mud_brick_wall": {
+      "air": 4.0,
+      "earth": 5.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 5.0,
+      "magic": 0.0
+    },
+    "minecraft:mud_bricks": {
+      "air": 4.0,
+      "earth": 5.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 5.0,
+      "magic": 0.0
+    },
+    "minecraft:muddy_mangrove_roots": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 3.0,
+      "magic": 0.0
+    },
+    "minecraft:mushroom_stem": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:mushroom_stew": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:mycelium": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 3.0,
+      "magic": 0.0
+    },
+    "minecraft:name_tag": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nautilus_shell": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_brick": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_brick_fence": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 6.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_brick_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_brick_stairs": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 12.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_brick_wall": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_bricks": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_gold_ore": {
+      "air": 0.0,
+      "earth": 34.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_quartz_ore": {
+      "air": 4.0,
+      "earth": 10.0,
+      "fire": 10.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_sprouts": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:nether_star": {
+      "air": 64.0,
+      "earth": 64.0,
+      "fire": 64.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 128.0
+    },
+    "minecraft:nether_wart": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:nether_wart_block": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 36.0,
+      "water": 0.0,
+      "life": 18.0,
+      "magic": 18.0
+    },
+    "minecraft:netherite_axe": {
+      "air": 0.0,
+      "earth": 192.0,
+      "fire": 192.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 192.0
+    },
+    "minecraft:netherite_block": {
+      "air": 0.0,
+      "earth": 576.0,
+      "fire": 576.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 576.0
+    },
+    "minecraft:netherite_boots": {
+      "air": 0.0,
+      "earth": 256.0,
+      "fire": 256.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 256.0
+    },
+    "minecraft:netherite_chestplate": {
+      "air": 0.0,
+      "earth": 512.0,
+      "fire": 512.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 512.0
+    },
+    "minecraft:netherite_helmet": {
+      "air": 0.0,
+      "earth": 320.0,
+      "fire": 320.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 320.0
+    },
+    "minecraft:netherite_hoe": {
+      "air": 0.0,
+      "earth": 128.0,
+      "fire": 128.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 128.0
+    },
+    "minecraft:netherite_ingot": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 64.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 64.0
+    },
+    "minecraft:netherite_leggings": {
+      "air": 0.0,
+      "earth": 448.0,
+      "fire": 448.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 448.0
+    },
+    "minecraft:netherite_pickaxe": {
+      "air": 0.0,
+      "earth": 192.0,
+      "fire": 192.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 192.0
+    },
+    "minecraft:netherite_scrap": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 64.0,
+      "water": 0.0,
+      "life": 64.0,
+      "magic": 0.0
+    },
+    "minecraft:netherite_shovel": {
+      "air": 0.0,
+      "earth": 64.0,
+      "fire": 64.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 64.0
+    },
+    "minecraft:netherite_sword": {
+      "air": 0.0,
+      "earth": 128.0,
+      "fire": 128.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 128.0
+    },
+    "minecraft:netherrack": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:note_block": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 8.0
+    },
+    "minecraft:oak_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:oak_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_hanging_sign": {
+      "air": 0.0,
+      "earth": 6.5200,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:oak_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:oak_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:observer": {
+      "air": 4.0,
+      "earth": 36.0,
+      "fire": 24.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:obsidian": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:ochre_froglight": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 8.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:ominous_bottle": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 8.0,
+      "life": 0.0,
+      "magic": 32.0
+    },
+    "minecraft:orange_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:orange_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:orange_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 0.7500,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_tulip": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:orange_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:oxeye_daisy": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_chiseled_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_copper_bulb": {
+      "air": 4.0,
+      "earth": 448.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 12.0
+    },
+    "minecraft:oxidized_copper_door": {
+      "air": 0.0,
+      "earth": 288.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_copper_grate": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+      "air": 0.0,
+      "earth": 432.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_cut_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_cut_copper_slab": {
+      "air": 0.0,
+      "earth": 72.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:oxidized_cut_copper_stairs": {
+      "air": 0.0,
+      "earth": 216.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:packed_ice": {
+      "air": 18.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 18.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:packed_mud": {
+      "air": 4.0,
+      "earth": 5.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 5.0,
+      "magic": 0.0
+    },
+    "minecraft:painting": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 24.0,
+      "magic": 0.0
+    },
+    "minecraft:paper": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pearlescent_froglight": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 8.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:peony": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:phantom_membrane": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:piglin_head": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:pink_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:pink_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_petals": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:pink_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_tulip": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:pink_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:piston": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:pitcher_plant": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:pitcher_pod": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:podzol": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:pointed_dripstone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:poisonous_potato": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 0.0,
+      "magic": 1.0
+    },
+    "minecraft:polished_andesite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_andesite_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_andesite_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_basalt": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_brick_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_brick_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_brick_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_button": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_pressure_plate": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_blackstone_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_deepslate": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_deepslate_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_deepslate_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_deepslate_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_diorite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_diorite_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_diorite_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_granite": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_granite_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_granite_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_tuff": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_tuff_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_tuff_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:polished_tuff_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:popped_chorus_fruit": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 16.0
+    },
+    "minecraft:poppy": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:potato": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:potatoes": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:powder_snow": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:powder_snow_bucket": {
+      "air": 2.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:powered_rail": {
+      "air": 0.0,
+      "earth": 200.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 8.0
+    },
+    "minecraft:prismarine": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 32.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:prismarine_brick_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 8.0,
+      "magic": 8.0
+    },
+    "minecraft:prismarine_brick_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 24.0,
+      "magic": 24.0
+    },
+    "minecraft:prismarine_bricks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 32.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:prismarine_crystals": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:prismarine_shard": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:prismarine_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 8.0,
+      "magic": 8.0
+    },
+    "minecraft:prismarine_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 24.0,
+      "magic": 24.0
+    },
+    "minecraft:prismarine_wall": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 32.0,
+      "life": 16.0,
+      "magic": 16.0
+    },
+    "minecraft:pufferfish": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:pumpkin": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:pumpkin_pie": {
+      "air": 1.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 9.0,
+      "life": 10.0,
+      "magic": 0.0
+    },
+    "minecraft:pumpkin_seeds": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:pumpkin_stem": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:purple_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:purple_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:purple_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:purpur_block": {
+      "air": 16.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 16.0,
+      "magic": 64.0
+    },
+    "minecraft:purpur_pillar": {
+      "air": 16.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 16.0,
+      "magic": 64.0
+    },
+    "minecraft:purpur_slab": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 32.0
+    },
+    "minecraft:purpur_stairs": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 24.0,
+      "magic": 96.0
+    },
+    "minecraft:quartz": {
+      "air": 4.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:quartz_block": {
+      "air": 16.0,
+      "earth": 32.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:quartz_bricks": {
+      "air": 16.0,
+      "earth": 32.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:quartz_pillar": {
+      "air": 16.0,
+      "earth": 32.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:quartz_slab": {
+      "air": 8.0,
+      "earth": 16.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:quartz_stairs": {
+      "air": 24.0,
+      "earth": 48.0,
+      "fire": 48.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:rabbit_foot": {
+      "air": 2.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 2.0
+    },
+    "minecraft:rabbit_hide": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:rabbit_stew": {
+      "air": 4.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 25.0,
+      "magic": 0.0
+    },
+    "minecraft:rail": {
+      "air": 0.0,
+      "earth": 96.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_beef": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_chicken": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_cod": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_copper": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_copper_block": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_gold": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_gold_block": {
+      "air": 0.0,
+      "earth": 288.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_iron": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_iron_block": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_mutton": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_porkchop": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_rabbit": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:raw_salmon": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:recovery_compass": {
+      "air": 128.0,
+      "earth": 136.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 128.0,
+      "magic": 136.0
+    },
+    "minecraft:red_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:red_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:red_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:red_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:red_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_mushroom": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:red_mushroom_block": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:red_nether_brick_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 6.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:red_nether_brick_stairs": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 18.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 6.0
+    },
+    "minecraft:red_nether_brick_wall": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 12.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:red_nether_bricks": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 12.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:red_sand": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_sandstone_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_sandstone_stairs": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_sandstone_wall": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:red_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:red_tulip": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:red_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:redstone_block": {
+      "air": 0.0,
+      "earth": 72.0,
+      "fire": 72.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 72.0
+    },
+    "minecraft:redstone_comparator": {
+      "air": 4.0,
+      "earth": 34.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 24.0
+    },
+    "minecraft:redstone_dust": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:redstone_lamp": {
+      "air": 32.0,
+      "earth": 64.0,
+      "fire": 64.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 64.0
+    },
+    "minecraft:redstone_ore": {
+      "air": 0.0,
+      "earth": 10.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 8.0
+    },
+    "minecraft:redstone_repeater": {
+      "air": 0.0,
+      "earth": 26.0,
+      "fire": 24.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 24.0
+    },
+    "minecraft:redstone_torch": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 8.0
+    },
+    "minecraft:respawn_anchor": {
+      "air": 96.0,
+      "earth": 192.0,
+      "fire": 192.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 192.0
+    },
+    "minecraft:rooted_dirt": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 1.0,
+      "magic": 0.0
+    },
+    "minecraft:rose_bush": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:rotten_flesh": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 2.0
+    },
+    "minecraft:saddle": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:sand": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:sandstone_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:sandstone_stairs": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:sandstone_wall": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:scaffolding": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 12.6700,
+      "magic": 0.0
+    },
+    "minecraft:sculk_catalyst": {
+      "air": 8.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 64.0
+    },
+    "minecraft:sculk_sensor": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 64.0
+    },
+    "minecraft:sculk_shrieker": {
+      "air": 8.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 32.0,
+      "magic": 64.0
+    },
+    "minecraft:sea_lantern": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 112.0,
+      "life": 36.0,
+      "magic": 56.0
+    },
+    "minecraft:sea_pickle": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 2.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:seagrass": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:shears": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:shield": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 24.0,
+      "magic": 0.0
+    },
+    "minecraft:short_dry_grass": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:short_grass": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:shroomlight": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:shulker_shell": {
+      "air": 8.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:skeleton_skull": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    },
+    "minecraft:skull_charge_banner_pattern": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 4.0
+    },
+    "minecraft:slime_block": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:slimeball": {
+      "air": 4.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 4.0
+    },
+    "minecraft:small_dripleaf": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:smithing_table": {
+      "air": 0.0,
+      "earth": 32.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:smoker": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 64.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_basalt": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_quartz_block": {
+      "air": 16.0,
+      "earth": 32.0,
+      "fire": 32.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_quartz_slab": {
+      "air": 8.0,
+      "earth": 16.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_quartz_stairs": {
+      "air": 24.0,
+      "earth": 48.0,
+      "fire": 48.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_red_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_red_sandstone_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_red_sandstone_stairs": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_sandstone": {
+      "air": 0.0,
+      "earth": 8.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_sandstone_slab": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_sandstone_stairs": {
+      "air": 0.0,
+      "earth": 12.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_stone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:smooth_stone_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:sniffer_egg": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:snow": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:snow_block": {
+      "air": 4.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:snowball": {
+      "air": 1.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:soul_campfire": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 24.0,
+      "magic": 2.0
+    },
+    "minecraft:soul_lantern": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 6.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 2.0
+    },
+    "minecraft:soul_sand": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:soul_soil": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 2.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 2.0
+    },
+    "minecraft:soul_torch": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 6.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 2.0
+    },
+    "minecraft:spectral_arrow": {
+      "air": 18.0,
+      "earth": 18.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 16.0
+    },
+    "minecraft:spider_eye": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 4.0,
+      "magic": 2.0
+    },
+    "minecraft:sponge": {
+      "air": 2.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:spore_blossom": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 20.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_chest_boat": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 52.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:spruce_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_hanging_sign": {
+      "air": 0.0,
+      "earth": 7.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_leaves": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_sapling": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:spruce_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:spruce_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:spyglass": {
+      "air": 4.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 4.0
+    },
+    "minecraft:steak": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:stick": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:sticky_piston": {
+      "air": 4.0,
+      "earth": 36.0,
+      "fire": 8.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 12.0
+    },
+    "minecraft:stone": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_axe": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_brick_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_brick_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_brick_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_button": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_hoe": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_pickaxe": {
+      "air": 0.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_pressure_plate": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_shovel": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_stairs": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stone_sword": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:stonecutter": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:string": {
+      "air": 2.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_acacia_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_acacia_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_bamboo_block": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_birch_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_birch_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_cherry_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_cherry_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_crimson_hyphae": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_crimson_stem": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_dark_oak_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_dark_oak_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_jungle_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_jungle_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_mangrove_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_mangrove_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_oak_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_oak_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_spruce_log": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_spruce_wood": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_warped_hyphae": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:stripped_warped_stem": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:sugar": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:sugar_cane": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:sunflower": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:suspicious_stew": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 18.0,
+      "magic": 0.0
+    },
+    "minecraft:sweet_berries": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:sweet_berry_bush": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:tall_dry_grass": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:tall_grass": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:tall_seagrass": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:target": {
+      "air": 36.0,
+      "earth": 68.0,
+      "fire": 32.0,
+      "water": 36.0,
+      "life": 36.0,
+      "magic": 32.0
+    },
+    "minecraft:terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:thing_banner_pattern": {
+      "air": 2.0,
+      "earth": 262.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 32.0
+    },
+    "minecraft:tinted_glass": {
+      "air": 16.0,
+      "earth": 66.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 16.0
+    },
+    "minecraft:tnt": {
+      "air": 20.0,
+      "earth": 48.0,
+      "fire": 40.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tnt_minecart": {
+      "air": 20.0,
+      "earth": 128.0,
+      "fire": 40.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:torch": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 4.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:torchflower": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:torchflower_seeds": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:totem_of_undying": {
+      "air": 8.0,
+      "earth": 8.0,
+      "fire": 8.0,
+      "water": 8.0,
+      "life": 32.0,
+      "magic": 32.0
+    },
+    "minecraft:trapped_chest": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 38.0,
+      "magic": 0.0
+    },
+    "minecraft:trident": {
+      "air": 16.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 16.0,
+      "life": 0.0,
+      "magic": 32.0
+    },
+    "minecraft:tripwire_hook": {
+      "air": 0.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 6.0,
+      "magic": 0.0
+    },
+    "minecraft:tropical_fish": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:tube_coral": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tube_coral_block": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tube_coral_fan": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_brick_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_brick_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_brick_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_bricks": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_slab": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_stairs": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:tuff_wall": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:turtle_egg": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:turtle_scute": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:turtle_shell": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:twisting_vines": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:verdant_froglight": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 8.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 8.0
+    },
+    "minecraft:vines": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_button": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_door": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_fence": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.3300,
+      "magic": 0.0
+    },
+    "minecraft:warped_fence_gate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_fungus": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_fungus_on_a_stick": {
+      "air": 4.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_hanging_sign": {
+      "air": 0.0,
+      "earth": 7.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_hyphae": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_nylium": {
+      "air": 0.0,
+      "earth": 3.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 3.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_planks": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_pressure_plate": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_roots": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_sign": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.6700,
+      "magic": 0.0
+    },
+    "minecraft:warped_slab": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_stairs": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_stem": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_trapdoor": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:warped_wart_block": {
+      "air": 0.0,
+      "earth": 18.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 18.0,
+      "magic": 0.0
+    },
+    "minecraft:water_bucket": {
+      "air": 0.0,
+      "earth": 48.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_block_of_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_chiseled_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_copper_bulb": {
+      "air": 8.0,
+      "earth": 450.0,
+      "fire": 16.0,
+      "water": 4.0,
+      "life": 6.0,
+      "magic": 12.0
+    },
+    "minecraft:waxed_copper_door": {
+      "air": 4.0,
+      "earth": 290.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_copper_grate": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_copper_trapdoor": {
+      "air": 4.0,
+      "earth": 434.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_cut_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_cut_copper_slab": {
+      "air": 4.0,
+      "earth": 74.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_cut_copper_stairs": {
+      "air": 4.0,
+      "earth": 218.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_chiseled_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+      "air": 8.0,
+      "earth": 450.0,
+      "fire": 16.0,
+      "water": 4.0,
+      "life": 6.0,
+      "magic": 12.0
+    },
+    "minecraft:waxed_exposed_copper_door": {
+      "air": 4.0,
+      "earth": 290.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_copper_grate": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+      "air": 4.0,
+      "earth": 434.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_cut_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_cut_copper_slab": {
+      "air": 4.0,
+      "earth": 74.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_exposed_cut_copper_stairs": {
+      "air": 4.0,
+      "earth": 218.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+      "air": 8.0,
+      "earth": 450.0,
+      "fire": 16.0,
+      "water": 4.0,
+      "life": 6.0,
+      "magic": 12.0
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+      "air": 4.0,
+      "earth": 290.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_copper_grate": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+      "air": 4.0,
+      "earth": 434.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_cut_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+      "air": 4.0,
+      "earth": 74.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_oxidized_cut_copper_stairs": {
+      "air": 4.0,
+      "earth": 218.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_chiseled_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+      "air": 8.0,
+      "earth": 450.0,
+      "fire": 16.0,
+      "water": 4.0,
+      "life": 6.0,
+      "magic": 12.0
+    },
+    "minecraft:waxed_weathered_copper_door": {
+      "air": 4.0,
+      "earth": 290.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_copper_grate": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+      "air": 4.0,
+      "earth": 434.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_cut_copper": {
+      "air": 4.0,
+      "earth": 146.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_cut_copper_slab": {
+      "air": 4.0,
+      "earth": 74.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:waxed_weathered_cut_copper_stairs": {
+      "air": 4.0,
+      "earth": 218.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_chiseled_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_copper_bulb": {
+      "air": 4.0,
+      "earth": 448.0,
+      "fire": 16.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 12.0
+    },
+    "minecraft:weathered_copper_door": {
+      "air": 0.0,
+      "earth": 288.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_copper_grate": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_copper_trapdoor": {
+      "air": 0.0,
+      "earth": 432.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_cut_copper": {
+      "air": 0.0,
+      "earth": 144.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_cut_copper_slab": {
+      "air": 0.0,
+      "earth": 72.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weathered_cut_copper_stairs": {
+      "air": 0.0,
+      "earth": 216.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:weeping_vines": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 1.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:wet_sponge": {
+      "air": 2.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:wheat": {
+      "air": 4.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:wheat_seeds": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:white_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:white_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:white_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:white_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:white_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:white_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:white_tulip": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:white_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:wildflowers": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:wither_rose": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 2.0,
+      "life": 2.0,
+      "magic": 0.0
+    },
+    "minecraft:wither_skeleton_skull": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 4.0
+    },
+    "minecraft:wooden_axe": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:wooden_hoe": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 12.0,
+      "magic": 0.0
+    },
+    "minecraft:wooden_pickaxe": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 16.0,
+      "magic": 0.0
+    },
+    "minecraft:wooden_shovel": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:wooden_sword": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 10.0,
+      "magic": 0.0
+    },
+    "minecraft:writable_book": {
+      "air": 4.0,
+      "earth": 12.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_banner": {
+      "air": 48.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 48.0,
+      "life": 48.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_bed": {
+      "air": 24.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 24.0,
+      "life": 36.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_candle": {
+      "air": 6.0,
+      "earth": 6.0,
+      "fire": 0.0,
+      "water": 10.0,
+      "life": 4.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_carpet": {
+      "air": 5.3300,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 5.3300,
+      "life": 5.3300,
+      "magic": 0.0
+    },
+    "minecraft:yellow_concrete": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 6.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_concrete_powder": {
+      "air": 0.0,
+      "earth": 20.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_dye": {
+      "air": 0.0,
+      "earth": 4.0,
+      "fire": 0.0,
+      "water": 4.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_glazed_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_shulker_box": {
+      "air": 16.0,
+      "earth": 16.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 40.0,
+      "magic": 16.0
+    },
+    "minecraft:yellow_stained_glass": {
+      "air": 0.0,
+      "earth": 2.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_stained_glass_pane": {
+      "air": 0.0,
+      "earth": 1.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_terracotta": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 0.0,
+      "magic": 0.0
+    },
+    "minecraft:yellow_wool": {
+      "air": 8.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 8.0,
+      "life": 8.0,
+      "magic": 0.0
+    },
+    "minecraft:zombie_head": {
+      "air": 0.0,
+      "earth": 0.0,
+      "fire": 0.0,
+      "water": 0.0,
+      "life": 4.0,
+      "magic": 4.0
+    }
+  }
+}

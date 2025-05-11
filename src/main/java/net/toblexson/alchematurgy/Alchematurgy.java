@@ -8,9 +8,33 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalCrucibleScreen;
 import org.slf4j.Logger;
+
+/* Work on Separator
+Input - Bottle of Mixed Essence
+Outputs - dirty? bottle of primary essence
+ */
+
+/* Work on Purifier
+Input - Bottle of Impure Essence
+Consume - Alchemical Filter (durability)
+Output - Bottle of Pure Essence
+ */
+
+/* Work on Concentrator
+Input - Bottle of Pure Essence
+Consume - Fuel?
+Output - Bottle of Concentrated Essence
+ */
+
+/* Work on Fabricator
+Input - Any item with Essence data
+Consume - Appropriate amount of Essence
+Output - Duplicate item
+ */
 
 /**
  * The main class for Alchematurgy
@@ -34,6 +58,7 @@ public class Alchematurgy
         // Register the event listeners
         bus.addListener(this::commonSetup);
         bus.addListener(this::registerScreens);
+        bus.addListener(this::registerDataMapTypes);
 
         // Register the deferred registers
         ModCreativeModeTabs.register(bus);
@@ -41,9 +66,15 @@ public class Alchematurgy
         ModBlocks.register(bus);
         ModBlockEntityTypes.register(bus);
         ModMenuTypes.register(bus);
+        ModDataComponents.register(bus);
 
         // Register ModConfigSpec so that FML can create and load the config file
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+    }
+
+    private void registerDataMapTypes(RegisterDataMapTypesEvent event)
+    {
+        event.register(ModDataMaps.ESSENCES);
     }
 
     /** Common Setup Event listener
@@ -51,6 +82,7 @@ public class Alchematurgy
      */
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+
     }
 
     /**

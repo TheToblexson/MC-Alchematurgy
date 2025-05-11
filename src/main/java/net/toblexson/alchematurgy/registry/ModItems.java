@@ -5,6 +5,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
+import net.toblexson.alchematurgy.world.item.BottledMixedEssenceItem;
+
+import java.util.function.Supplier;
 
 /**
  * Alchematurgy's Item registration.
@@ -26,6 +29,15 @@ public class ModItems
     public static final DeferredItem<Item> BOTTLED_WATER_ESSENCE = item("bottled_water_essence");
     public static final DeferredItem<Item> BOTTLED_AIR_ESSENCE = item("bottled_air_essence");
     public static final DeferredItem<Item> BOTTLED_FIRE_ESSENCE = item("bottled_fire_essence");
+    public static final DeferredItem<Item> BOTTLED_LIFE_ESSENCE = item("bottled_life_essence");
+    public static final DeferredItem<Item> BOTTLED_MAGIC_ESSENCE = item("bottled_magic_essence");
+
+    public static final DeferredItem<Item> BOTTLED_MIXED_ESSENCE = item("bottled_mixed_essence", BottledMixedEssenceItem::new);
+
+    private static DeferredItem<Item> item(String name, Supplier<Item> itemSupplier)
+    {
+        return REGISTER.register(name, itemSupplier);
+    }
 
     private static DeferredItem<Item> item(String name)
     {

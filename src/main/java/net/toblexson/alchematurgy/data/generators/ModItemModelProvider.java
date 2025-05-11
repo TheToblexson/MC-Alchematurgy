@@ -1,4 +1,4 @@
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.data.generators;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -13,7 +13,7 @@ public class ModItemModelProvider extends ItemModelProvider
 {
     /**
      * Create the item model provider
-     * @param output The pack output.
+     * @param output The pack result.
      * @param fileHelper The existing file helper
      */
     public ModItemModelProvider(PackOutput output, ExistingFileHelper fileHelper)
@@ -32,9 +32,12 @@ public class ModItemModelProvider extends ItemModelProvider
 
         basicItem(ModItems.ALCHEMICAL_ASH.get());
 
-        basicItem(ModItems.BOTTLED_EARTH_ESSENCE.get());
-        basicItem(ModItems.BOTTLED_WATER_ESSENCE.get());
         basicItem(ModItems.BOTTLED_AIR_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_EARTH_ESSENCE.get());
         basicItem(ModItems.BOTTLED_FIRE_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_WATER_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_LIFE_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_MAGIC_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_MIXED_ESSENCE.get());
     }
 }

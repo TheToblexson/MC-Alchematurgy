@@ -1,4 +1,4 @@
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.data.generators;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -17,7 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider
 {
     /**
      * Create the block state provider
-     * @param output The pack output.
+     * @param output The pack result.
      * @param fileHelper The existing file helper
      */
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper fileHelper)
@@ -32,12 +32,10 @@ public class ModBlockStateProvider extends BlockStateProvider
     protected void registerStatesAndModels()
     {
         AlchemicalCrucible();
-
-        //simpleBlockWithItem(ModBlocks.ALCHEMICAL_CRUCIBLE.get(),
-        //    models().cubeBottomTop("alchemical_crucible", modBlockLocation("alchemical_crucible_side"),
-        //                           modBlockLocation("alchemical_crucible_bottom"), modBlockLocation("alchemical_crucible_top")));
-
-        block(ModBlocks.ALCHEMICAL_DISTILLER);
+        block(ModBlocks.ALCHEMICAL_SEPARATOR);
+        block(ModBlocks.ALCHEMICAL_PURIFIER);
+        block(ModBlocks.ALCHEMICAL_CONCENTRATOR);
+        block(ModBlocks.ALCHEMICAL_FABRICATOR);
     }
 
     private void AlchemicalCrucible()

@@ -1,4 +1,4 @@
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.data.generators;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -16,7 +16,7 @@ public class ModItemTagsProvider extends ItemTagsProvider
 {
     /**
      * Create the block tags provider.
-     * @param output     The pack output.
+     * @param output     The pack result.
      * @param provider   The lookup provider.
      * @param blockTags  The block tags.
      * @param fileHelper The existing file helper.

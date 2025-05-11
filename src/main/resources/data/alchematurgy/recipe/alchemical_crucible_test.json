@@ -1,0 +1,9 @@
+{
+  "type": "alchematurgy:alchemical_crucible",
+  "ingredient": {
+    "item": "minecraft:dirt"
+  },
+  "result": {
+    "id": "alchematurgy:bottled_earth_essence"
+  }
+}

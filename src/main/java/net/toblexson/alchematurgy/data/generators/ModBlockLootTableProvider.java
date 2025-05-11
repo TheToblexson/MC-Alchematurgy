@@ -1,4 +1,4 @@
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.data.generators;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -30,7 +30,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider
     public void generate()
     {
         dropSelf(ModBlocks.ALCHEMICAL_CRUCIBLE.get());
-        dropSelf(ModBlocks.ALCHEMICAL_DISTILLER.get());
+        dropSelf(ModBlocks.ALCHEMICAL_SEPARATOR.get());
+        dropSelf(ModBlocks.ALCHEMICAL_PURIFIER.get());
+        dropSelf(ModBlocks.ALCHEMICAL_CONCENTRATOR.get());
+        dropSelf(ModBlocks.ALCHEMICAL_FABRICATOR.get());
     }
 
     /**

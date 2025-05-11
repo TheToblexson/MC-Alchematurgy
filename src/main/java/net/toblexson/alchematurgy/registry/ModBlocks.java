@@ -24,16 +24,31 @@ public class ModBlocks
     public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(Alchematurgy.MOD_ID);
 
     public static final DeferredBlock<Block> ALCHEMICAL_CRUCIBLE = registerBlock("alchemical_crucible",
-        () -> new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of()
-                                                  .strength(4f)
-                                                  .requiresCorrectToolForDrops()
-                                                  .sound(SoundType.METAL)));
+        () -> new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
-    public static final DeferredBlock<Block> ALCHEMICAL_DISTILLER = registerBlock("alchemical_distiller",
+    public static final DeferredBlock<Block> ALCHEMICAL_SEPARATOR = registerBlock("alchemical_separator",
         () -> new Block(BlockBehaviour.Properties.of()
                                 .strength(4f)
                                 .requiresCorrectToolForDrops()
                                 .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> ALCHEMICAL_PURIFIER = registerBlock("alchemical_purifier",
+                                                                                  () -> new Block(BlockBehaviour.Properties.of()
+                                                                                                          .strength(4f)
+                                                                                                          .requiresCorrectToolForDrops()
+                                                                                                          .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> ALCHEMICAL_CONCENTRATOR = registerBlock("alchemical_concentrator",
+                                                                                 () -> new Block(BlockBehaviour.Properties.of()
+                                                                                                         .strength(4f)
+                                                                                                         .requiresCorrectToolForDrops()
+                                                                                                         .sound(SoundType.METAL)));
+
+    public static final DeferredBlock<Block> ALCHEMICAL_FABRICATOR = registerBlock("alchemical_fabricator",
+                                                                                 () -> new Block(BlockBehaviour.Properties.of()
+                                                                                                         .strength(4f)
+                                                                                                         .requiresCorrectToolForDrops()
+                                                                                                         .sound(SoundType.METAL)));
 
     /**
      * Register a block with a block item.

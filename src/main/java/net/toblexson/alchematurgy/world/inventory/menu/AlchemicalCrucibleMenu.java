@@ -174,7 +174,7 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
 
         // Check if the slot clicked is one of the vanilla container slots
         if (index < PLAYER_FULL_INVENTORY_START + PLAYER_FULL_INVENTORY_SIZE) {
-            // This is a vanilla container slot so merge the stack into the tile inventory (-1 to avoid the output slot)
+            // This is a vanilla container slot so merge the stack into the tile inventory (-1 to avoid the result slot)
             if (!moveItemStackTo(stack, INVENTORY_START, INVENTORY_START + INVENTORY_SIZE - 1, false)) {
                 return ItemStack.EMPTY;  // EMPTY_ITEM
             }

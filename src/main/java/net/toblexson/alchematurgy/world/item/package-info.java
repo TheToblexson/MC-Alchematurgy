@@ -1,6 +1,6 @@
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.world.item;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 

@@ -79,19 +79,30 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
      * @param level The game level.
      * @param pos The block position.
      * @param player The player.
-     * @param hitResult The hit result.
+     * @param blockHit The block hit result.
      * @return The interaction result.
      */
     @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult)
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult blockHit)
     {
         if (!level.isClientSide && player instanceof ServerPlayer serverPlayer)
             serverPlayer.openMenu(Objects.requireNonNull(state.getMenuProvider(level, pos)), pos);
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
+    /**
+     * React to the player right-clicking whilst holding an item stack.
+     * @param stack The held item stack.
+     * @param state The block state.
+     * @param level The game level.
+     * @param pos The block position.
+     * @param player The player.
+     * @param hand The hand holding the item stack.
+     * @param blockHit The block hit result.
+     * @return The interaction result.
+     */
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result)
+    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHit)
     {
         if (stack.is(Items.WATER_BUCKET) && level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
         {

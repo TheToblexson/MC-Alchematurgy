@@ -1,4 +1,4 @@
-package net.toblexson.alchematurgy.datagen;
+package net.toblexson.alchematurgy.data.generators;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -22,7 +22,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 {
     /**
      * Creates the recipe provider
-     * @param output The pack output.
+     * @param output The pack result.
      * @param provider The lookup provider.
      */
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider)
@@ -55,17 +55,47 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("ici")
                 .define('i', Tags.Items.INGOTS_IRON)
                 .define('c', Blocks.CAMPFIRE)
-                .unlockedBy("has_wand", has(ModItems.WAND))
+                .unlockedBy("has_wand", has(Tags.Items.INGOTS_IRON))
                 .save(output);
 
-            //Alchemical Purifier
-            ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALCHEMICAL_DISTILLER.get())
-                    .pattern("iii")
-                    .pattern("igi")
-                    .pattern("iii")
-                    .define('i', Tags.Items.INGOTS_IRON)
-                    .define('g', Tags.Items.INGOTS_GOLD)
-                    .unlockedBy("has_crucible", has(ModBlocks.ALCHEMICAL_CRUCIBLE))
-                    .save(output);
+        //Alchemical Separator
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALCHEMICAL_SEPARATOR.get())
+                .pattern("iii")
+                .pattern("igi")
+                .pattern("iii")
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('g', Tags.Items.INGOTS_GOLD)
+                .unlockedBy("has_crucible", has(ModBlocks.ALCHEMICAL_CRUCIBLE))
+                .save(output);
+
+        //Alchemical Purifier
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALCHEMICAL_PURIFIER.get())
+                .pattern("iii")
+                .pattern("igi")
+                .pattern("iii")
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('g', Tags.Items.GEMS_DIAMOND)
+                .unlockedBy("has_crucible", has(ModBlocks.ALCHEMICAL_CRUCIBLE))
+                .save(output);
+
+        //Alchemical Concentrator
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALCHEMICAL_CONCENTRATOR.get())
+                .pattern("iii")
+                .pattern("igi")
+                .pattern("iii")
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('g', Tags.Items.GEMS_AMETHYST)
+                .unlockedBy("has_crucible", has(ModBlocks.ALCHEMICAL_CRUCIBLE))
+                .save(output);
+
+        //Alchemical Fabricator
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ALCHEMICAL_FABRICATOR.get())
+                .pattern("iii")
+                .pattern("igi")
+                .pattern("iii")
+                .define('i', Tags.Items.INGOTS_IRON)
+                .define('g', Tags.Items.ENDER_PEARLS)
+                .unlockedBy("has_crucible", has(ModBlocks.ALCHEMICAL_FABRICATOR))
+                .save(output);
     }
 }
