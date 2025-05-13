@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalSeparatorMenu;
 
 import java.util.function.Supplier;
 
@@ -20,8 +21,11 @@ public class ModMenuTypes
      */
     public static DeferredRegister<MenuType<?>> REGISTER = DeferredRegister.create(Registries.MENU, Alchematurgy.MOD_ID);
 
-    public static final Supplier<MenuType<AlchemicalCrucibleMenu>> ALCHEMICAL_CRUCIBLE_MENU =
-        registerMenuType("alchemical_crucible_menu", AlchemicalCrucibleMenu::new);
+    public static final Supplier<MenuType<AlchemicalCrucibleMenu>> ALCHEMICAL_CRUCIBLE =
+        registerMenuType("alchemical_crucible", AlchemicalCrucibleMenu::new);
+
+    public static final Supplier<MenuType<AlchemicalSeparatorMenu>> ALCHEMICAL_SEPARATOR =
+            registerMenuType("alchemical_separator", AlchemicalSeparatorMenu::new);
 
 
     /**

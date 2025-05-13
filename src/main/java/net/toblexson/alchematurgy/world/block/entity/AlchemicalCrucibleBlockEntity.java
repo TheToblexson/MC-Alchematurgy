@@ -26,11 +26,6 @@ import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 import org.jetbrains.annotations.Nullable;
 
-//When crafted the water becomes Mixed Essence, and then is result into bottles.
-
-/**
- * The block entity for the Alchemical Crucible
- */
 public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuProvider
 {
     private static final int INVENTORY_SIZE = 4;
@@ -49,7 +44,7 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
 
     protected final ContainerData data;
     private int progress = 0;
-    private int maxProgress = 50; //200
+    private int maxProgress = 200;
     private int fluidAmount = 0;
     private int maxFluid = 4;
     private int fuelLevel = 0;
@@ -71,11 +66,6 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
         }
     };
 
-    /**
-     * Create an instance of an Alchemical Crucible block entity.
-     * @param pos The position of the block.
-     * @param state The block state that is hosting the block entity.
-     */
     public AlchemicalCrucibleBlockEntity(BlockPos pos, BlockState state)
     {
         super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state);
@@ -118,6 +108,10 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
         };
     }
 
+    /**
+     * Add water to the crucible if it is not already full.
+     * @return true if water has been added, false if not.
+     */
     public boolean tryAddWater()
     {
         if (fluidAmount >= maxFluid)
@@ -134,18 +128,14 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
      */
     public void tick(Level level, BlockPos pos, BlockState state)
     {
-        //TODO implement recipes
         boolean updateLitStatus = false;
         boolean hasChanged = false;
-        //Optional<RecipeHolder<AlchemicalCrucibleRecipe>> recipe = getRecipe();
-        //ItemStack result = recipe.isPresent() ? recipe.get().value().result() : ItemStack.EMPTY;
-        //Alchematurgy.LOGGER.debug("Recipe: {}", recipe);
         ModDataMaps.Essences essences = inventory.getStackInSlot(INPUT_SLOT).getItemHolder().getData(ModDataMaps.ESSENCES);
         //else reset progress
         if (essences != null)
         {
             ItemStack result = new ItemStack(ModItems.BOTTLED_MIXED_ESSENCE.get());
-            result.set(ModDataComponents.ESSENCES.get(), essences);
+            result.set(ModDataComponents.ESSENCES, essences);
             if (canCraft(result))
             {
                 //if there is no fuel, burn fuel
@@ -158,20 +148,21 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
                 //if there is fuel, craft
                 if (fuelLevel > 0)
                 {
-                    progress++;
                     //if progress has reached the required amount, craft
                     if (progress >= maxProgress)
                     {
-                        craftItem(result);
+                        finishCraft(result);
                         progress = 0;
                         hasChanged = true;
                     }
+                    progress++;
                 }
-            } else progress = 0;
-        } else
-        {
-            progress = 0;
+                else //there is no fuel
+                    progress = 0;
+            }
+            else progress = 0;
         }
+        else progress = 0;
         //if lit, decrease fuel
         if (fuelLevel > 1)
             fuelLevel--;
@@ -202,10 +193,9 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
             setChanged(level, pos, state);
     }
 
-//    private Optional<RecipeHolder<AlchemicalCrucibleRecipe>> getRecipe()
-//    {
-//    }
-
+    /**
+     * Burn a fuel item from the fuel slot, increasing the fuel level.
+     */
     private void burnFuel()
     {
         if (inventory.getStackInSlot(FUEL_SLOT).getBurnTime(null) > 0)
@@ -219,7 +209,7 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     /**
      * Complete the crafting operation. Removing from the input and adding to the result.
      */
-    private void craftItem(ItemStack result)
+    private void finishCraft(ItemStack result)
     {
         int newCount = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount();
         result.setCount(newCount);
@@ -230,21 +220,28 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     }
 
     /**
-     * Check to see if there is a recipe and space to craft.
+     * Check to see if there is the required water, bottle and space to craft.
      * @return Whether crafting is possible.
      */
     private boolean canCraft(ItemStack result)
     {
-        //if (result.isEmpty())
-        //    return false;
-        return fluidAmount > 0 && hasBottle() && !inventory.getStackInSlot(INPUT_SLOT).isEmpty() && canOutput(result);
+        return fluidAmount > 0 && hasBottle() && canOutput(result);
     }
 
+    /**
+     * Check if there is a glass bottle in the bottle slot.
+     * @return If there is a glass bottle in the bottle slot.
+     */
     private boolean hasBottle()
     {
         return inventory.getStackInSlot(BOTTLE_SLOT).is(Items.GLASS_BOTTLE);
     }
 
+    /**
+     * Check if the crafting result can be put into the output slot.
+     * @param result If there is space in the output slot for the result.
+     * @return The crafting result.
+     */
     private boolean canOutput(ItemStack result)
     {
         ItemStack stack = inventory.getStackInSlot(OUTPUT_SLOT);

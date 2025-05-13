@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.world.block.AlchemicalCrucibleBlock;
+import net.toblexson.alchematurgy.world.block.AlchemicalSeparatorBlock;
 
 import java.util.function.Supplier;
 
@@ -27,10 +28,7 @@ public class ModBlocks
         () -> new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     public static final DeferredBlock<Block> ALCHEMICAL_SEPARATOR = registerBlock("alchemical_separator",
-        () -> new Block(BlockBehaviour.Properties.of()
-                                .strength(4f)
-                                .requiresCorrectToolForDrops()
-                                .sound(SoundType.METAL)));
+        () -> new AlchemicalSeparatorBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
     public static final DeferredBlock<Block> ALCHEMICAL_PURIFIER = registerBlock("alchemical_purifier",
                                                                                   () -> new Block(BlockBehaviour.Properties.of()

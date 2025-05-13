@@ -6,47 +6,27 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
-/**
- * The Alchemical Crucible block class
- */
-public class AlchemicalCrucibleBlock extends BaseEntityBlock
+public class AlchemicalSeparatorBlock  extends BaseEntityBlock
 {
-    public static final MapCodec<AlchemicalCrucibleBlock> CODEC = simpleCodec(AlchemicalCrucibleBlock::new);
-    public static final BooleanProperty LIT = BlockStateProperties.LIT;
+    public static final MapCodec<AlchemicalSeparatorBlock> CODEC = simpleCodec(AlchemicalSeparatorBlock::new);
 
-    public AlchemicalCrucibleBlock(Properties properties)
+    public AlchemicalSeparatorBlock(Properties properties)
     {
         super(properties);
-        this.registerDefaultState(this.getStateDefinition().any().setValue(LIT, false));
-    }
-
-    /**
-     * Apply the block properties to the builder.
-     * @param builder The state definition builder.
-     */
-    @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
-    {
-        builder.add(LIT);
     }
 
     /**
@@ -61,7 +41,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston)
     {
         if (state.getBlock() != newState.getBlock())
-            if (level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
+            if (level.getBlockEntity(pos) instanceof AlchemicalSeparatorBlockEntity blockEntity)
             {
                 blockEntity.dropInventory();
                 level.updateNeighbourForOutputSignal(pos,this);
@@ -100,14 +80,6 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHit)
     {
-        if (stack.is(Items.WATER_BUCKET) && level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
-        {
-            if (blockEntity.tryAddWater())
-            {
-                player.setItemInHand(hand, new ItemStack(Items.BUCKET));
-                return ItemInteractionResult.sidedSuccess(level.isClientSide);
-            }
-        }
         if (!level.isClientSide && player instanceof ServerPlayer serverPlayer)
             serverPlayer.openMenu(Objects.requireNonNull(state.getMenuProvider(level, pos)), pos);
         return ItemInteractionResult.sidedSuccess(level.isClientSide);
@@ -124,7 +96,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     @Override
     protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos)
     {
-        if (level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
+        if (level.getBlockEntity(pos) instanceof AlchemicalSeparatorBlockEntity blockEntity)
             return new SimpleMenuProvider(blockEntity, getName());
         return null;
     }
@@ -142,7 +114,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
         if (!level.isClientSide())
-            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(),
+            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_SEPARATOR.get(),
                                       (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
         return null;
     }
@@ -152,7 +124,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
      * @return The CODEC
      */
     @Override
-    public MapCodec<? extends BaseEntityBlock> codec()
+    protected MapCodec<? extends BaseEntityBlock> codec()
     {
         return CODEC;
     }
@@ -168,6 +140,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
         return RenderShape.MODEL;
     }
 
+
     /**
      * Create a new block entity.
      * @param pos The block position.
@@ -177,6 +150,6 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
-        return new AlchemicalCrucibleBlockEntity(pos, state);
+        return new AlchemicalSeparatorBlockEntity(pos, state);
     }
 }

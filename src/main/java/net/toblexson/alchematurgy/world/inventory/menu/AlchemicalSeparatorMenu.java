@@ -5,17 +5,16 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.neoforged.neoforge.items.SlotItemHandler;
 import net.toblexson.alchematurgy.registry.ModBlocks;
+import net.toblexson.alchematurgy.registry.ModItems;
 import net.toblexson.alchematurgy.registry.ModMenuTypes;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
 
 import java.util.Objects;
 
-public class AlchemicalCrucibleMenu extends AbstractContainerMenu
+public class AlchemicalSeparatorMenu extends AbstractContainerMenu
 {
     private static final int PLAYER_HOTBAR_SIZE = 9;
     private static final int PLAYER_INVENTORY_ROWS = 3;
@@ -25,9 +24,9 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
     private static final int PLAYER_FULL_INVENTORY_START = 0;
 
     private static final int INVENTORY_START = PLAYER_FULL_INVENTORY_START + PLAYER_FULL_INVENTORY_SIZE;
-    private static final int INVENTORY_SIZE = 4;
+    private static final int INVENTORY_SIZE = 2;
 
-    private final AlchemicalCrucibleBlockEntity blockEntity;
+    private final AlchemicalSeparatorBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
@@ -37,10 +36,10 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
      * @param inventory The player's inventory.
      * @param data Extra data from a buffer.
      */
-    public AlchemicalCrucibleMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
+    public AlchemicalSeparatorMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
     {
         this(containerId, inventory, Objects.requireNonNull(inventory.player.level().getBlockEntity(data.readBlockPos())),
-             new SimpleContainerData(AlchemicalCrucibleBlockEntity.DATA_COUNT));
+             new SimpleContainerData(AlchemicalSeparatorBlockEntity.DATA_COUNT));
     }
 
     /**
@@ -49,70 +48,26 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
      * @param inventory The player's inventory.
      * @param blockEntity The block entity that the menu is attached to.
      */
-    public AlchemicalCrucibleMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
+    public AlchemicalSeparatorMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
     {
-        super(ModMenuTypes.ALCHEMICAL_CRUCIBLE.get(), containerId);
-        this.blockEntity = (AlchemicalCrucibleBlockEntity) blockEntity;
+        super(ModMenuTypes.ALCHEMICAL_SEPARATOR.get(), containerId);
+        this.blockEntity = (AlchemicalSeparatorBlockEntity) blockEntity;
         this.level = inventory.player.level();
         this.data = data;
 
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
 
+        addDataSlots(data);
+
         //input
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.INPUT_SLOT, 56, 17));
-        //fuel
-        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.FUEL_SLOT,
-                                            56, 53,  (stack) -> stack.getBurnTime(null) > 0));
-        //bottle
-        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.BOTTLE_SLOT,
-                                            84, 17, (stack -> stack.is(Items.GLASS_BOTTLE))));
+        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory, AlchemicalSeparatorBlockEntity.INPUT_SLOT,
+                                         56, 35, (stack) -> stack.is(ModItems.BOTTLED_MIXED_ESSENCE.get())));
+
         //output
-        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.OUTPUT_SLOT,
+        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory, AlchemicalSeparatorBlockEntity.OUTPUT_SLOT,
                                          116, 35, (stack) -> false));
 
-        addDataSlots(data);
-    }
-
-    /**
-     * If there is water in the block entity.
-     * @return True if the water level is above 0.
-     */
-    public boolean hasWater()
-    {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_WATER_AMOUNT_SLOT) > 0;
-    }
-
-    /**
-     * Calculates the amount of the water cover texture to render.
-     * @return the height the water cover texture should be.
-     */
-    public int waterAmount()
-    {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_WATER_AMOUNT_SLOT);
-    }
-
-    /**
-     * If the crucible should render the flames.
-     * @return If the heat value is above zero.
-     */
-    public boolean isBurning()
-    {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_FUEL_LEVEL_SLOT) > 0;
-    }
-
-    /**
-     * Calculates how much of the flame should be rendered.
-     * @return The height of the flame in pixels.
-     */
-    public int fireAmount()
-    {
-        int fuelLevel = data.get(AlchemicalCrucibleBlockEntity.DATA_FUEL_LEVEL_SLOT);
-        int maxFuel = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_FUEL_SLOT);
-        int flameMaxSize = 14;
-        float factor = (float) flameMaxSize / maxFuel;
-
-        return (int)(fuelLevel * factor);
     }
 
     /**
@@ -121,7 +76,7 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
      */
     public boolean isCrafting()
     {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_PROGRESS_SLOT) > 0;
+        return data.get(AlchemicalSeparatorBlockEntity.DATA_PROGRESS_SLOT) > 0;
     }
 
     /**
@@ -130,9 +85,9 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
      */
     public int getCraftingArrowProgress()
     {
-        int progress = data.get(AlchemicalCrucibleBlockEntity.DATA_PROGRESS_SLOT);
-        int maxProgress = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_PROGRESS_SLOT);
-        int arrowMaxSize = 28;
+        int progress = data.get(AlchemicalSeparatorBlockEntity.DATA_PROGRESS_SLOT);
+        int maxProgress = data.get(AlchemicalSeparatorBlockEntity.DATA_MAX_PROGRESS_SLOT);
+        int arrowMaxSize = 22;
         float factor = (float) arrowMaxSize / maxProgress;
 
         return maxProgress != 0 && progress != 0 ? (int)(progress * factor) : 0;
@@ -161,7 +116,7 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
                 return ItemStack.EMPTY;  // EMPTY_ITEM
             }
         } else if (index < INVENTORY_START + INVENTORY_SIZE) {
-            // This is a TE slot so merge the stack into the players inventory
+            // This is a BE slot so merge the stack into the players inventory
             if (!moveItemStackTo(stack, PLAYER_FULL_INVENTORY_START, PLAYER_FULL_INVENTORY_START + PLAYER_FULL_INVENTORY_SIZE, false)) {
                 return ItemStack.EMPTY;
             }
@@ -187,7 +142,7 @@ public class AlchemicalCrucibleMenu extends AbstractContainerMenu
     @Override
     public boolean stillValid(Player player)
     {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ALCHEMICAL_CRUCIBLE.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ALCHEMICAL_SEPARATOR.get());
     }
 
     /**
