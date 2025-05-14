@@ -32,12 +32,20 @@ public class ModItemModelProvider extends ItemModelProvider
 
         basicItem(ModItems.ALCHEMICAL_ASH.get());
 
+        basicItem(ModItems.BOTTLED_MIXED_ESSENCE.get());
+
+        basicItem(ModItems.BOTTLED_DIRTY_AIR_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_DIRTY_EARTH_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_DIRTY_FIRE_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_DIRTY_WATER_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_DIRTY_LIFE_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_DIRTY_MAGIC_ESSENCE.get());
+
         basicItem(ModItems.BOTTLED_AIR_ESSENCE.get());
         basicItem(ModItems.BOTTLED_EARTH_ESSENCE.get());
         basicItem(ModItems.BOTTLED_FIRE_ESSENCE.get());
         basicItem(ModItems.BOTTLED_WATER_ESSENCE.get());
         basicItem(ModItems.BOTTLED_LIFE_ESSENCE.get());
         basicItem(ModItems.BOTTLED_MAGIC_ESSENCE.get());
-        basicItem(ModItems.BOTTLED_MIXED_ESSENCE.get());
     }
 }

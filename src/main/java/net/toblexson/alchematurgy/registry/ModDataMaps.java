@@ -38,6 +38,14 @@ public class ModDataMaps
                 4, ModItems.BOTTLED_LIFE_ESSENCE,
                 5, ModItems.BOTTLED_MAGIC_ESSENCE);
 
+        public static final Map<Integer, DeferredItem<Item>> INDEX_TO_DIRTY_ITEM = Map.of(
+                0, ModItems.BOTTLED_DIRTY_AIR_ESSENCE,
+                1, ModItems.BOTTLED_DIRTY_EARTH_ESSENCE,
+                2, ModItems.BOTTLED_DIRTY_WATER_ESSENCE,
+                3, ModItems.BOTTLED_DIRTY_WATER_ESSENCE,
+                4, ModItems.BOTTLED_DIRTY_LIFE_ESSENCE,
+                5, ModItems.BOTTLED_DIRTY_MAGIC_ESSENCE);
+
         public static final Codec<Essences> CODEC = RecordCodecBuilder.create(inst -> inst.group(
                 Codec.FLOAT.fieldOf("air").forGetter(Essences::air),
                 Codec.FLOAT.fieldOf("earth").forGetter(Essences::earth),

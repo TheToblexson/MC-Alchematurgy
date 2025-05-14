@@ -157,7 +157,7 @@ public class AlchemicalSeparatorBlockEntity extends BlockEntity implements MenuP
     {
         if (resultEssence >= 0 && resultEssence < 6)
         {
-            return new ItemStack(Essences.INDEX_TO_ITEM.get(resultEssence).get());
+            return new ItemStack(Essences.INDEX_TO_DIRTY_ITEM.get(resultEssence).get());
         }
         Iterator<Map.Entry<String, Float>> iterator = essences.all().entrySet().iterator();
         ArrayList<Map.Entry<String, Float>> dominantEssences = new ArrayList<>();
@@ -169,10 +169,12 @@ public class AlchemicalSeparatorBlockEntity extends BlockEntity implements MenuP
             {
                 count = entry.getValue();
                 dominantEssences.clear();
+                dominantEssences.add(entry);
             }
             else if (entry.getValue() == count)
                 dominantEssences.add(entry);
         }
+        int test = dominantEssences.size();
         //Randomly pick from the list
         int index = this.level.random.nextInt(dominantEssences.size());
         resultEssence = Essences.NAME_TO_INDEX.get(dominantEssences.get(index).getKey());
