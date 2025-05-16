@@ -11,6 +11,7 @@ import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalCrucibleScreen;
+import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalPurifierScreen;
 import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalSeparatorScreen;
 import org.slf4j.Logger;
 
@@ -94,6 +95,7 @@ public class Alchematurgy
     {
         event.register(ModMenuTypes.ALCHEMICAL_CRUCIBLE.get(), AlchemicalCrucibleScreen::new);
         event.register(ModMenuTypes.ALCHEMICAL_SEPARATOR.get(), AlchemicalSeparatorScreen::new);
+        event.register(ModMenuTypes.ALCHEMICAL_PURIFIER.get(), AlchemicalPurifierScreen::new);
     }
 
     /**

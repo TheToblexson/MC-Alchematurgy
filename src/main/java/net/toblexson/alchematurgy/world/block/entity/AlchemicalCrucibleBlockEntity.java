@@ -4,12 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -17,18 +12,15 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.neoforge.items.ItemStackHandler;
 import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
-import org.jetbrains.annotations.Nullable;
 
-public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuProvider
+public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity implements MenuProvider
 {
-    private static final int INVENTORY_SIZE = 4;
+    public static final int INVENTORY_SIZE = 4;
     public static final int INPUT_SLOT = 0;
     public static final int FUEL_SLOT = 1;
     public static final int BOTTLE_SLOT = 2;
@@ -42,7 +34,6 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     public static final int DATA_FUEL_LEVEL_SLOT = 4;
     public static final int DATA_MAX_FUEL_SLOT = 5;
 
-    protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 200;
     private int fluidAmount = 0;
@@ -50,26 +41,19 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     private int fuelLevel = 0;
     private int maxFuel = 0;
 
-    public ItemStackHandler inventory = new ItemStackHandler(INVENTORY_SIZE)
-    {
-        /**
-         * Updates the server when the inventory is modified.
-         * @param slot The slot that has been modified.
-         */
-        @Override
-        protected void onContentsChanged(int slot)
-        {
-            setChanged();
-            assert level != null;
-            if(!level.isClientSide())
-                level.sendBlockUpdated(getBlockPos(),getBlockState(),getBlockState(),3);
-        }
-    };
-
     public AlchemicalCrucibleBlockEntity(BlockPos pos, BlockState state)
     {
-        super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state);
-        data = new ContainerData()
+        super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state, 4);
+    }
+
+    /**
+     * Initialise the container data for the container.
+     * @return the initialised container data.
+     */
+    @Override
+    protected ContainerData initialiseData()
+    {
+        return new ContainerData()
         {
             @Override
             public int get(int index)
@@ -255,18 +239,6 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     }
 
     /**
-     * Drops the inventory using the Containers helper method.
-     */
-    public void dropInventory()
-    {
-        SimpleContainer container = new SimpleContainer(inventory.getSlots());
-        for(int i = 0; i < inventory.getSlots(); i++)
-            container.setItem(i, inventory.getStackInSlot(i));
-        assert this.level != null;
-        Containers.dropContents(this.level, this.worldPosition, container);
-    }
-
-    /**
      * Save additional data to the tag.
      * @param tag The tag being written to.
      * @param registries The registries.
@@ -275,7 +247,6 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
         super.saveAdditional(tag, registries);
-        tag.put("inventory", inventory.serializeNBT(registries));
         tag.putInt("progress", progress);
         tag.putInt("max_progress", maxProgress);
         tag.putInt("water_amount", fluidAmount);
@@ -293,7 +264,6 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
         super.loadAdditional(tag, registries);
-        inventory.deserializeNBT(registries, tag.getCompound("inventory"));
         progress = tag.getInt("progress");
         maxProgress = tag.getInt("max_progress");
         fluidAmount = tag.getInt("water_amount");
@@ -319,32 +289,9 @@ public class AlchemicalCrucibleBlockEntity extends BlockEntity implements MenuPr
      * @param player The player who has interacted with the block.
      * @return The new menu instance.
      */
-    @Nullable
     @Override
     public AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player)
     {
         return new AlchemicalCrucibleMenu(containerID, inventory, this, data);
-    }
-
-    /**
-     * Create an update packet.
-     * @return The new client-bound block entity packet.
-     */
-    @Nullable
-    @Override
-    public Packet<ClientGamePacketListener> getUpdatePacket()
-    {
-        return ClientboundBlockEntityDataPacket.create(this);
-    }
-
-    /**
-     * Create an update tag.
-     * @param registries The registries.
-     * @return The new compound tag.
-     */
-    @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registries)
-    {
-        return saveWithoutMetadata(registries);
     }
 }

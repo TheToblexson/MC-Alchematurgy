@@ -4,44 +4,37 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.toblexson.alchematurgy.Essence;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.registry.ModBlocks;
-import net.toblexson.alchematurgy.registry.ModDataComponents;
-import net.toblexson.alchematurgy.registry.ModDataMaps.Essences;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalSeparatorMenu;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalPurifierMenu;
+import net.toblexson.alchematurgy.world.item.BottledEssenceItem;
+import org.jetbrains.annotations.Nullable;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-
-//When crafted the water becomes Mixed Essence, and then is result into bottles.
-
-public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
+public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
 {
     public static final int INVENTORY_SIZE = 2;
     public static final int INPUT_SLOT = 0;
     public static final int OUTPUT_SLOT = 1;
 
-    public static final int DATA_COUNT = 3;
+    public static final int DATA_COUNT = 2;
     public static final int DATA_PROGRESS_SLOT = 0;
     public static final int DATA_MAX_PROGRESS_SLOT = 1;
-    public static final int DATA_RESULT_ESSENCE_SLOT = 2;
 
     private int progress = 0;
     private int maxProgress = 200;
-    private int resultEssence = -1;
 
-    public AlchemicalSeparatorBlockEntity(BlockPos pos, BlockState state)
+    public AlchemicalPurifierBlockEntity(BlockPos pos, BlockState state)
     {
-        super(ModBlockEntityTypes.ALCHEMICAL_SEPARATOR.get(), pos, state, INVENTORY_SIZE);
+        super(ModBlockEntityTypes.ALCHEMICAL_PURIFIER.get(), pos, state, INVENTORY_SIZE);
     }
 
     /**
@@ -58,9 +51,8 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
             {
                 return switch (index)
                 {
-                    case DATA_PROGRESS_SLOT -> AlchemicalSeparatorBlockEntity.this.progress;
-                    case DATA_MAX_PROGRESS_SLOT -> AlchemicalSeparatorBlockEntity.this.maxProgress;
-                    case DATA_RESULT_ESSENCE_SLOT -> AlchemicalSeparatorBlockEntity.this.resultEssence;
+                    case DATA_PROGRESS_SLOT -> AlchemicalPurifierBlockEntity.this.progress;
+                    case DATA_MAX_PROGRESS_SLOT -> AlchemicalPurifierBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -70,9 +62,8 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
             {
                 switch (index)
                 {
-                    case DATA_PROGRESS_SLOT: AlchemicalSeparatorBlockEntity.this.progress = value;
-                    case DATA_MAX_PROGRESS_SLOT: AlchemicalSeparatorBlockEntity.this.maxProgress = value;
-                    case DATA_RESULT_ESSENCE_SLOT: AlchemicalSeparatorBlockEntity.this.resultEssence = value;
+                    case DATA_PROGRESS_SLOT: AlchemicalPurifierBlockEntity.this.progress = value;
+                    case DATA_MAX_PROGRESS_SLOT: AlchemicalPurifierBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -92,23 +83,33 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
      */
     public void tick(Level level, BlockPos pos, BlockState state)
     {
-        Essences essences = inventory.getStackInSlot(INPUT_SLOT).get(ModDataComponents.ESSENCES.get());
-        if (essences != null)
+        ItemStack input = inventory.getStackInSlot(INPUT_SLOT);
+        if (!input.isEmpty() && input.getItem() instanceof BottledEssenceItem)
         {
-            ItemStack result = getDominantEssence(essences);
-            if (canOutput(result))
+            Item resultItem = getResult(input);
+            if (resultItem != null)
             {
-                if (progress >= maxProgress)
+                ItemStack result = new ItemStack(resultItem);
+                if (canOutput(result))
                 {
-                    finishCraft(result);
-                    progress = 0;
-                    resultEssence = -1;
+                    if (progress >= maxProgress)
+                    {
+                        finishCraft(result);
+                        progress = 0;
+                    }
+                    progress++;
                 }
-                progress++;
             }
             else progress = 0;
         }
         else progress = 0;
+    }
+
+    @Nullable
+    private Item getResult(ItemStack input)
+    {
+        Essence essence = ((BottledEssenceItem)input.getItem()).getEssence();
+        return Essence.getPureEssence(essence.index);
     }
 
     /**
@@ -137,34 +138,6 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
         return stack.getItem() == result.getItem() && outputCount <= maxCount;
     }
 
-    private ItemStack getDominantEssence(Essences essences)
-    {
-        if (resultEssence >= 0 && resultEssence < 6)
-        {
-            return new ItemStack(Essences.INDEX_TO_DIRTY_ITEM.get(resultEssence).get());
-        }
-        Iterator<Map.Entry<String, Float>> iterator = essences.all().entrySet().iterator();
-        ArrayList<Map.Entry<String, Float>> dominantEssences = new ArrayList<>();
-        float count = 0;
-        while (iterator.hasNext())
-        {
-            Map.Entry<String, Float> entry = iterator.next();
-            if (entry.getValue() > count)
-            {
-                count = entry.getValue();
-                dominantEssences.clear();
-                dominantEssences.add(entry);
-            }
-            else if (entry.getValue() == count)
-                dominantEssences.add(entry);
-        }
-        int test = dominantEssences.size();
-        //Randomly pick from the list
-        int index = this.level.random.nextInt(dominantEssences.size());
-        resultEssence = Essences.NAME_TO_INDEX.get(dominantEssences.get(index).getKey());
-        return new ItemStack(Essences.NAME_TO_ESSENCE.get(dominantEssences.get(index).getKey()).get());
-    }
-
     /**
      * Save additional data to the tag.
      * @param tag The tag being written to.
@@ -176,7 +149,6 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
         super.saveAdditional(tag, registries);
         tag.putInt("progress", progress);
         tag.putInt("max_progress", maxProgress);
-        tag.putInt("result_essence", resultEssence);
     }
 
     /**
@@ -190,7 +162,6 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
         super.loadAdditional(tag, registries);
         progress = tag.getInt("progress");
         maxProgress = tag.getInt("max_progress");
-        resultEssence = tag.getInt("result_essence");
     }
 
     /**
@@ -200,7 +171,7 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
     @Override
     public Component getDisplayName()
     {
-        return ModBlocks.ALCHEMICAL_SEPARATOR.get().getName();
+        return ModBlocks.ALCHEMICAL_PURIFIER.get().getName();
     }
 
     /**
@@ -213,6 +184,6 @@ public class AlchemicalSeparatorBlockEntity extends ModMenuBlockEntity
     @Override
     public AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player)
     {
-        return new AlchemicalSeparatorMenu(containerID, inventory, this, data);
+        return new AlchemicalPurifierMenu(containerID, inventory, this, data);
     }
 }

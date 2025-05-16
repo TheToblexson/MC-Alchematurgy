@@ -1,9 +1,23 @@
 {
   "item.alchematurgy.wand": "Wand",
   "item.alchematurgy.ash": "Ash",
+  "item.bottled_mixed_essence": "Bottled Mixed Essence",
+  "item.bottled_dirty_air_essence": "Bottled Dirty Air Essence",
+  "item.bottled_dirty_earth_essence": "Bottled Dirty Earth Essence",
+  "item.bottled_dirty_fire_essence": "Bottled Dirty Fire Essence",
+  "item.bottled_dirty_water_essence": "Bottled Dirty Water Essence",
+  "item.bottled_dirty_life_essence": "Bottled Dirty Life Essence",
+  "item.bottled_dirty_magic_essence": "Bottled Dirty Magic Essence",
+  "item.bottled_air_essence": "Bottled Air Essence",
+  "item.bottled_earth_essence": "Bottled Earth Essence",
+  "item.bottled_fire_essence": "Bottled Fire Essence",
+  "item.bottled_water_essence": "Bottled Water Essence",
+  "item.bottled_life_essence": "Bottled Life Essence",
+  "item.bottled_magic_essence": "Bottled Magic Essence",
 
   "block.alchematurgy.alchemical_crucible": "Alchemical Crucible",
   "block.alchematurgy.alchemical_separator": "Alchemical Separator",
+  "block.alchematurgy.alchemical_purifier": "Alchemical Purifier",
 
   "creativetab.alchematurgy.alchematurgy_tab": "Alchematurgy"
 }

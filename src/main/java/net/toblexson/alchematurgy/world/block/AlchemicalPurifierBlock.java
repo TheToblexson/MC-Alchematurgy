@@ -2,23 +2,21 @@ package net.toblexson.alchematurgy.world.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalPurifierBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-public class AlchemicalSeparatorBlock  extends ModMenuBlock
+public class AlchemicalPurifierBlock extends ModMenuBlock
 {
-    public static final MapCodec<AlchemicalSeparatorBlock> CODEC = simpleCodec(AlchemicalSeparatorBlock::new);
+    public static final MapCodec<AlchemicalPurifierBlock> CODEC = simpleCodec(AlchemicalPurifierBlock::new);
 
-    public AlchemicalSeparatorBlock(Properties properties)
+    public AlchemicalPurifierBlock(Properties properties)
     {
         super(properties);
     }
@@ -36,7 +34,7 @@ public class AlchemicalSeparatorBlock  extends ModMenuBlock
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
         if (!level.isClientSide())
-            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_SEPARATOR.get(),
+            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_PURIFIER.get(),
                                       (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
         return null;
     }
@@ -57,9 +55,10 @@ public class AlchemicalSeparatorBlock  extends ModMenuBlock
      * @param state the block state.
      * @return The new block entity.
      */
+    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
-        return new AlchemicalSeparatorBlockEntity(pos, state);
+        return new AlchemicalPurifierBlockEntity(pos, state);
     }
 }

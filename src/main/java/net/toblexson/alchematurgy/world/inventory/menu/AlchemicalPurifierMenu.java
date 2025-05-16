@@ -10,11 +10,13 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.registry.ModItems;
 import net.toblexson.alchematurgy.registry.ModMenuTypes;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalPurifierBlockEntity;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
+import net.toblexson.alchematurgy.world.item.BottledEssenceItem;
 
 import java.util.Objects;
 
-public class AlchemicalSeparatorMenu extends ModMenu
+public class AlchemicalPurifierMenu extends ModMenu
 {
     /**
      * Client-side constructor.
@@ -22,10 +24,10 @@ public class AlchemicalSeparatorMenu extends ModMenu
      * @param inventory The player's inventory.
      * @param data Extra data from a buffer.
      */
-    public AlchemicalSeparatorMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
+    public AlchemicalPurifierMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
     {
         this(containerId, inventory, Objects.requireNonNull(inventory.player.level().getBlockEntity(data.readBlockPos())),
-             new SimpleContainerData(AlchemicalSeparatorBlockEntity.DATA_COUNT));
+             new SimpleContainerData(AlchemicalPurifierBlockEntity.DATA_COUNT));
     }
 
     /**
@@ -35,17 +37,18 @@ public class AlchemicalSeparatorMenu extends ModMenu
      * @param blockEntity The menu's block entity.
      * @param data The container data.
      */
-    public AlchemicalSeparatorMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
+    public AlchemicalPurifierMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
     {
-        super(ModMenuTypes.ALCHEMICAL_SEPARATOR.get(), containerId, inventory, blockEntity, data, AlchemicalSeparatorBlockEntity.INVENTORY_SIZE);
+        super(ModMenuTypes.ALCHEMICAL_PURIFIER.get(), containerId, inventory, blockEntity, data, 2);
 
         //input
-        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory, AlchemicalSeparatorBlockEntity.INPUT_SLOT,
-                                         56, 35, (stack) -> stack.is(ModItems.BOTTLED_MIXED_ESSENCE.get())));
+        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,     AlchemicalPurifierBlockEntity.INPUT_SLOT,
+                                            56, 35, (stack) ->
+                                                    stack.getItem() instanceof BottledEssenceItem && ((BottledEssenceItem) stack.getItem()).isDirty()));
 
         //output
-        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory, AlchemicalSeparatorBlockEntity.OUTPUT_SLOT,
-                                         116, 35, (stack) -> false));
+        this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory, AlchemicalPurifierBlockEntity.OUTPUT_SLOT,
+                                            116, 35, (stack) -> false));
 
     }
 
@@ -80,6 +83,6 @@ public class AlchemicalSeparatorMenu extends ModMenu
     @Override
     public boolean stillValid(Player player)
     {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ALCHEMICAL_SEPARATOR.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ALCHEMICAL_PURIFIER.get());
     }
 }

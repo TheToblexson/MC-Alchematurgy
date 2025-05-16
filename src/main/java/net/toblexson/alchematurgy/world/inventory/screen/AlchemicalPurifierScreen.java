@@ -8,15 +8,15 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.toblexson.alchematurgy.Alchematurgy;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalSeparatorMenu;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalPurifierMenu;
 
-public class AlchemicalSeparatorScreen extends ModScreen<AlchemicalSeparatorMenu>
+public class AlchemicalPurifierScreen extends ModScreen<AlchemicalPurifierMenu>
 {
-    private static final ResourceLocation TEXTURE = Alchematurgy.modLoc("textures/gui/container/alchemical_separator_screen.png");
+    private static final ResourceLocation TEXTURE = Alchematurgy.modLoc("textures/gui/container/alchemical_purifier_screen.png");
 
-    public AlchemicalSeparatorScreen(AlchemicalSeparatorMenu menu, Inventory inventory, Component title)
+    public AlchemicalPurifierScreen(AlchemicalPurifierMenu pMenu, Inventory pPlayerInventory, Component pTitle)
     {
-        super(menu, inventory, title);
+        super(pMenu, pPlayerInventory, pTitle);
     }
 
     /**

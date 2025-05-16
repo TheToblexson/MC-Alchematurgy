@@ -2,7 +2,6 @@ package net.toblexson.alchematurgy.world.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -10,7 +9,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -23,12 +21,10 @@ import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Objects;
-
 /**
  * The Alchemical Crucible block class
  */
-public class AlchemicalCrucibleBlock extends BaseEntityBlock
+public class AlchemicalCrucibleBlock extends ModMenuBlock
 {
     public static final MapCodec<AlchemicalCrucibleBlock> CODEC = simpleCodec(AlchemicalCrucibleBlock::new);
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
@@ -47,43 +43,6 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(LIT);
-    }
-
-    /**
-     * Drop contents and remove the block entity when removed.
-     * @param state The block state.
-     * @param level The game level.
-     * @param pos The block pos.
-     * @param newState The block state replacing the block.
-     * @param movedByPiston Was the block moved by a piston?
-     */
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston)
-    {
-        if (state.getBlock() != newState.getBlock())
-            if (level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
-            {
-                blockEntity.dropInventory();
-                level.updateNeighbourForOutputSignal(pos,this);
-            }
-        super.onRemove(state,level,pos,newState,movedByPiston);
-    }
-
-    /**
-     * React to the player right-clicking whilst not holding an item
-     * @param state The block state.
-     * @param level The game level.
-     * @param pos The block position.
-     * @param player The player.
-     * @param blockHit The block hit result.
-     * @return The interaction result.
-     */
-    @Override
-    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult blockHit)
-    {
-        if (!level.isClientSide && player instanceof ServerPlayer serverPlayer)
-            serverPlayer.openMenu(Objects.requireNonNull(state.getMenuProvider(level, pos)), pos);
-        return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
     /**
@@ -108,25 +67,7 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
                 return ItemInteractionResult.sidedSuccess(level.isClientSide);
             }
         }
-        if (!level.isClientSide && player instanceof ServerPlayer serverPlayer)
-            serverPlayer.openMenu(Objects.requireNonNull(state.getMenuProvider(level, pos)), pos);
-        return ItemInteractionResult.sidedSuccess(level.isClientSide);
-    }
-
-    /**
-     * Get this block's menu provider.
-     * @param state The block state.
-     * @param level The game level.
-     * @param pos The block position.
-     * @return The menu provider.
-     */
-    @Nullable
-    @Override
-    protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos)
-    {
-        if (level.getBlockEntity(pos) instanceof AlchemicalCrucibleBlockEntity blockEntity)
-            return new SimpleMenuProvider(blockEntity, getName());
-        return null;
+        return super.useItemOn(stack, state, level, pos, player, hand, blockHit);
     }
 
     /**
@@ -155,17 +96,6 @@ public class AlchemicalCrucibleBlock extends BaseEntityBlock
     public MapCodec<? extends BaseEntityBlock> codec()
     {
         return CODEC;
-    }
-
-    /**
-     * Get the block's render shape.
-     * @param state The block state.
-     * @return The render shape.
-     */
-    @Override
-    protected RenderShape getRenderShape(BlockState state)
-    {
-        return RenderShape.MODEL;
     }
 
     /**
