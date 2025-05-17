@@ -6,13 +6,13 @@ import net.toblexson.alchematurgy.Essence;
 public class BottledEssenceItem extends Item
 {
     private final Essence essence;
-    private final boolean isDirty;
+    private final Essence.Quality quality;
 
-    public BottledEssenceItem(Essence essence, boolean isDirty)
+    public BottledEssenceItem(Essence essence, Essence.Quality quality)
     {
         super(new Item.Properties());
         this.essence = essence;
-        this.isDirty = isDirty;
+        this.quality = quality;
     }
 
     public Essence getEssence()
@@ -20,8 +20,8 @@ public class BottledEssenceItem extends Item
         return this.essence;
     }
 
-    public boolean isDirty()
+    public Essence.Quality getQuality()
     {
-        return isDirty;
+        return quality;
     }
 }

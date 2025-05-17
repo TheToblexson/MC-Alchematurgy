@@ -12,14 +12,15 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.Essence;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
 import net.toblexson.alchematurgy.registry.ModBlocks;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalPurifierMenu;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalConcentratorMenu;
 import net.toblexson.alchematurgy.world.item.BottledEssenceItem;
 import org.jetbrains.annotations.Nullable;
 
-public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
+public class AlchemicalConcentratorBlockEntity extends ModMenuBlockEntity
 {
     public static final int INVENTORY_SIZE = 2;
     public static final int INPUT_SLOT = 0;
@@ -32,9 +33,9 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
     private int progress = 0;
     private int maxProgress = 200;
 
-    public AlchemicalPurifierBlockEntity(BlockPos pos, BlockState state)
+    public AlchemicalConcentratorBlockEntity(BlockPos pos, BlockState state)
     {
-        super(ModBlockEntityTypes.ALCHEMICAL_PURIFIER.get(), pos, state, INVENTORY_SIZE);
+        super(ModBlockEntityTypes.ALCHEMICAL_CONCENTRATOR.get(), pos, state, INVENTORY_SIZE);
     }
 
     /**
@@ -51,8 +52,8 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
             {
                 return switch (index)
                 {
-                    case DATA_PROGRESS_SLOT -> AlchemicalPurifierBlockEntity.this.progress;
-                    case DATA_MAX_PROGRESS_SLOT -> AlchemicalPurifierBlockEntity.this.maxProgress;
+                    case DATA_PROGRESS_SLOT -> AlchemicalConcentratorBlockEntity.this.progress;
+                    case DATA_MAX_PROGRESS_SLOT -> AlchemicalConcentratorBlockEntity.this.maxProgress;
                     default -> 0;
                 };
             }
@@ -62,8 +63,8 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
             {
                 switch (index)
                 {
-                    case DATA_PROGRESS_SLOT: AlchemicalPurifierBlockEntity.this.progress = value;
-                    case DATA_MAX_PROGRESS_SLOT: AlchemicalPurifierBlockEntity.this.maxProgress = value;
+                    case DATA_PROGRESS_SLOT: AlchemicalConcentratorBlockEntity.this.progress = value;
+                    case DATA_MAX_PROGRESS_SLOT: AlchemicalConcentratorBlockEntity.this.maxProgress = value;
                 }
             }
 
@@ -84,8 +85,9 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
     public void tick(Level level, BlockPos pos, BlockState state)
     {
         ItemStack input = inventory.getStackInSlot(INPUT_SLOT);
-        if (!input.isEmpty() && input.getItem() instanceof BottledEssenceItem)
+        if (validInput(input))
         {
+            Alchematurgy.LOGGER.debug("VALID!!");
             Item resultItem = getResult(input);
             if (resultItem != null)
             {
@@ -106,6 +108,17 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
     }
 
     /**
+     * If the input is a valid item stack.
+     * @param input The input item stack.
+     * @return True if the input is valid.
+     */
+    private boolean validInput(ItemStack input)
+    {
+        return !input.isEmpty() && input.getItem() instanceof BottledEssenceItem bottle
+                && bottle.getQuality() == Essence.Quality.Pure && input.getCount() >= 2;
+    }
+
+    /**
      * Generate the output item from the input item stack.
      * @param input The input item stack.
      * @return The output item.
@@ -114,18 +127,7 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
     private Item getResult(ItemStack input)
     {
         Essence essence = ((BottledEssenceItem)input.getItem()).getEssence();
-        return Essence.getPureEssence(essence.index);
-    }
-
-    /**
-     * Complete the crafting operation. Removing from the input and adding to the result.
-     */
-    private void finishCraft(ItemStack result)
-    {
-        int newCount = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount();
-        result.setCount(newCount);
-        inventory.extractItem(INPUT_SLOT, 1, false);
-        inventory.setStackInSlot(OUTPUT_SLOT, result);
+        return Essence.getConcentratedEssence(essence.index);
     }
 
     /**
@@ -141,6 +143,17 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
         int maxCount = stack.getMaxStackSize();
         int outputCount = stack.getCount() + 1;
         return stack.getItem() == result.getItem() && outputCount <= maxCount;
+    }
+
+    /**
+     * Complete the crafting operation. Removing from the input and adding to the result.
+     */
+    private void finishCraft(ItemStack result)
+    {
+        int newCount = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount();
+        result.setCount(newCount);
+        inventory.extractItem(INPUT_SLOT, 2, false);
+        inventory.setStackInSlot(OUTPUT_SLOT, result);
     }
 
     /**
@@ -176,7 +189,7 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
     @Override
     public Component getDisplayName()
     {
-        return ModBlocks.ALCHEMICAL_PURIFIER.get().getName();
+        return ModBlocks.ALCHEMICAL_CONCENTRATOR.get().getName();
     }
 
     /**
@@ -189,6 +202,6 @@ public class AlchemicalPurifierBlockEntity extends ModMenuBlockEntity
     @Override
     public AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player)
     {
-        return new AlchemicalPurifierMenu(containerID, inventory, this, data);
+        return new AlchemicalConcentratorMenu(containerID, inventory, this, data);
     }
 }

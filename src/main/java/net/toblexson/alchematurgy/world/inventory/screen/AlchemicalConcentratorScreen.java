@@ -7,13 +7,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.toblexson.alchematurgy.Alchematurgy;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalConcentratorMenu;
 
-public class AlchemicalCrucibleScreen extends ModScreen<AlchemicalCrucibleMenu>
+public class AlchemicalConcentratorScreen extends ModScreen<AlchemicalConcentratorMenu>
 {
-    private static final ResourceLocation TEXTURE = Alchematurgy.modLoc("textures/gui/container/alchemical_crucible_screen.png");
+    private static final ResourceLocation TEXTURE = Alchematurgy.modLoc("textures/gui/container/alchemical_concentrator_screen.png");
 
-    public AlchemicalCrucibleScreen(AlchemicalCrucibleMenu menu, Inventory inventory, Component title)
+    public AlchemicalConcentratorScreen(AlchemicalConcentratorMenu menu, Inventory inventory, Component title)
     {
         super(menu, inventory, title);
     }
@@ -38,33 +38,11 @@ public class AlchemicalCrucibleScreen extends ModScreen<AlchemicalCrucibleMenu>
         graphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
         renderProgressArrow(graphics, x, y);
-        renderWaterCover(graphics, x, y);
-        renderFlame(graphics, x, y);
-    }
-
-    private void renderFlame(GuiGraphics graphics, int x, int y)
-    {
-        if (menu.isBurning())
-        {
-            int height = menu.fireAmount();
-            int offset = 14 - height;
-            graphics.blit(TEXTURE, x + 56, y + 36 + offset, 176, 15 + offset, 14, height);
-        }
-    }
-
-    private void renderWaterCover(GuiGraphics graphics, int x, int y)
-    {
-        if (menu.hasWater())
-        {
-            int height = menu.waterAmount();
-            int offset = 4 - height;
-            graphics.blit(TEXTURE, x + 87, y + 54 + offset, 176, 11 + offset, 10, height);
-        }
     }
 
     private void renderProgressArrow(GuiGraphics graphics, int x, int y)
     {
         if (menu.isCrafting())
-            graphics.blit(TEXTURE, x + 78, y + 36, 176, 0, menu.getCraftingArrowProgress(), 11);
+            graphics.blit(TEXTURE, x + 80, y + 34, 176, 0, menu.getCraftingArrowProgress(), 16);
     }
 }

@@ -9,6 +9,7 @@ import net.neoforged.neoforge.network.IContainerFactory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
+import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalConcentratorMenu;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalPurifierMenu;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalSeparatorMenu;
@@ -30,6 +31,9 @@ public class ModMenuTypes
 
     public static final Supplier<MenuType<AlchemicalPurifierMenu>> ALCHEMICAL_PURIFIER =
             registerMenuType("alchemical_purifier", AlchemicalPurifierMenu::new);
+
+    public static final Supplier<MenuType<AlchemicalConcentratorMenu>> ALCHEMICAL_CONCENTRATOR =
+            registerMenuType("alchemical_concentrator", AlchemicalConcentratorMenu::new);
 
     /**
      * Helper method to register a menu type.

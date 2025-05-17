@@ -10,13 +10,13 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.toblexson.alchematurgy.Essence;
 import net.toblexson.alchematurgy.registry.ModBlocks;
 import net.toblexson.alchematurgy.registry.ModMenuTypes;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalConcentratorBlockEntity;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalPurifierBlockEntity;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
 import net.toblexson.alchematurgy.world.item.BottledEssenceItem;
 
 import java.util.Objects;
 
-public class AlchemicalPurifierMenu extends ModMenu
+public class AlchemicalConcentratorMenu extends ModMenu
 {
     /**
      * Client-side constructor.
@@ -24,10 +24,10 @@ public class AlchemicalPurifierMenu extends ModMenu
      * @param inventory The player's inventory.
      * @param data Extra data from a buffer.
      */
-    public AlchemicalPurifierMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
+    public AlchemicalConcentratorMenu(int containerId, Inventory inventory, FriendlyByteBuf data)
     {
         this(containerId, inventory, Objects.requireNonNull(inventory.player.level().getBlockEntity(data.readBlockPos())),
-             new SimpleContainerData(AlchemicalPurifierBlockEntity.DATA_COUNT));
+             new SimpleContainerData(AlchemicalConcentratorBlockEntity.DATA_COUNT));
     }
 
     /**
@@ -37,13 +37,13 @@ public class AlchemicalPurifierMenu extends ModMenu
      * @param blockEntity The menu's block entity.
      * @param data The container data.
      */
-    public AlchemicalPurifierMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
+    public AlchemicalConcentratorMenu(int containerId, Inventory inventory, BlockEntity blockEntity, ContainerData data)
     {
-        super(ModMenuTypes.ALCHEMICAL_PURIFIER.get(), containerId, inventory, blockEntity, data, AlchemicalPurifierBlockEntity.INVENTORY_SIZE);
+        super(ModMenuTypes.ALCHEMICAL_CONCENTRATOR.get(), containerId, inventory, blockEntity, data, AlchemicalConcentratorBlockEntity.INVENTORY_SIZE);
 
         //input
         this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalPurifierBlockEntity.INPUT_SLOT,
-            56, 35, (stack) -> stack.getItem() instanceof BottledEssenceItem bottle && bottle.getQuality() == Essence.Quality.Dirty));
+            56, 35, (stack) -> stack.getItem() instanceof BottledEssenceItem bottle && bottle.getQuality() == Essence.Quality.Pure));
 
         //output
         this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory, AlchemicalPurifierBlockEntity.OUTPUT_SLOT,
@@ -56,7 +56,7 @@ public class AlchemicalPurifierMenu extends ModMenu
      */
     public boolean isCrafting()
     {
-        return data.get(AlchemicalSeparatorBlockEntity.DATA_PROGRESS_SLOT) > 0;
+        return data.get(AlchemicalConcentratorBlockEntity.DATA_PROGRESS_SLOT) > 0;
     }
 
     /**
@@ -65,8 +65,8 @@ public class AlchemicalPurifierMenu extends ModMenu
      */
     public int getCraftingArrowProgress()
     {
-        int progress = data.get(AlchemicalSeparatorBlockEntity.DATA_PROGRESS_SLOT);
-        int maxProgress = data.get(AlchemicalSeparatorBlockEntity.DATA_MAX_PROGRESS_SLOT);
+        int progress = data.get(AlchemicalConcentratorBlockEntity.DATA_PROGRESS_SLOT);
+        int maxProgress = data.get(AlchemicalConcentratorBlockEntity.DATA_MAX_PROGRESS_SLOT);
         int arrowMaxSize = 22;
         float factor = (float) arrowMaxSize / maxProgress;
 
@@ -81,6 +81,6 @@ public class AlchemicalPurifierMenu extends ModMenu
     @Override
     public boolean stillValid(Player player)
     {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ALCHEMICAL_PURIFIER.get());
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()), player, ModBlocks.ALCHEMICAL_CONCENTRATOR.get());
     }
 }

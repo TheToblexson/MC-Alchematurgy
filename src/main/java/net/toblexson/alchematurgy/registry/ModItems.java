@@ -29,23 +29,30 @@ public class ModItems
 
     public static final DeferredItem<Item> BOTTLED_MIXED_ESSENCE = item("bottled_mixed_essence", BottledMixedEssenceItem::new);
 
-    public static final DeferredItem<Item> BOTTLED_DIRTY_AIR_ESSENCE = bottledEssence("bottled_dirty_air_essence", Essence.Air, true);
-    public static final DeferredItem<Item> BOTTLED_DIRTY_EARTH_ESSENCE = bottledEssence("bottled_dirty_earth_essence", Essence.Earth, true);
-    public static final DeferredItem<Item> BOTTLED_DIRTY_FIRE_ESSENCE = bottledEssence("bottled_dirty_fire_essence", Essence.Fire, true);
-    public static final DeferredItem<Item> BOTTLED_DIRTY_WATER_ESSENCE = bottledEssence("bottled_dirty_water_essence", Essence.Water, true);
-    public static final DeferredItem<Item> BOTTLED_DIRTY_LIFE_ESSENCE = bottledEssence("bottled_dirty_life_essence", Essence.Life, true);
-    public static final DeferredItem<Item> BOTTLED_DIRTY_MAGIC_ESSENCE = bottledEssence("bottled_dirty_magic_essence", Essence.Magic, true);
+    public static final DeferredItem<Item> BOTTLED_DIRTY_AIR_ESSENCE = bottledEssence("bottled_dirty_air_essence", Essence.Air, Essence.Quality.Dirty);
+    public static final DeferredItem<Item> BOTTLED_DIRTY_EARTH_ESSENCE = bottledEssence("bottled_dirty_earth_essence", Essence.Earth, Essence.Quality.Dirty);
+    public static final DeferredItem<Item> BOTTLED_DIRTY_FIRE_ESSENCE = bottledEssence("bottled_dirty_fire_essence", Essence.Fire, Essence.Quality.Dirty);
+    public static final DeferredItem<Item> BOTTLED_DIRTY_WATER_ESSENCE = bottledEssence("bottled_dirty_water_essence", Essence.Water, Essence.Quality.Dirty);
+    public static final DeferredItem<Item> BOTTLED_DIRTY_LIFE_ESSENCE = bottledEssence("bottled_dirty_life_essence", Essence.Life, Essence.Quality.Dirty);
+    public static final DeferredItem<Item> BOTTLED_DIRTY_MAGIC_ESSENCE = bottledEssence("bottled_dirty_magic_essence", Essence.Magic, Essence.Quality.Dirty);
 
-    public static final DeferredItem<Item> BOTTLED_AIR_ESSENCE = bottledEssence("bottled_air_essence", Essence.Air, false);
-    public static final DeferredItem<Item> BOTTLED_EARTH_ESSENCE = bottledEssence("bottled_earth_essence", Essence.Earth, false);
-    public static final DeferredItem<Item> BOTTLED_FIRE_ESSENCE = bottledEssence("bottled_fire_essence", Essence.Fire, false);
-    public static final DeferredItem<Item> BOTTLED_WATER_ESSENCE = bottledEssence("bottled_water_essence", Essence.Water, false);
-    public static final DeferredItem<Item> BOTTLED_LIFE_ESSENCE = bottledEssence("bottled_life_essence", Essence.Life, false);
-    public static final DeferredItem<Item> BOTTLED_MAGIC_ESSENCE = bottledEssence("bottled_magic_essence", Essence.Magic, false);
+    public static final DeferredItem<Item> BOTTLED_AIR_ESSENCE = bottledEssence("bottled_air_essence", Essence.Air, Essence.Quality.Pure);
+    public static final DeferredItem<Item> BOTTLED_EARTH_ESSENCE = bottledEssence("bottled_earth_essence", Essence.Earth, Essence.Quality.Pure);
+    public static final DeferredItem<Item> BOTTLED_FIRE_ESSENCE = bottledEssence("bottled_fire_essence", Essence.Fire, Essence.Quality.Pure);
+    public static final DeferredItem<Item> BOTTLED_WATER_ESSENCE = bottledEssence("bottled_water_essence", Essence.Water, Essence.Quality.Pure);
+    public static final DeferredItem<Item> BOTTLED_LIFE_ESSENCE = bottledEssence("bottled_life_essence", Essence.Life, Essence.Quality.Pure);
+    public static final DeferredItem<Item> BOTTLED_MAGIC_ESSENCE = bottledEssence("bottled_magic_essence", Essence.Magic, Essence.Quality.Pure);
 
-    private static DeferredItem<Item> bottledEssence(String name, Essence essence, boolean isDirty)
+    public static final DeferredItem<Item> BOTTLED_CONCENTRATED_AIR_ESSENCE = bottledEssence("bottled_concentrated_air_essence", Essence.Air, Essence.Quality.Concentrated);
+    public static final DeferredItem<Item> BOTTLED_CONCENTRATED_EARTH_ESSENCE = bottledEssence("bottled_concentrated_earth_essence", Essence.Earth, Essence.Quality.Concentrated);
+    public static final DeferredItem<Item> BOTTLED_CONCENTRATED_FIRE_ESSENCE = bottledEssence("bottled_concentrated_fire_essence", Essence.Fire, Essence.Quality.Concentrated);
+    public static final DeferredItem<Item> BOTTLED_CONCENTRATED_WATER_ESSENCE = bottledEssence("bottled_concentrated_water_essence", Essence.Water, Essence.Quality.Concentrated);
+    public static final DeferredItem<Item> BOTTLED_CONCENTRATED_LIFE_ESSENCE = bottledEssence("bottled_concentrated_life_essence", Essence.Life, Essence.Quality.Concentrated);
+    public static final DeferredItem<Item> BOTTLED_CONCENTRATED_MAGIC_ESSENCE = bottledEssence("bottled_concentrated_magic_essence", Essence.Magic, Essence.Quality.Concentrated);
+
+    private static DeferredItem<Item> bottledEssence(String name, Essence essence, Essence.Quality quality)
     {
-        return item(name, () -> new BottledEssenceItem(essence, isDirty));
+        return item(name, () -> new BottledEssenceItem(essence, quality));
     }
 
     private static DeferredItem<Item> item(String name, Supplier<Item> itemSupplier)

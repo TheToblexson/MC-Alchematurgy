@@ -1,6 +1,5 @@
 package net.toblexson.alchematurgy.world.block;
 
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.*;
@@ -8,9 +7,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.toblexson.alchematurgy.world.block.entity.ModMenuBlockEntity;
@@ -88,8 +85,7 @@ public abstract class ModMenuBlock extends BaseEntityBlock
      * @param pos The block position.
      * @return The menu provider.
      */
-    @Nullable
-    @Override
+    @Nullable @Override
     protected MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos)
     {
         if (level.getBlockEntity(pos) instanceof ModMenuBlockEntity blockEntity)

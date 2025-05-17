@@ -29,8 +29,7 @@ public class AlchemicalPurifierBlock extends ModMenuBlock
      * @return The block entity ticker.
      * @param <T> A block entity class.
      */
-    @Nullable
-    @Override
+    @Nullable @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
         if (!level.isClientSide())
@@ -55,7 +54,6 @@ public class AlchemicalPurifierBlock extends ModMenuBlock
      * @param state the block state.
      * @return The new block entity.
      */
-    @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {

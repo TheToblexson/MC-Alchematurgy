@@ -7,16 +7,20 @@ import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalConcentratorBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-public class AlchemicalSeparatorBlock  extends ModMenuBlock
+public class AlchemicalConcentratorBlock extends ModMenuBlock
 {
-    public static final MapCodec<AlchemicalSeparatorBlock> CODEC = simpleCodec(AlchemicalSeparatorBlock::new);
+    /**
+     * The block's codec.
+     */
+    public static final MapCodec<AlchemicalConcentratorBlock> CODEC = simpleCodec(AlchemicalConcentratorBlock::new);
 
-    public AlchemicalSeparatorBlock(Properties properties)
+    public AlchemicalConcentratorBlock(BlockBehaviour.Properties properties)
     {
         super(properties);
     }
@@ -33,14 +37,14 @@ public class AlchemicalSeparatorBlock  extends ModMenuBlock
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
         if (!level.isClientSide())
-            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_SEPARATOR.get(),
+            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_CONCENTRATOR.get(),
                                       (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
         return null;
     }
 
     /**
-     * Returns the block's Codec
-     * @return The Codec
+     * Returns the block's CODEC
+     * @return The CODEC
      */
     @Override
     protected MapCodec<? extends BaseEntityBlock> codec()
@@ -57,6 +61,6 @@ public class AlchemicalSeparatorBlock  extends ModMenuBlock
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state)
     {
-        return new AlchemicalSeparatorBlockEntity(pos, state);
+        return new AlchemicalConcentratorBlockEntity(pos, state);
     }
 }

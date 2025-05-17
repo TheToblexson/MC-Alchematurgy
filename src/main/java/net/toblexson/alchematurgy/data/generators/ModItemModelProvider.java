@@ -47,5 +47,12 @@ public class ModItemModelProvider extends ItemModelProvider
         basicItem(ModItems.BOTTLED_WATER_ESSENCE.get());
         basicItem(ModItems.BOTTLED_LIFE_ESSENCE.get());
         basicItem(ModItems.BOTTLED_MAGIC_ESSENCE.get());
+
+        basicItem(ModItems.BOTTLED_CONCENTRATED_AIR_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_CONCENTRATED_EARTH_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_CONCENTRATED_FIRE_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_CONCENTRATED_WATER_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_CONCENTRATED_LIFE_ESSENCE.get());
+        basicItem(ModItems.BOTTLED_CONCENTRATED_MAGIC_ESSENCE.get());
     }
 }

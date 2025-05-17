@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
+import net.toblexson.alchematurgy.world.block.entity.AlchemicalConcentratorBlockEntity;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalPurifierBlockEntity;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
@@ -31,6 +32,9 @@ public class ModBlockEntityTypes
 
     public static final Supplier<BlockEntityType<AlchemicalPurifierBlockEntity>> ALCHEMICAL_PURIFIER = REGISTER.register("alchemical_purifier", () ->
             BlockEntityType.Builder.of(AlchemicalPurifierBlockEntity::new, ModBlocks.ALCHEMICAL_PURIFIER.get()).build(null));
+
+    public static final Supplier<BlockEntityType<AlchemicalConcentratorBlockEntity>> ALCHEMICAL_CONCENTRATOR = REGISTER.register("alchemical_concentrator", () ->
+            BlockEntityType.Builder.of(AlchemicalConcentratorBlockEntity::new, ModBlocks.ALCHEMICAL_CONCENTRATOR.get()).build(null));
 
     /**
      * Register all the block entities in the deferred register.

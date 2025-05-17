@@ -78,8 +78,7 @@ public class AlchemicalCrucibleBlock extends ModMenuBlock
      * @return The block entity ticker.
      * @param <T> A block entity class.
      */
-    @Nullable
-    @Override
+    @Nullable @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
         if (!level.isClientSide())

@@ -17,8 +17,14 @@ import net.neoforged.neoforge.items.ItemStackHandler;
 
 public abstract class ModMenuBlockEntity extends BlockEntity implements MenuProvider
 {
+    /**
+     * The block entity's container data.
+     */
     protected final ContainerData data;
 
+    /**
+     * The block entity's item stack handler.
+     */
     public ItemStackHandler inventory;
 
     public ModMenuBlockEntity(BlockEntityType<?> pType, BlockPos pPos, BlockState pBlockState, int inventorySize)
@@ -98,6 +104,7 @@ public abstract class ModMenuBlockEntity extends BlockEntity implements MenuProv
     {
         return saveWithoutMetadata(registries);
     }
+
     /**
      * Initialise the container data for the container.
      * @return the initialised container data.
