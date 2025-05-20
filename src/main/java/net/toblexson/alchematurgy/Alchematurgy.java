@@ -10,10 +10,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import net.toblexson.alchematurgy.registry.*;
-import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalConcentratorScreen;
-import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalCrucibleScreen;
-import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalPurifierScreen;
-import net.toblexson.alchematurgy.world.inventory.screen.AlchemicalSeparatorScreen;
+import net.toblexson.alchematurgy.world.inventory.screen.*;
 import org.slf4j.Logger;
 
 /* Work on Separator
@@ -98,6 +95,8 @@ public class Alchematurgy
         event.register(ModMenuTypes.ALCHEMICAL_SEPARATOR.get(), AlchemicalSeparatorScreen::new);
         event.register(ModMenuTypes.ALCHEMICAL_PURIFIER.get(), AlchemicalPurifierScreen::new);
         event.register(ModMenuTypes.ALCHEMICAL_CONCENTRATOR.get(), AlchemicalConcentratorScreen::new);
+        event.register(ModMenuTypes.ALCHEMICAL_FABRICATOR.get(), AlchemicalFabricatorScreen::new);
+
     }
 
     /**

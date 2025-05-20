@@ -6,7 +6,6 @@ import org.jetbrains.annotations.Nullable;
 
 public enum Essence
 {
-    Null("null", -1),
     Air("air", 0),
     Earth("earth", 1),
     Fire("fire", 2),
@@ -23,6 +22,11 @@ public enum Essence
         this.index = index;
     }
 
+    /**
+     * Convert the index to a bottled pure essence item.
+     * @param index The essence index.
+     * @return The bottled pure essence corresponding to the index.
+     */
     @Nullable
     public static Item getPureEssence(int index)
     {
@@ -38,6 +42,11 @@ public enum Essence
         };
     }
 
+    /**
+     * Convert the index to a bottled concentrated essence item.
+     * @param index The essence index.
+     * @return The bottled concentrated essence corresponding to the index.
+     */
     @Nullable
     public static Item getConcentratedEssence(int index)
     {
@@ -54,8 +63,24 @@ public enum Essence
     }
     public enum Quality
     {
-        Dirty,
-        Pure,
-        Concentrated
+        Dirty(1),
+        Pure(2),
+        Concentrated(4);
+
+        private final int essenceAmount;
+
+        Quality(int essenceAmount)
+        {
+            this.essenceAmount = essenceAmount;
+        }
+
+        /**
+         * Get the usable amount of essence that the quality gives.
+         * @return The essence amount.
+         */
+        public int getEssenceAmount()
+        {
+            return essenceAmount;
+        }
     }
 }

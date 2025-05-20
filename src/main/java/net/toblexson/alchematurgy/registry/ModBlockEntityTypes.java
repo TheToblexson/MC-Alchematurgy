@@ -1,14 +1,12 @@
 package net.toblexson.alchematurgy.registry;
 
+import com.llamalad7.mixinextras.sugar.impl.SingleIterationList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalConcentratorBlockEntity;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalPurifierBlockEntity;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalSeparatorBlockEntity;
+import net.toblexson.alchematurgy.world.block.entity.*;
 
 import java.util.function.Supplier;
 
@@ -35,6 +33,9 @@ public class ModBlockEntityTypes
 
     public static final Supplier<BlockEntityType<AlchemicalConcentratorBlockEntity>> ALCHEMICAL_CONCENTRATOR = REGISTER.register("alchemical_concentrator", () ->
             BlockEntityType.Builder.of(AlchemicalConcentratorBlockEntity::new, ModBlocks.ALCHEMICAL_CONCENTRATOR.get()).build(null));
+
+    public static final Supplier<BlockEntityType<AlchemicalFabricatorBlockEntity>> ALCHEMICAL_FABRICATOR = REGISTER.register("alchemical_fabricator", () ->
+            BlockEntityType.Builder.of(AlchemicalFabricatorBlockEntity::new, ModBlocks.ALCHEMICAL_FABRICATOR.get()).build(null));
 
     /**
      * Register all the block entities in the deferred register.

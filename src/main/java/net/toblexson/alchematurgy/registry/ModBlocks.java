@@ -9,12 +9,11 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
-import net.toblexson.alchematurgy.world.block.AlchemicalConcentratorBlock;
-import net.toblexson.alchematurgy.world.block.AlchemicalCrucibleBlock;
-import net.toblexson.alchematurgy.world.block.AlchemicalPurifierBlock;
-import net.toblexson.alchematurgy.world.block.AlchemicalSeparatorBlock;
+import net.toblexson.alchematurgy.world.block.*;
 
 import java.util.function.Supplier;
+
+import static net.neoforged.neoforge.common.data.SoundDefinition.Sound.sound;
 
 /**
  * Alchematurgy's Block registration.
@@ -27,22 +26,19 @@ public class ModBlocks
     public static final DeferredRegister.Blocks REGISTER = DeferredRegister.createBlocks(Alchematurgy.MOD_ID);
 
     public static final DeferredBlock<Block> ALCHEMICAL_CRUCIBLE = registerBlock("alchemical_crucible", () ->
-            new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+            new AlchemicalCrucibleBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
 
     public static final DeferredBlock<Block> ALCHEMICAL_SEPARATOR = registerBlock("alchemical_separator", () ->
-            new AlchemicalSeparatorBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+            new AlchemicalSeparatorBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
 
     public static final DeferredBlock<Block> ALCHEMICAL_PURIFIER = registerBlock("alchemical_purifier", () ->
-            new AlchemicalPurifierBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+            new AlchemicalPurifierBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
 
     public static final DeferredBlock<Block> ALCHEMICAL_CONCENTRATOR = registerBlock("alchemical_concentrator", () ->
-            new AlchemicalConcentratorBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+            new AlchemicalConcentratorBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
 
-    public static final DeferredBlock<Block> ALCHEMICAL_FABRICATOR = registerBlock("alchemical_fabricator",
-                                                                                 () -> new Block(BlockBehaviour.Properties.of()
-                                                                                                         .strength(4f)
-                                                                                                         .requiresCorrectToolForDrops()
-                                                                                                         .sound(SoundType.METAL)));
+    public static final DeferredBlock<Block> ALCHEMICAL_FABRICATOR = registerBlock("alchemical_fabricator", () ->
+            new AlchemicalFabricatorBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
 
     /**
      * Register a block with a block item.

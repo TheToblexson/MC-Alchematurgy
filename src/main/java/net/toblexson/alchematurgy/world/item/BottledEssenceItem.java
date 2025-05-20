@@ -15,13 +15,30 @@ public class BottledEssenceItem extends Item
         this.quality = quality;
     }
 
+    /**
+     * get the essence of the bottled item.
+     * @return The item's essence.
+     */
     public Essence getEssence()
     {
-        return this.essence;
+        return essence;
     }
 
+    /**
+     * Get the quality of the essence.
+     * @return The essence quality.
+     */
     public Essence.Quality getQuality()
     {
         return quality;
+    }
+
+    /**
+     * Get the usable amount of essence in the bottle.
+     * @return The quality essence amount.
+     */
+    public int getEssenceAmount()
+    {
+        return quality.getEssenceAmount();
     }
 }

@@ -27,6 +27,8 @@ public abstract class ModMenu extends AbstractContainerMenu
     protected final ModMenuBlockEntity blockEntity;
     protected final Level level;
     protected final ContainerData data;
+    protected int playerInventoryX = getPlayerInventoryX();
+    protected int playerInventoryY = getPlayerInventoryY();
 
     /**
      * Server-side constructor.
@@ -91,6 +93,16 @@ public abstract class ModMenu extends AbstractContainerMenu
         return copy;
     }
 
+    protected int getPlayerInventoryX()
+    {
+        return 8;
+    }
+
+    protected int getPlayerInventoryY()
+    {
+        return 84;
+    }
+
     /**
      * Add the player's main inventory to the menu.
      * @param inventory The player's inventory.
@@ -99,7 +111,8 @@ public abstract class ModMenu extends AbstractContainerMenu
     {
         for (int y = 0; y < PLAYER_INVENTORY_ROWS; ++y)
             for (int x = 0; x < PLAYER_INVENTORY_COLUMNS; ++x)
-                addSlot(new Slot(inventory, x + y * PLAYER_INVENTORY_COLUMNS + PLAYER_HOTBAR_SIZE, 8 + x * 18, 84 + y * 18));
+                addSlot(new Slot(inventory, x + y * PLAYER_INVENTORY_COLUMNS + PLAYER_HOTBAR_SIZE,
+                                 playerInventoryX + x * 18, playerInventoryY + y * 18));
     }
 
     /**
@@ -109,6 +122,7 @@ public abstract class ModMenu extends AbstractContainerMenu
     private void addPlayerHotbar(Inventory inventory)
     {
         for (int x = 0; x < 9; ++x)
-            addSlot(new Slot(inventory, x,  8 + x * 18, 142));
+            addSlot(new Slot(inventory, x,
+                             playerInventoryX + x * 18, playerInventoryY + 58));
     }
 }

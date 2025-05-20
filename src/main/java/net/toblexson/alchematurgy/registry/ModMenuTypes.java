@@ -1,5 +1,6 @@
 package net.toblexson.alchematurgy.registry;
 
+import com.llamalad7.mixinextras.sugar.impl.SingleIterationList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -9,18 +10,12 @@ import net.neoforged.neoforge.network.IContainerFactory;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.toblexson.alchematurgy.Alchematurgy;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalConcentratorMenu;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalPurifierMenu;
-import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalSeparatorMenu;
+import net.toblexson.alchematurgy.world.inventory.menu.*;
 
 import java.util.function.Supplier;
 
 public class ModMenuTypes
 {
-    /**
-     * The Deferred Register for all the menu types.
-     */
     public static DeferredRegister<MenuType<?>> REGISTER = DeferredRegister.create(Registries.MENU, Alchematurgy.MOD_ID);
 
     public static final Supplier<MenuType<AlchemicalCrucibleMenu>> ALCHEMICAL_CRUCIBLE =
@@ -34,6 +29,9 @@ public class ModMenuTypes
 
     public static final Supplier<MenuType<AlchemicalConcentratorMenu>> ALCHEMICAL_CONCENTRATOR =
             registerMenuType("alchemical_concentrator", AlchemicalConcentratorMenu::new);
+
+    public static final Supplier<MenuType<AlchemicalFabricatorMenu>> ALCHEMICAL_FABRICATOR =
+            registerMenuType("alchemical_fabricator", AlchemicalFabricatorMenu::new);
 
     /**
      * Helper method to register a menu type.

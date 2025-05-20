@@ -18,7 +18,7 @@ import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
 
-public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity implements MenuProvider
+public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
 {
     public static final int INVENTORY_SIZE = 4;
     public static final int INPUT_SLOT = 0;
@@ -43,7 +43,7 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity implements
 
     public AlchemicalCrucibleBlockEntity(BlockPos pos, BlockState state)
     {
-        super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state, 4);
+        super(ModBlockEntityTypes.ALCHEMICAL_CRUCIBLE.get(), pos, state, INVENTORY_SIZE);
     }
 
     /**
