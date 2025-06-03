@@ -1,10 +1,12 @@
 package net.toblexson.alchematurgy.world.block.entity;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.MenuProvider;
+import net.minecraft.world.Container;
+import net.minecraft.world.WorldlyContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -14,32 +16,43 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.material.Fluids;
+import net.neoforged.neoforge.fluids.FluidStack;
+import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.toblexson.alchematurgy.Alchematurgy;
 import net.toblexson.alchematurgy.registry.*;
 import net.toblexson.alchematurgy.world.inventory.menu.AlchemicalCrucibleMenu;
+import org.jetbrains.annotations.Nullable;
 
-public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
+public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity implements WorldlyContainer, IFluidHandler
 {
     public static final int INVENTORY_SIZE = 4;
-    public static final int INPUT_SLOT = 0;
-    public static final int FUEL_SLOT = 1;
-    public static final int BOTTLE_SLOT = 2;
+    public static final int FUEL_SLOT = 0;
+    public static final int BOTTLE_SLOT = 1;
+    public static final int INPUT_SLOT = 2;
     public static final int OUTPUT_SLOT = 3;
 
-    public static final int DATA_COUNT = 6;
-    public static final int DATA_PROGRESS_SLOT = 0;
-    public static final int DATA_MAX_PROGRESS_SLOT = 1;
-    public static final int DATA_WATER_AMOUNT_SLOT = 2;
-    public static final int DATA_MAX_WATER_SLOT = 3;
+    public static final int DATA_COUNT = 9;
+    public static final int DATA_CRAFT_PROGRESS_SLOT = 0;
+    public static final int DATA_MAX_CRAFT_PROGRESS_SLOT = 1;
+    public static final int DATA_FLUID_AMOUNT_SLOT = 2;
+    public static final int DATA_MAX_FLUID_SLOT = 3;
     public static final int DATA_FUEL_LEVEL_SLOT = 4;
     public static final int DATA_MAX_FUEL_SLOT = 5;
+    public static final int DATA_IS_ESSENCE_SLOT = 6;
+    public static final int DATA_TRANSFER_PROGRESS_SLOT = 7;
+    public static final int DATA_MAX_TRANSFER_PROGRESS_SLOT = 8;
 
-    private int progress = 0;
-    private int maxProgress = 200;
-    private int fluidAmount = 0;
-    private int maxFluid = 4;
+    private int craftProgress = 0;
+    private int maxCraftProgress = 200;
+    private int maxFluid = 1000; //in mb
     private int fuelLevel = 0;
     private int maxFuel = 0;
+    private boolean isEssence = false;
+    private int transferProgress = 0;
+    private int maxTransferProgress = 50;
+
+    private FluidStack fluidStack = FluidStack.EMPTY;
 
     public AlchemicalCrucibleBlockEntity(BlockPos pos, BlockState state)
     {
@@ -48,7 +61,6 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
 
     /**
      * Initialise the container data for the container.
-     * @return the initialised container data.
      */
     @Override
     protected ContainerData initialiseData()
@@ -60,12 +72,15 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
             {
                 return switch (index)
                 {
-                    case DATA_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.progress;
-                    case DATA_MAX_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxProgress;
-                    case DATA_WATER_AMOUNT_SLOT -> AlchemicalCrucibleBlockEntity.this.fluidAmount;
-                    case DATA_MAX_WATER_SLOT -> AlchemicalCrucibleBlockEntity.this.maxFluid;
+                    case DATA_CRAFT_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.craftProgress;
+                    case DATA_MAX_CRAFT_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxCraftProgress;
+                    case DATA_FLUID_AMOUNT_SLOT -> AlchemicalCrucibleBlockEntity.this.fluidStack.getAmount();
+                    case DATA_MAX_FLUID_SLOT -> AlchemicalCrucibleBlockEntity.this.maxFluid;
                     case DATA_FUEL_LEVEL_SLOT -> AlchemicalCrucibleBlockEntity.this.fuelLevel;
                     case DATA_MAX_FUEL_SLOT -> AlchemicalCrucibleBlockEntity.this.maxFuel;
+                    case DATA_IS_ESSENCE_SLOT -> AlchemicalCrucibleBlockEntity.this.isEssence ? 1 : 0;
+                    case DATA_TRANSFER_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.transferProgress;
+                    case DATA_MAX_TRANSFER_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxTransferProgress;
                     default -> 0;
                 };
             }
@@ -75,12 +90,15 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
             {
                 switch (index)
                 {
-                    case DATA_PROGRESS_SLOT: AlchemicalCrucibleBlockEntity.this.progress = value;
-                    case DATA_MAX_PROGRESS_SLOT: AlchemicalCrucibleBlockEntity.this.maxProgress = value;
-                    case DATA_WATER_AMOUNT_SLOT: AlchemicalCrucibleBlockEntity.this.fluidAmount = value;
-                    case DATA_MAX_WATER_SLOT: AlchemicalCrucibleBlockEntity.this.maxFluid = value;
-                    case DATA_FUEL_LEVEL_SLOT: AlchemicalCrucibleBlockEntity.this.fuelLevel = value;
-                    case DATA_MAX_FUEL_SLOT: AlchemicalCrucibleBlockEntity.this.maxFuel = value;
+                    case DATA_CRAFT_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.craftProgress = value;
+                    case DATA_MAX_CRAFT_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxCraftProgress = value;
+                    case DATA_FLUID_AMOUNT_SLOT -> AlchemicalCrucibleBlockEntity.this.fluidStack.setAmount(value);
+                    case DATA_MAX_FLUID_SLOT -> AlchemicalCrucibleBlockEntity.this.maxFluid = value;
+                    case DATA_FUEL_LEVEL_SLOT -> AlchemicalCrucibleBlockEntity.this.fuelLevel = value;
+                    case DATA_MAX_FUEL_SLOT -> AlchemicalCrucibleBlockEntity.this.maxFuel = value;
+                    case DATA_TRANSFER_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.transferProgress = value;
+                    case DATA_MAX_TRANSFER_PROGRESS_SLOT -> AlchemicalCrucibleBlockEntity.this.maxTransferProgress = value;
+                    case DATA_IS_ESSENCE_SLOT -> isEssence = value > 0;
                 }
             }
 
@@ -94,13 +112,13 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
 
     /**
      * Add water to the crucible if it is not already full.
-     * @return true if water has been added, false if not.
      */
     public boolean tryAddWater()
     {
-        if (fluidAmount >= maxFluid)
+        if (fluidStack.is(ModFluids.MIXED_ESSENCE) || fluidStack.getAmount() >= maxFluid)
             return false;
-        fluidAmount = maxFluid;
+        fluidStack = new FluidStack(Fluids.WATER, maxFluid);
+        isEssence = false;
         return true;
     }
 
@@ -112,62 +130,43 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
      */
     public void tick(Level level, BlockPos pos, BlockState state)
     {
-        boolean updateLitStatus = false;
+        if (fuelLevel > 0) fuelLevel--;
+
+        boolean updateLit = false;
         boolean hasChanged = false;
         ModDataMaps.Essences essences = inventory.getStackInSlot(INPUT_SLOT).getItemHolder().getData(ModDataMaps.ESSENCES);
-        //else reset progress
         if (essences != null)
         {
-            ItemStack result = new ItemStack(ModItems.BOTTLED_MIXED_ESSENCE.get());
-            result.set(ModDataComponents.ESSENCES, essences);
-            if (canCraft(result))
+            if (fluidStack.is(Fluids.WATER) && fluidStack.getAmount() >= maxFluid)
             {
-                //if there is no fuel, burn fuel
-                if (fuelLevel <= 0)
-                {
-                    maxFuel = 0;
-                    burnFuel();
-                    updateLitStatus = true;
-                }
-                //if there is fuel, craft
+                updateLit = burnFuel();
                 if (fuelLevel > 0)
                 {
-                    //if progress has reached the required amount, craft
-                    if (progress >= maxProgress)
+                    if (craftProgress >= maxCraftProgress)
                     {
-                        finishCraft(result);
-                        progress = 0;
+                        finishCraft(essences);
+                        craftProgress = 0;
                         hasChanged = true;
                     }
-                    progress++;
+                    else craftProgress++;
                 }
-                else //there is no fuel
-                    progress = 0;
+                else craftProgress = 0;
             }
-            else progress = 0;
+            else craftProgress = 0;
         }
-        else progress = 0;
-        //if lit, decrease fuel
-        if (fuelLevel > 1)
-            fuelLevel--;
-        else
-        {
-            fuelLevel = 0;
-            updateLitStatus = true;
-        }
+        else craftProgress = 0;
+
         //if fuel has changed, change state and update
-        if (updateLitStatus)
+        if (updateLit)
         {
             if (fuelLevel > 0 && !state.getValue(BlockStateProperties.LIT))
             {
-                Alchematurgy.LOGGER.debug("Setting Block State to LIT");
                 state = state.setValue(BlockStateProperties.LIT, true);
                 level.setBlock(pos, state, 3);
                 hasChanged = true;
             }
             else if (fuelLevel <= 0 && state.getValue(BlockStateProperties.LIT))
             {
-                Alchematurgy.LOGGER.debug("Setting Block State to UNLIT");
                 state = state.setValue(BlockStateProperties.LIT, false);
                 level.setBlock(pos, state, 3);
                 hasChanged = true;
@@ -175,67 +174,89 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
         }
         if (hasChanged)
             setChanged(level, pos, state);
+
+        if (canTransfer())
+        {
+            if (transferProgress >= maxTransferProgress)
+            {
+                transferToBottle();
+                transferProgress = 0;
+            }
+            else transferProgress++;
+        }
+        else transferProgress = 0;
     }
 
     /**
-     * Burn a fuel item from the fuel slot, increasing the fuel level.
+     * Checks to see if essence can be transferred to a bottle
+     * @return TRUE is essence can be transferred, FALSE if it cannot;
      */
-    private void burnFuel()
+    private boolean canTransfer()
     {
-        if (inventory.getStackInSlot(FUEL_SLOT).getBurnTime(null) > 0)
+        ItemStack output = inventory.getStackInSlot(OUTPUT_SLOT);
+        ModDataMaps.Essences fluidData = fluidStack.get(ModDataComponents.ESSENCES);
+        ModDataMaps.Essences bottleData = output.get(ModDataComponents.ESSENCES);
+        return fluidStack.is(ModFluids.MIXED_ESSENCE) && fluidStack.getAmount() >= 250 && //Checking fluid
+                inventory.getStackInSlot(BOTTLE_SLOT).is(Items.GLASS_BOTTLE) && //Checking bottle slot
+                (output.isEmpty() || output.is(ModItems.BOTTLED_MIXED_ESSENCE.get()) && fluidData == bottleData); //Checking output slot
+    }
+
+
+    /**
+     * Transfers some of the essence into a bottle, consuming a bottle and some essence to output a mixed essence bottle.
+     */
+    private void transferToBottle()
+    {
+        ModDataMaps.Essences essences = fluidStack.get(ModDataComponents.ESSENCES);
+        if (essences == null)
         {
-            maxFuel = inventory.getStackInSlot(FUEL_SLOT).getBurnTime(null);
-            fuelLevel = maxFuel;
-            inventory.extractItem(FUEL_SLOT, 1, false);
+            Alchematurgy.LOGGER.error("Error in Alchemical Crucible at pos {}. " +
+                                              "Alchemical Crucible contains Mixed Essence with no essence data. " +
+                                              "If this is a reoccurring error, please provide a bug report.", getBlockPos());
+        }
+        else
+        {
+            int count = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + 1;
+            ItemStack result = new ItemStack(ModItems.BOTTLED_MIXED_ESSENCE.get(), count);
+            result.set(ModDataComponents.ESSENCES, essences);
+            inventory.getStackInSlot(BOTTLE_SLOT).shrink(1);
+            fluidStack.shrink(250);
+            inventory.setStackInSlot(OUTPUT_SLOT,result);
+            if (fluidStack.getAmount() <= 0)
+            {
+                fluidStack = FluidStack.EMPTY;
+                fluidStack.remove(ModDataComponents.ESSENCES);
+                isEssence = false;
+            }
         }
     }
 
     /**
+     * If there is no fuel left, burn a fuel item if present.
+     * @return FALSE if no extra fuel has been burnt, TRUE if fuel has been burnt.
+     */
+    private boolean burnFuel()
+    {
+        if (fuelLevel > 0)
+            return false;
+        int fuel = inventory.getStackInSlot(FUEL_SLOT).getBurnTime(null);
+        fuelLevel = fuel;
+        maxFuel = fuel;
+        inventory.extractItem(FUEL_SLOT, 1, false);
+        return true;
+    }
+
+    /**
      * Complete the crafting operation. Removing from the input and adding to the result.
+     * @param essences the essences from the input.
      */
-    private void finishCraft(ItemStack result)
+    private void finishCraft(ModDataMaps.Essences essences)
     {
-        int newCount = inventory.getStackInSlot(OUTPUT_SLOT).getCount() + result.getCount();
-        result.setCount(newCount);
-        fluidAmount--;
-        inventory.extractItem(BOTTLE_SLOT, 1, false);
         inventory.extractItem(INPUT_SLOT, 1, false);
-        inventory.setStackInSlot(OUTPUT_SLOT, result);
-    }
 
-    /**
-     * Check to see if there is the required water, bottle and space to craft.
-     * @return Whether crafting is possible.
-     */
-    private boolean canCraft(ItemStack result)
-    {
-        return fluidAmount > 0 && hasBottle() && canOutput(result);
-    }
-
-    /**
-     * Check if there is a glass bottle in the bottle slot.
-     * @return If there is a glass bottle in the bottle slot.
-     */
-    private boolean hasBottle()
-    {
-        return inventory.getStackInSlot(BOTTLE_SLOT).is(Items.GLASS_BOTTLE);
-    }
-
-    /**
-     * Check if the crafting result can be put into the output slot.
-     * @param result If there is space in the output slot for the result.
-     * @return The crafting result.
-     */
-    private boolean canOutput(ItemStack result)
-    {
-        ItemStack stack = inventory.getStackInSlot(OUTPUT_SLOT);
-        if (stack.isEmpty())
-            return true;
-        int maxCount = stack.getMaxStackSize();
-        int outputCount = stack.getCount() + 1;
-        ModDataMaps.Essences stackEssences = stack.get(ModDataComponents.ESSENCES);
-        ModDataMaps.Essences resultEssences = result.get(ModDataComponents.ESSENCES);
-        return stack.getItem() == result.getItem() && stackEssences == resultEssences && outputCount <= maxCount;
+        fluidStack = new FluidStack(ModFluids.MIXED_ESSENCE, maxFluid);
+        fluidStack.set(ModDataComponents.ESSENCES, essences);
+        isEssence = true;
     }
 
     /**
@@ -247,12 +268,18 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
     protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
         super.saveAdditional(tag, registries);
-        tag.putInt("progress", progress);
-        tag.putInt("max_progress", maxProgress);
-        tag.putInt("water_amount", fluidAmount);
-        tag.putInt("max_water", maxFluid);
+        if (fluidStack.getAmount() > 0)
+            tag.put("fluid", fluidStack.save(registries));
+        tag.putInt("craft_progress", craftProgress);
+        tag.putInt("max_craft_progress", maxCraftProgress);
+        tag.putInt("fill_progress", craftProgress);
+        tag.putInt("max_fill_progress", maxCraftProgress);
+        tag.putInt("max_fluid", maxFluid);
         tag.putInt("fuel_level", fuelLevel);
         tag.putInt("max_fuel", maxFuel);
+        tag.putBoolean("is_essence", isEssence);
+        tag.putInt("transfer_progress", transferProgress);
+        tag.putInt("max_transfer_progress", maxTransferProgress);
     }
 
     /**
@@ -263,18 +290,24 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
     @Override
     protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries)
     {
+
         super.loadAdditional(tag, registries);
-        progress = tag.getInt("progress");
-        maxProgress = tag.getInt("max_progress");
-        fluidAmount = tag.getInt("water_amount");
-        maxFluid = tag.getInt("max_water");
+        if (tag.getCompound("fluid").isEmpty())
+            fluidStack = new FluidStack(Fluids.WATER, 0);
+        else
+            fluidStack = FluidStack.parseOptional(registries, tag.getCompound("fluid"));
+        craftProgress = tag.getInt("progress");
+        maxCraftProgress = tag.getInt("max_progress");
+        maxFluid = tag.getInt("max_fluid");
         fuelLevel = tag.getInt("fuel_level");
         maxFuel = tag.getInt("max_fuel");
+        isEssence = tag.getBoolean("is_essence");
+        transferProgress = tag.getInt("transfer_progress");
+        maxTransferProgress = tag.getInt("max_transfer_progress");
     }
 
     /**
      * Get the inventory's display name.
-     * @return The display name.
      */
     @Override
     public Component getDisplayName()
@@ -293,5 +326,261 @@ public class AlchemicalCrucibleBlockEntity extends ModMenuBlockEntity
     public AbstractContainerMenu createMenu(int containerID, Inventory inventory, Player player)
     {
         return new AlchemicalCrucibleMenu(containerID, inventory, this, data);
+    }
+
+    /**
+     * Get the slots that can be accessed from the given side.
+     * @param side The side being interacted with.
+     */
+    @Override
+    public int[] getSlotsForFace(Direction side)
+    {
+        return new int[] {FUEL_SLOT, BOTTLE_SLOT, INPUT_SLOT};
+    }
+
+    /**
+     * Returns {@code true} if automation can insert the given item in the given slot from the given side.
+     * @param slot The inventory index to test inserting into.
+     * @param stack The stack to insert.
+     * @param direction The face that is being tested.
+     */
+    @Override
+    public boolean canPlaceItemThroughFace(int slot, ItemStack stack, @Nullable Direction direction)
+    {
+        if (slot == OUTPUT_SLOT) return false;
+        return canPlaceItem(slot, stack);
+    }
+
+    /**
+     * Returns {@code true} if automation can place the given item in the given slot
+     * @param slot The inventory index to test inserting into.
+     * @param stack The stack to insert.
+     */
+    @Override
+    public boolean canPlaceItem(int slot, ItemStack stack)
+    {
+
+        return switch (slot)
+        {
+            case INPUT_SLOT ->
+                    (inventory.getStackInSlot(slot).isEmpty() || inventory.getStackInSlot(slot).is(stack.getItem()));
+            case BOTTLE_SLOT ->
+                    (stack.is(Items.GLASS_BOTTLE) && inventory.getStackInSlot(slot).isEmpty() || inventory.getStackInSlot(slot).is(stack.getItem()));
+            case FUEL_SLOT ->
+                    (stack.getBurnTime(null) > 0 && inventory.getStackInSlot(slot).isEmpty() || inventory.getStackInSlot(slot).is(stack.getItem()));
+            default -> false;
+        };
+    }
+
+    /**
+     * Returns {@code true} if automation can extract the given item in the given slot from the given side.
+     * @param index The inventory index to test taking from.
+     * @param stack The stack to insert.
+     * @param direction The face that is being tested.
+     */
+    @Override
+    public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction)
+    {
+        //Not working??
+        return index == OUTPUT_SLOT || stack.is(Items.BUCKET);
+    }
+
+    /**
+     * Get the size of the container's inventory.
+     */
+    @Override
+    public int getContainerSize()
+    {
+        return AlchemicalCrucibleBlockEntity.INVENTORY_SIZE;
+    }
+
+    /**
+     * Returns {@code true} if the inventory is empty.
+     */
+    @Override
+    public boolean isEmpty()
+    {
+        for (int i = 0; i < inventory.getSlots(); i++)
+        {
+            if (!inventory.getStackInSlot(i).isEmpty())
+                return false;
+        }
+        return true;
+    }
+
+    /**
+     * Returns the stack in the given slot.
+     * @param slot The slot index.
+     */
+    @Override
+    public ItemStack getItem(int slot)
+    {
+        if (slot >= INVENTORY_SIZE || slot < 0)
+            return ItemStack.EMPTY;
+        return inventory.getStackInSlot(slot);
+    }
+
+    /**
+     * Removes up to a specified number of items from an inventory slot and returns them in a new stack.
+     * @param slot The slot index.
+     * @param amount The amount to remove from the slot.
+     */
+    @Override
+    public ItemStack removeItem(int slot, int amount)
+    {
+        int stackAmount = getItem(slot).getCount();
+        if (stackAmount <= 0)
+            return ItemStack.EMPTY;
+        this.setChanged();
+        if (stackAmount <= amount)
+            return inventory.extractItem(slot, amount, false);
+        return inventory.extractItem(slot, stackAmount, false);
+    }
+
+    /**
+     * Removes a stack from the given slot and returns it.
+     * @param slot The slot index.
+     */
+    @Override
+    public ItemStack removeItemNoUpdate(int slot)
+    {
+        return inventory.extractItem(slot, getItem(slot).getCount(), false);
+    }
+
+    /**
+     * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+     * @param slot The slot index.
+     * @param stack The item stack to insert.
+     */
+    @Override
+    public void setItem(int slot, ItemStack stack)
+    {
+        switch (slot)
+        {
+            case INPUT_SLOT:
+                inventory.setStackInSlot(slot, stack);
+            case FUEL_SLOT:
+                if (stack.getBurnTime(null) > 0)
+                    inventory.setStackInSlot(slot, stack);
+            case BOTTLE_SLOT:
+                if (stack.is(Items.GLASS_BOTTLE))
+                    inventory.setStackInSlot(slot, stack);
+        }
+    }
+
+    /**
+     * Returns {@code true} if the supplied player can use the container.
+     * @param player The player using the container.
+     */
+    @Override
+    public boolean stillValid(Player player)
+    {
+        return Container.stillValidBlockEntity(this, player);
+    }
+
+    /**
+     *
+     */
+    @Override
+    public void clearContent()
+    {
+        inventory = createInventory(INVENTORY_SIZE);
+    }
+
+    /**
+     * Returns the number of fluid storage units ("tanks") available
+     * @return The number of tanks available
+     */
+    @Override
+    public int getTanks()
+    {
+        return 1;
+    }
+
+    /**
+     * Returns the FluidStack in a given tank.
+     * <p>
+     * <strong>IMPORTANT:</strong> This FluidStack <em>MUST NOT</em> be modified. This method is not for
+     * altering internal contents. Any implementers who are able to detect modification via this method
+     * should throw an exception. It is ENTIRELY reasonable and likely that the stack returned here will be a copy.
+     * @param tank Tank to query.
+     * @return FluidStack in a given tank. FluidStack.EMPTY if the tank is empty.
+     */
+    @Override
+    public FluidStack getFluidInTank(int tank)
+    {
+        return fluidStack.copy();
+    }
+
+    /**
+     * Retrieves the maximum fluid amount for a given tank.
+     * @param tank Tank to query.
+     * @return The maximum fluid amount held by the tank.
+     */
+    @Override
+    public int getTankCapacity(int tank)
+    {
+        return maxFluid;
+    }
+
+    /**
+     * This function is a way to determine which fluids can exist inside a given handler. General purpose tanks will
+     * basically always return TRUE for this.
+     * @param tank  Tank to query for validity
+     * @param stack Stack to test with for validity
+     * @return TRUE if the tank can hold the FluidStack, not considering current state.
+     */
+    @Override
+    public boolean isFluidValid(int tank, FluidStack stack)
+    {
+        return stack.is(Fluids.WATER);
+    }
+
+    /**
+     * Fills fluid into internal tanks, distribution is left entirely to the IFluidHandler.
+     * @param resource FluidStack representing the Fluid and maximum amount of fluid to be filled.
+     * @param action   If SIMULATE, fill will only be simulated.
+     * @return Amount of resource that was (or would have been, if simulated) filled.
+     */
+    @Override
+    public int fill(FluidStack resource, FluidAction action)
+    {
+        int emptySpace = maxFluid - fluidStack.getAmount();
+        int waterIn = resource.getAmount();
+        int fillAmount = Math.min(waterIn, emptySpace);
+        if (action.execute())
+            fluidStack.grow(fillAmount);
+        return fillAmount;
+    }
+
+    /**
+     * Drains fluid out of internal tanks, distribution is left entirely to the IFluidHandler.
+     * @param resource FluidStack representing the Fluid and maximum amount of fluid to be drained.
+     * @param action   If SIMULATE, drain will only be simulated.
+     * @return FluidStack representing the Fluid and amount that was (or would have been, if
+     * simulated) drained.
+     */
+    @Override
+    public FluidStack drain(FluidStack resource, FluidAction action)
+    {
+        return drain(resource.getAmount(), action);
+    }
+
+    /**
+     * Drains fluid out of internal tanks, distribution is left entirely to the IFluidHandler.
+     * <p>
+     * This method is not Fluid-sensitive.
+     * @param maxDrain Maximum amount of fluid to drain.
+     * @param action   If SIMULATE, drain will only be simulated.
+     * @return FluidStack representing the Fluid and amount that was (or would have been, if
+     * simulated) drained.
+     */
+    @Override
+    public FluidStack drain(int maxDrain, FluidAction action)
+    {
+        int outputAmount = Math.min(maxDrain, fluidStack.getAmount());
+        if (action.execute())
+            fluidStack.shrink(outputAmount);
+        return new FluidStack(Fluids.WATER, outputAmount);
     }
 }

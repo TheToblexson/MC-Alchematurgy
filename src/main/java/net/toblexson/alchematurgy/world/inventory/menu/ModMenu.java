@@ -9,7 +9,6 @@ import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.toblexson.alchematurgy.registry.ModMenuTypes;
 import net.toblexson.alchematurgy.world.block.entity.ModMenuBlockEntity;
 
 public abstract class ModMenu extends AbstractContainerMenu

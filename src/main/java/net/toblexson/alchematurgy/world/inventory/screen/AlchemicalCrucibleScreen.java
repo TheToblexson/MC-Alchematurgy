@@ -37,9 +37,20 @@ public class AlchemicalCrucibleScreen extends ModScreen<AlchemicalCrucibleMenu>
 
         graphics.blit(TEXTURE, x, y, 0, 0, imageWidth, imageHeight);
 
-        renderProgressArrow(graphics, x, y);
+        renderBubbles(graphics, x, y);
         renderWaterCover(graphics, x, y);
         renderFlame(graphics, x, y);
+        renderTransferArrow(graphics, x, y);
+    }
+
+    private void renderTransferArrow(GuiGraphics graphics, int x, int y)
+    {
+        if (menu.isTransferring())
+        {
+            int maxLength = 15;
+            int length = menu.getTransferArrowSize(maxLength);
+            graphics.blit(TEXTURE, x + 107, y + 36, 176, 46, 7, length);
+        }
     }
 
     private void renderFlame(GuiGraphics graphics, int x, int y)
@@ -48,23 +59,32 @@ public class AlchemicalCrucibleScreen extends ModScreen<AlchemicalCrucibleMenu>
         {
             int height = menu.fireAmount();
             int offset = 14 - height;
-            graphics.blit(TEXTURE, x + 56, y + 36 + offset, 176, 15 + offset, 14, height);
+            graphics.blit(TEXTURE, x + 55, y + 36 + offset, 176, 4 + offset, 14, height);
         }
     }
 
     private void renderWaterCover(GuiGraphics graphics, int x, int y)
     {
-        if (menu.hasWater())
+        if (menu.hasFluid())
         {
-            int height = menu.waterAmount();
-            int offset = 4 - height;
-            graphics.blit(TEXTURE, x + 87, y + 54 + offset, 176, 11 + offset, 10, height);
+            //get the sprite to use
+            int sprite = menu.essenceSprite();
+            int width = 10;
+            int maxHeight = 4;
+
+            int height = menu.FluidAmount(maxHeight);
+            int offset = maxHeight - height;
+            graphics.blit(TEXTURE, x + 83, y + 54 + offset, 176 + (sprite * width), offset, 10, height);
         }
     }
 
-    private void renderProgressArrow(GuiGraphics graphics, int x, int y)
+    private void renderBubbles(GuiGraphics graphics, int x, int y)
     {
         if (menu.isCrafting())
-            graphics.blit(TEXTURE, x + 78, y + 36, 176, 0, menu.getCraftingArrowProgress(), 11);
+        {
+            int maxHeight = 28;
+            int height = menu.getCraftingArrowProgress(maxHeight);
+            graphics.blit(TEXTURE, x + 82, y + 20 + height, 176, 18 + height, 11, maxHeight - height);
+        }
     }
 }

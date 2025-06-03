@@ -13,8 +13,6 @@ import net.toblexson.alchematurgy.world.block.*;
 
 import java.util.function.Supplier;
 
-import static net.neoforged.neoforge.common.data.SoundDefinition.Sound.sound;
-
 /**
  * Alchematurgy's Block registration.
  */
@@ -39,6 +37,9 @@ public class ModBlocks
 
     public static final DeferredBlock<Block> ALCHEMICAL_FABRICATOR = registerBlock("alchemical_fabricator", () ->
             new AlchemicalFabricatorBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
+
+//    public static final DeferredBlock<Block> FUNNEL = registerBlock("funnel", () ->
+//            new FunnelBlock(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.METAL)));
 
     /**
      * Register a block with a block item.

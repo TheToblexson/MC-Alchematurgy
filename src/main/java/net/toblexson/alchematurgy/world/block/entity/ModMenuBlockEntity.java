@@ -31,7 +31,12 @@ public abstract class ModMenuBlockEntity extends BlockEntity implements MenuProv
     {
         super(pType, pPos, pBlockState);
         data = initialiseData();
-        inventory = new ItemStackHandler(inventorySize)
+        inventory = createInventory(inventorySize);
+    }
+
+    protected ItemStackHandler createInventory(int inventorySize)
+    {
+        return new ItemStackHandler(inventorySize)
         {
             /**
              * Updates the server when the inventory is modified.

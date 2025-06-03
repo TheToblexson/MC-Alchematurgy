@@ -60,6 +60,11 @@ public class ModDataMaps
             return Map.of("air", air, "earth", earth, "fire", fire,
                           "water", water, "life", life, "magic", magic);
         }
+
+        public static Essences empty()
+        {
+            return new Essences(0,0,0,0,0,0);
+        }
     }
 
     public static final DataMapType<Item, Essences> ESSENCES = DataMapType.builder(

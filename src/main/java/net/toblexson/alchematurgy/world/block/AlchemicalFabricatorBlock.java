@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.toblexson.alchematurgy.registry.ModBlockEntityTypes;
-import net.toblexson.alchematurgy.world.block.entity.AlchemicalCrucibleBlockEntity;
 import net.toblexson.alchematurgy.world.block.entity.AlchemicalFabricatorBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
@@ -34,10 +33,8 @@ public class AlchemicalFabricatorBlock extends ModMenuBlock
     @Nullable @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
-        if (!level.isClientSide())
-            return createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_FABRICATOR.get(),
-                                      (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1));
-        return null;
+        return !level.isClientSide() ? createTickerHelper(blockEntityType, ModBlockEntityTypes.ALCHEMICAL_FABRICATOR.get(),
+                                                          (level1, pos, state1, blockEntity) -> blockEntity.tick(level1, pos, state1)) : null;
     }
 
     /**

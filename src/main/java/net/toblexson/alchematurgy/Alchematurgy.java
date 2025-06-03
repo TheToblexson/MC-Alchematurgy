@@ -66,6 +66,7 @@ public class Alchematurgy
         ModBlocks.register(bus);
         ModBlockEntityTypes.register(bus);
         ModMenuTypes.register(bus);
+        ModFluids.register(bus);
         ModDataComponents.register(bus);
 
         // Register ModConfigSpec so that FML can create and load the config file

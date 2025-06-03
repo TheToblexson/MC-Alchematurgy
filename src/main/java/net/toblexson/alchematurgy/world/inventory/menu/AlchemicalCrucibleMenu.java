@@ -4,9 +4,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.toblexson.alchematurgy.registry.ModBlocks;
@@ -40,36 +38,38 @@ public class AlchemicalCrucibleMenu extends ModMenu
         super(ModMenuTypes.ALCHEMICAL_CRUCIBLE.get(), containerId, inventory, blockEntity, data, AlchemicalCrucibleBlockEntity.INVENTORY_SIZE);
 
         //input
-        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.INPUT_SLOT, 56, 17));
+        this.addSlot(new SlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.INPUT_SLOT, 55, 17));
         //fuel
         this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.FUEL_SLOT,
-                                            56, 53,  (stack) -> stack.getBurnTime(null) > 0));
+                                            55, 53,  (stack) -> stack.getBurnTime(null) > 0));
         //bottle
         this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.BOTTLE_SLOT,
-                                            84, 17, (stack -> stack.is(Items.GLASS_BOTTLE))));
+                                            105, 17, (stack -> stack.is(Items.GLASS_BOTTLE))));
         //output
         this.addSlot(new ModSlotItemHandler(this.blockEntity.inventory,AlchemicalCrucibleBlockEntity.OUTPUT_SLOT,
-                                         116, 35, (stack) -> false));
+                                         105, 53, (stack) -> false));
 
         addDataSlots(data);
     }
 
     /**
-     * If there is water in the block entity.
-     * @return True if the water level is above 0.
+     * If there is fluid in the block entity.
+     * @return True if the fluid level is above 0.
      */
-    public boolean hasWater()
+    public boolean hasFluid()
     {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_WATER_AMOUNT_SLOT) > 0;
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_FLUID_AMOUNT_SLOT) > 0;
     }
 
     /**
      * Calculates the amount of the water cover texture to render.
      * @return the height the water cover texture should be.
      */
-    public int waterAmount()
+    public int FluidAmount(int maxSize)
     {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_WATER_AMOUNT_SLOT);
+        int fluidAmount = data.get(AlchemicalCrucibleBlockEntity.DATA_FLUID_AMOUNT_SLOT);
+        int maxFluid = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_FLUID_SLOT);
+        return (int)Math.floor(fluidAmount * ((float)maxSize / maxFluid));
     }
 
     /**
@@ -95,27 +95,62 @@ public class AlchemicalCrucibleMenu extends ModMenu
         return (int)(fuelLevel * factor);
     }
 
+    public int essenceSprite()
+    {
+        int spriteCount = 5;
+        int progress = data.get(AlchemicalCrucibleBlockEntity.DATA_CRAFT_PROGRESS_SLOT);
+        int maxProgress = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_CRAFT_PROGRESS_SLOT);
+        boolean isEssence = data.get(AlchemicalCrucibleBlockEntity.DATA_IS_ESSENCE_SLOT) > 0;
+        if (isEssence)
+        {
+            return spriteCount-1;
+        }
+        float percentageComplete = (float) progress /maxProgress;
+        return (int)Math.floor(spriteCount * percentageComplete);
+    }
+
     /**
      * If the block entity is in the process of crafting.
      * @return Whether the block entity is crafting.
      */
     public boolean isCrafting()
     {
-        return data.get(AlchemicalCrucibleBlockEntity.DATA_PROGRESS_SLOT) > 0;
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_CRAFT_PROGRESS_SLOT) > 0;
     }
 
     /**
      * Get the current progress of the progress arrow.
      * @return The size of the progress arrow in pixels.
      */
-    public int getCraftingArrowProgress()
+    public int getCraftingArrowProgress(int maxHeight)
     {
-        int progress = data.get(AlchemicalCrucibleBlockEntity.DATA_PROGRESS_SLOT);
-        int maxProgress = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_PROGRESS_SLOT);
-        int arrowMaxSize = 28;
-        float factor = (float) arrowMaxSize / maxProgress;
+        int progress = data.get(AlchemicalCrucibleBlockEntity.DATA_CRAFT_PROGRESS_SLOT);
+        int maxProgress = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_CRAFT_PROGRESS_SLOT);
+        float factor = (float)maxHeight / maxProgress;
 
         return maxProgress != 0 && progress != 0 ? (int)(progress * factor) : 0;
+    }
+
+    /**
+     * If the crucible is in the progress of transferring fluid to a bottle.
+     * @return TRUE if a transfer is in progress. FALSE if a transfer is not in progress.
+     */
+    public boolean isTransferring()
+    {
+        return data.get(AlchemicalCrucibleBlockEntity.DATA_TRANSFER_PROGRESS_SLOT) > 0;
+    }
+
+    /**
+     * Get the size of the transfer arrow.
+     * @param maxSize The maximum size of the transfer arrow
+     * @return The required size of the transfer arrow in pixels.
+     */
+    public int getTransferArrowSize(int maxSize)
+    {
+        int progress = data.get(AlchemicalCrucibleBlockEntity.DATA_TRANSFER_PROGRESS_SLOT);
+        int maxProgress = data.get(AlchemicalCrucibleBlockEntity.DATA_MAX_TRANSFER_PROGRESS_SLOT);
+        float percentageComplete = (float)progress / maxProgress;
+        return (int)(maxSize * percentageComplete);
     }
 
     /**
